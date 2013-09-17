@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/background_pink">
+
+
+    <TextView style="@style/write_9_title"
+        android:id="@+id/TextView01"
+        android:text="保護者の記録(新生児～6歳)"></TextView>
+
+<ScrollView android:id="@+id/ScrollView9" android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+
+
+
+<LinearLayout
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" android:orientation="vertical">
+
+	<Button android:text="@string/write_9_1_title" android:id="@+id/write_9_1_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_2_title" android:id="@+id/write_9_2_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_3_title" android:id="@+id/write_9_3_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_4_title" android:id="@+id/write_9_4_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_5_title" android:id="@+id/write_9_5_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_6_title" android:id="@+id/write_9_6_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_7_title" android:id="@+id/write_9_7_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_8_title" android:id="@+id/write_9_8_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_9_title" android:id="@+id/write_9_9_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_10_title" android:id="@+id/write_9_10_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_11_title" android:id="@+id/write_9_11_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_12_title" android:id="@+id/write_9_12_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+
+</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

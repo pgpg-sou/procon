@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" 
+  android:orientation="vertical" 
+  android:background="@drawable/background_pink">
+  <!-- 読込・保存ボタン -->
+  
+  
+    <TextView android:id="@+id/TextView01" 
+        style="@style/write_9_title" 
+        android:text="母親(両親)学級受講記録　"></TextView>
+    
+    <LinearLayout 
+        android:id="@+id/linearLayout1" 
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        style="@style/write_9_question_box">
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_81_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_81_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_81_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+    </LinearLayout>
+    
+    
+    <ScrollView android:layout_height="wrap_content" 
+        android:id="@+id/scrollView1" 
+        android:layout_width="fill_parent" 
+        android:layout_gravity="top">
+        
+        <LinearLayout android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:orientation="vertical" 
+            android:id="@+id/linearLayout4">
+            
+            <TextView   style="@style/write_9_title" 
+                android:id="@+id/textView1" 
+                android:text="受講記録"></TextView>
+            
+            <LinearLayout android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:id="@+id/LinearLayout03" 
+                style="@style/write_9_question_box" 
+                android:orientation="vertical">
+                
+                <TableLayout android:layout_height="wrap_content" 
+                    android:id="@+id/TableLayout01" 
+                    android:layout_width="match_parent">
+                    
+                    <TableRow android:id="@+id/TableRow01" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content">
+                        
+                        <TextView style="@style/blackOnly"  
+                            android:text="受講年月日" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView06" 
+                            android:layout_width="wrap_content"></TextView>
+                        
+                        <TextView style="@style/blackOnly"  
+                            android:text="課目" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView08" 
+                            android:layout_width="wrap_content"></TextView>
+                        
+                        <TextView style="@style/blackOnly"  
+                            android:text="備考" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView07" 
+                            android:layout_width="wrap_content"></TextView>
+                        
+                        
+                    </TableRow>
+                    
+                    <TableRow android:id="@+id/TableRow01" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content">
+                        
+                        <!-- 受講年月日 -->
+                        <TextView style="@style/blackOnly"  
+                            android:text="---------" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/write_pregnant_81_0q" 
+                            android:layout_width="wrap_content"></TextView>
+                        
+                        <!-- 科目 -->
+                        <TextView style="@style/blackOnly"  
+                            android:text="---------" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/write_pregnant_81_02" 
+                            android:layout_width="wrap_content"></TextView>
+                        
+                        <!-- 備考 -->
+                        <TextView style="@style/blackOnly"  
+                            android:text="---------" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/write_pregnant_81_03" 
+                            android:layout_width="wrap_content"></TextView>
+                        
+                        
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+            
+            
+            <LinearLayout android:layout_height="wrap_content" 
+                android:orientation="vertical" 
+                android:id="@+id/LinearLayout01" 
+                android:layout_width="fill_parent" 
+                style="@style/write_9_question_box">
+                
+                <TextView style="@style/blackOnly"  
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView04" 
+                    android:layout_width="wrap_content" 
+                    android:text="受講年月日"></TextView>
+                
+                <LinearLayout android:id="@+id/linearLayout2" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- ○年 -->
+                        <TextView style="@style/blackOnly"  
+                            android:text="---------" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/write_pregnant_81_04" 
+                            android:layout_width="wrap_content"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView01" 
+                        android:text="@string/write_1_year" 
+                        android:layout_width="wrap_content"></TextView>
+                    
+                    <!-- ○月 -->
+                        <TextView style="@style/blackOnly"  
+                            android:text="---------" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/write_pregnant_81_05" 
+                            android:layout_width="wrap_content"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView01" 
+                        android:text="@string/write_1_month" 
+                        android:layout_width="wrap_content"></TextView>
+                    
+                    <!-- ○日 -->
+                        <TextView style="@style/blackOnly"  
+                            android:text="---------" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/write_pregnant_81_06" 
+                            android:layout_width="wrap_content"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView02" 
+                        android:layout_width="wrap_content" 
+                        android:text="日"></TextView>
+                </LinearLayout>
+                
+                <TextView style="@style/blackOnly"  
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView01" 
+                    android:layout_width="wrap_content" 
+                    android:text="課目"></TextView>
+                
+                <!--課目 -->
+                        <TextView style="@style/blackOnly"  
+                            android:text="---------" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/write_pregnant_81_07" 
+                            android:layout_width="wrap_content"></TextView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView09" 
+                    android:layout_width="wrap_content" 
+                    android:text="備考"></TextView>
+                
+                <!-- 備考 -->
+                        <TextView style="@style/blackOnly"  
+                            android:text="---------" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/write_pregnant_81_08" 
+                            android:layout_width="wrap_content"></TextView>
+
+                        
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>

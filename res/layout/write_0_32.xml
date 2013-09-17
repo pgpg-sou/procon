@@ -1,0 +1,1256 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="fill_parent" 
+  android:layout_width="fill_parent" 
+  android:orientation="vertical" 
+  android:background="@drawable/background_pink">
+  
+    
+    
+  <!-- 読込・保存ボタン -->
+    <TextView 
+        style="@style/write_9_title" 
+        android:id="@+id/TextView01" 
+        android:text="妊婦の職業と環境"></TextView>
+    
+    
+    
+    <LinearLayout 
+        android:id="@+id/linearLayout1" 
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        style="@style/write_9_question_box">
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonLock" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="編集する"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonUnlock" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="編集終了"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonCancel" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="キャンセル"></Button>
+    </LinearLayout>
+    
+    
+    
+    <ScrollView 
+        android:layout_height="wrap_content" 
+        android:id="@+id/scrollView1" 
+        android:layout_width="fill_parent" 
+        android:layout_gravity="top">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:id="@+id/linearLayout4" 
+            android:orientation="vertical">
+            
+            <TextView   
+                style="@style/write_9_title" 
+                android:id="@+id/TextView43" 
+                android:text="妊娠に気付いた時の状況"></TextView>
+
+            <LinearLayout
+                android:id="@+id/LinearLayout01"
+                style="@style/write_9_question_box"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView25"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;職業&gt;" style="@style/Ques_title">
+                </TextView>
+                
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/ViewFlipper01">
+                    
+                    <Spinner 
+                        android:id="@+id/Spinner01" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="fill_parent"></Spinner>
+                    
+                    <TextView 
+                        android:id="@+id/TextView23" 
+                        style="@style/blackOnly" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+
+                <TextView
+                    android:id="@+id/TextView41"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;仕事内容と職場環境&gt;" 
+                    style="@style/Ques_title">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/TextView42"
+                    style="@style/blackOnly"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="(特記事項も記載)" >
+                </TextView>
+                
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/ViewFlipper02">
+                    <EditText 
+                        android:text="@+id/EditText01" 
+                        android:id="@+id/EditText01" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="fill_parent"></EditText>
+                    
+                    <TextView 
+                        android:id="@+id/TextView29" 
+                        style="@style/blackOnly" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+
+                <TextView
+                    android:id="@+id/TextView16"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;仕事をする時間&gt;" 
+                    style="@style/Ques_title">
+                </TextView>
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/ViewFlipper03">
+                    
+                    <LinearLayout 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout05" 
+                        android:layout_width="wrap_content">
+                        
+                        <EditText 
+                            android:text="@+id/EditText02" 
+                            android:layout_weight="1" 
+                            android:id="@+id/EditText02" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="50sp"></EditText>
+                        
+                        <TextView 
+                            android:id="@+id/TextView02" 
+                            android:layout_weight="1" 
+                            style="@style/blackOnly" 
+                            android:text="時から" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_weight="1" 
+                            android:id="@+id/EditText03" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="50sp"></EditText>
+                        <TextView 
+                            android:id="@+id/TextView14" 
+                            android:layout_weight="1" 
+                            style="@style/blackOnly" 
+                            android:text="時まで" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:id="@+id/TextView30" 
+                        style="@style/blackOnly" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+
+                <TextView
+                    android:id="@+id/TextView03"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;交代制などの変則的な勤務&gt;" 
+                    style="@style/Ques_title">
+                </TextView>
+                
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/ViewFlipper04">
+                    
+                    <Spinner 
+                        android:id="@+id/Spinner02" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="fill_parent"></Spinner>
+                    
+                    <TextView 
+                        android:id="@+id/TextView32" 
+                        style="@style/blackOnly" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+
+                <TextView
+                    android:id="@+id/TextView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;通勤や仕事に利用する乗り物&gt;" 
+                    style="@style/Ques_title">
+                </TextView>
+                
+                
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/ViewFlipper05">
+                    
+                    <EditText 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText17" 
+                        android:id="@+id/EditText04" 
+                        android:layout_width="fill_parent"></EditText>
+                    
+                    <TextView 
+                        android:id="@+id/TextView35" 
+                        style="@style/blackOnly" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+
+                <TextView
+                    android:id="@+id/TextView40"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;通勤の時間&gt;" 
+                    style="@style/Ques_title">
+                </TextView>
+                
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/ViewFlipper06">
+                    
+                    <LinearLayout 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout17">
+                        
+                        <TextView 
+                            android:id="@+id/TextView44" 
+                            style="@style/blackOnly" 
+                            android:text="片道" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"></TextView>
+                        
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_weight="1" 
+                            android:id="@+id/EditText05" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="75sp"></EditText>
+                        
+                        <TextView 
+                            android:id="@+id/TextView45" 
+                            style="@style/blackOnly" 
+                            android:text="分" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"></TextView>
+                        </LinearLayout>
+                        
+                    <TextView 
+                        android:id="@+id/TextView37" 
+                        style="@style/blackOnly" 
+                        android:text="職業" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+
+            
+            
+            <TextView   
+                style="@style/write_9_title" 
+                android:id="@+id/TextView26" 
+                android:text="妊娠してからの変更点"></TextView>
+            
+            <LinearLayout 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:id="@+id/LinearLayout16" 
+                android:orientation="vertical" 
+                style="@style/write_9_question_box">
+                
+                <HorizontalScrollView 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/horizontalScrollView1" 
+                    android:layout_height="wrap_content">
+                    
+                    <LinearLayout 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/linearLayout5" 
+                        android:orientation="vertical">
+                        
+                        <TableLayout 
+                            android:layout_width="fill_parent" 
+                            android:id="@+id/tableLayout2" 
+                            android:layout_height="wrap_content">
+
+
+                            <TableRow
+                                android:id="@+id/tableRow6"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/TextView04"
+                                    style="@style/blackOnly"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="仕事を休んだ" />
+                                
+                                <ViewFlipper 
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper07">
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout18" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView46" 
+                                            style="@style/blackOnly" 
+                                            android:text="妊娠" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText17" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText06" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="75sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView47" 
+                                            style="@style/blackOnly" 
+                                            android:text="週頃" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:id="@+id/TextView38" 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="職業" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+
+
+                            <TableRow
+                                android:id="@+id/tableRow7"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/TextView50"
+                                    style="@style/blackOnly"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="仕事を変えた" >
+                                </TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper08">
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout19" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView48" 
+                                            style="@style/blackOnly" 
+                                            android:text="妊娠" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText18" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText07" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="75sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView49" 
+                                            style="@style/blackOnly" 
+                                            android:text="週頃" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    <TextView 
+                                        android:id="@+id/TextView62" 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="職業" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow8"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/TextView05"
+                                    style="@style/blackOnly"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="仕事を辞めた" >
+                                </TextView>
+                                <ViewFlipper 
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper09">
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout03" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView07" 
+                                            style="@style/blackOnly" 
+                                            android:text="妊娠" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText18" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText08" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="75sp" ></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView06" 
+                                            style="@style/blackOnly" 
+                                            android:text="週頃" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    <TextView 
+                                        android:id="@+id/TextView63" 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="職業" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow9"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+                                <TextView android:id="@+id/TextView10"
+                                     style="@style/blackOnly" 
+                                     android:text="その他" 
+                                     android:layout_width="wrap_content" 
+                                     android:layout_height="wrap_content"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper10">
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/LinearLayout04" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText18" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText09" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="100sp"></EditText>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:id="@+id/TextView64" 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="職業" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <TextView 
+                style="@style/write_9_title" 
+                android:id="@+id/TextView17" 
+                android:text="産前休業・産後休業"></TextView>
+            
+            <LinearLayout 
+                android:layout_width="fill_parent" 
+                android:id="@+id/LinearLayout02" 
+                android:orientation="vertical" 
+                style="@style/write_9_question_box" 
+                android:layout_height="wrap_content">
+                
+                <HorizontalScrollView 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/horizontalScrollView2" 
+                    android:layout_height="wrap_content">
+                    
+                    <LinearLayout 
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout10" 
+                        android:orientation="vertical">
+                        
+                        <TableLayout 
+                            android:layout_width="fill_parent" 
+                            android:id="@+id/tableLayout3" 
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:id="@+id/tableRow10"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/TextView15"
+                                    style="@style/blackOnly"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="産前休業" >
+                                </TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper11">
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout08" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText10"
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText10" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView13" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="月" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText15" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText11" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView12" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="日から" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText16" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText12" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="75sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView58" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="日間" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:id="@+id/TextView76" 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="産前休業" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow11"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/TextView09"
+                                    style="@style/blackOnly"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="産後休業" >
+                                </TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper12">
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout06" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText13" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText13" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView19" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="月" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText15" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText14" 
+                                            android:layout_height="wrap_content"
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView
+                                            android:id="@+id/TextView11" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="日から" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText16" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText15" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="75sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView08" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="日間" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    <TextView 
+                                        android:id="@+id/TextView65" 
+                                        style="@style/blackOnly"
+                                        android:layout_width="wrap_content" 
+                                        android:text="職業" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            
+            <TextView 
+                style="@style/write_9_title" 
+                android:id="@+id/TextView22" 
+                android:text="育児休業"></TextView>
+            
+            <LinearLayout 
+                android:layout_width="fill_parent" 
+                android:id="@+id/LinearLayout22" 
+                android:orientation="vertical" 
+                style="@style/write_9_question_box" 
+                android:layout_height="wrap_content">
+                
+                <HorizontalScrollView 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/horizontalScrollView3" 
+                    android:layout_height="wrap_content">
+                    
+                    <LinearLayout 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout11" 
+                        android:orientation="vertical">
+                        
+                        <TableLayout 
+                            android:layout_width="fill_parent" 
+                            android:id="@+id/tableLayout4" 
+                            android:layout_height="wrap_content">
+
+                            <TableRow
+                                android:id="@+id/tableRow12"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/TextView27"
+                                    style="@style/blackOnly"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="母親" >
+                                </TextView>
+                                <ViewFlipper 
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper13">
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout09" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText16" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText16" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView
+                                            android:id="@+id/TextView28" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="月" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText17" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText17" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView21" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="日から" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText15" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText18" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView24" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="月" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText19" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText19" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView60" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="日まで" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:id="@+id/TextView66" 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="職業" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+
+                            <TableRow
+                                android:id="@+id/tableRow14"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content" >
+
+                                <TextView
+                                    android:id="@+id/TextView20"
+                                    style="@style/blackOnly"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="父親" >
+                                </TextView>
+                                <ViewFlipper 
+                                    android:layout_width="match_parent" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper14">
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout12" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText20" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText20" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView33" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="月" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText21" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText21" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView31" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="日から" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText15" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText22" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView59" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="月" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:text="@+id/EditText23" 
+                                            android:layout_weight="1" 
+                                            android:id="@+id/EditText23" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50sp"></EditText>
+                                        
+                                        <TextView 
+                                            android:id="@+id/TextView61" 
+                                            android:layout_weight="1" 
+                                            style="@style/blackOnly" 
+                                            android:text="日まで" 
+                                            android:layout_width="wrap_content" 
+                                            android:layout_height="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:id="@+id/TextView68" 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content"
+                                         android:text="職業" 
+                                         android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            
+            <TextView   
+                style="@style/write_9_title" 
+                android:id="@+id/TextView55" 
+                android:text="住居・家族"></TextView>
+
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayout15"
+                style="@style/write_9_question_box"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:id="@+id/TextView36"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;住居の種類&gt;" 
+                    style="@style/Ques_title">
+                </TextView>
+                
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content"
+                     android:id="@+id/ViewFlipper15">
+                    
+                    <LinearLayout 
+                        android:layout_height="fill_parent" 
+                        android:id="@+id/LinearLayout14" 
+                        android:layout_width="fill_parent" 
+                        android:orientation="vertical">
+                        
+                        <Spinner 
+                            android:id="@+id/Spinner03" 
+                            android:layout_weight="1" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="fill_parent"></Spinner>
+                        
+                        <LinearLayout 
+                            android:layout_width="match_parent" 
+                            android:layout_height="wrap_content"
+                            android:id="@+id/linearLayout6">
+                            
+                            <LinearLayout 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="match_parent" 
+                                android:id="@+id/linearLayout3">
+                                
+                                <EditText 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/EditText24" 
+                                    android:layout_weight="1" 
+                                    android:layout_width="50sp" 
+                                    android:text="@+id/EditText24"></EditText>
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_weight="1" 
+                                    android:text="階建" 
+                                    android:id="@+id/TextView54" 
+                                    android:layout_width="wrap_content"></TextView>
+                            </LinearLayout>
+                            
+                            
+                            <LinearLayout 
+                                android:layout_width="match_parent" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/LinearLayout07">
+                                
+                                <EditText 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/EditText25" 
+                                    android:layout_weight="1" 
+                                    android:text="@+id/EditText25" 
+                                    android:layout_width="50sp"></EditText>
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_weight="1" 
+                                    android:text="階" 
+                                    android:id="@+id/TextView51" 
+                                    android:layout_width="wrap_content"></TextView>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:id="@+id/TextView70" 
+                        style="@style/blackOnly" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+
+                <TextView
+                    android:id="@+id/TextView34"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;エレベータの有無&gt;" 
+                    style="@style/Ques_title">
+                </TextView>
+                
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content"
+                    android:id="@+id/ViewFlipper16">
+                    
+                    <Spinner 
+                        android:id="@+id/Spinner04" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="fill_parent"></Spinner>
+                    
+                    <TextView 
+                        android:id="@+id/TextView71" 
+                        style="@style/blackOnly" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+                
+                <TextView 
+                    android:id="@+id/TextView52" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;騒音&gt;" 
+                    style="@style/Ques_title"></TextView>
+                
+                <ViewFlipper 
+                    android:id="@+id/ViewFlipper18" 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content">
+                    
+                    <Spinner 
+                        android:layout_width="fill_parent" 
+                        android:id="@+id/Spinner05" 
+                        android:layout_height="wrap_content"></Spinner>
+                    
+                    <TextView 
+                        android:id="@+id/TextView73" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" style="@style/blackOnly" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView53" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;日当たり&gt;" 
+                    style="@style/Ques_title"></TextView>
+                
+                <ViewFlipper 
+                    android:id="@+id/ViewFlipper19" 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content">
+                    
+                    <Spinner 
+                        android:layout_width="fill_parent" 
+                        android:id="@+id/Spinner06" 
+                        android:layout_height="wrap_content"></Spinner>
+                    
+                    <TextView 
+                        android:id="@+id/TextView74" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+
+                <TextView
+                    android:id="@+id/TextView39"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" 
+                    android:text="&lt;その他&gt;" 
+                    style="@style/Ques_title">
+                </TextView>
+                
+                <ViewFlipper 
+                    android:layout_width="match_parent" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/ViewFlipper17">
+                    
+                    <EditText 
+                        android:text="@+id/EditText26" 
+                        android:id="@+id/EditText26" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="fill_parent"></EditText>
+                    
+                    <TextView 
+                        android:id="@+id/TextView72" 
+                        style="@style/blackOnly" 
+                        android:layout_width="wrap_content" 
+                        android:text="職業" 
+                        android:layout_height="wrap_content"></TextView>
+                </ViewFlipper>
+                
+                <TextView 
+                    android:id="@+id/TextView56" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="fill_parent" 
+                    android:text="&lt;同居&gt;" 
+                    style="@style/Ques_title"></TextView>
+                
+                
+                <ViewFlipper 
+                    android:id="@+id/ViewFlipper20" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="match_parent">
+                    
+                    <TableLayout 
+                        android:id="@+id/tableLayout1" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content">
+                        
+                        <TableRow 
+                            android:id="@+id/tableRow4" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <CheckBox 
+                                android:layout_width="fill_parent" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/CheckBox02" 
+                                android:text="夫" 
+                                style="@style/blackQuestion"></CheckBox>
+                            
+                            <CheckBox 
+                                android:layout_width="fill_parent" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/CheckBox01" 
+                                android:text="子ども" 
+                                style="@style/blackQuestion"></CheckBox>
+                            
+                            <Spinner 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/Spinner07" 
+                                android:layout_height="wrap_content"></Spinner>
+                        </TableRow>
+                        
+                        <TableRow 
+                            android:id="@+id/tableRow2" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <CheckBox 
+                                android:layout_width="fill_parent" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/CheckBox05" 
+                                android:text="実父" 
+                                style="@style/blackQuestion"></CheckBox>
+                            
+                            <CheckBox 
+                                android:layout_width="fill_parent" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/CheckBox06" 
+                                android:text="実母" 
+                                style="@style/blackQuestion"></CheckBox>
+                        </TableRow>
+                        
+                        <TableRow 
+                            android:id="@+id/tableRow1" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <CheckBox 
+                                android:layout_width="fill_parent" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/CheckBox03" 
+                                android:text="夫の父" 
+                                style="@style/blackQuestion"></CheckBox>
+                            
+                            <CheckBox 
+                                android:layout_width="fill_parent" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/CheckBox04" 
+                                android:text="夫の母" 
+                                style="@style/blackQuestion"></CheckBox>
+                        </TableRow>
+                        
+                        <TableRow 
+                            android:id="@+id/tableRow5" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <CheckBox
+                                android:layout_width="fill_parent" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/CheckBox07" 
+                                android:text="その他" 
+                                style="@style/blackQuestion"></CheckBox>
+                            
+                            <EditText 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText27"
+                                android:layout_height="wrap_content" 
+                                android:text="EditText"></EditText>
+                        </TableRow>
+                    </TableLayout>
+                    
+                    
+                    <TextView 
+                        android:id="@+id/TextView75" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        style="@style/blackOnly" android:text="職業"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>

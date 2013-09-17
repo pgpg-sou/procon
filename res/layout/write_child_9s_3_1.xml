@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical" android:background="@drawable/background_pink">
+
+
+<!-- 読込・保存ボタン -->
+    <TextView style="@style/write_9_title" android:id="@+id/write_9s_1_title1" android:text="晩期新生児期【生後1～4週間】の経過"></TextView>
+ <LinearLayout
+         android:layout_height="wrap_content" 
+         android:id="@+id/linearLayout8" 
+         android:layout_width="match_parent" 
+         style="@style/write_9_question_box">
+        
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9s_3_1_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9s_3_1_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9s_3_1_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+    </LinearLayout>
+<!-- 読込・保存ボタン -->
+
+
+
+<ScrollView
+	android:id="@+id/ScrollView01"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+
+			<!-- 日齢 -->
+
+
+			<!-- 体重 -->
+
+
+			<!-- ※生まれた当日は0日。 -->
+			<HorizontalScrollView android:id="@+id/horizontalScrollView1" android:layout_width="wrap_content" android:layout_height="wrap_content">
+				<LinearLayout android:id="@+id/linearLayout1" android:layout_height="fill_parent" android:layout_width="fill_parent" android:orientation="vertical">
+					<TableLayout android:id="@+id/tableLayout1" android:layout_width="wrap_content" android:layout_height="fill_parent">
+						<TableRow android:id="@+id/tableRow1" android:layout_width="wrap_content" android:layout_height="fill_parent">
+							<TextView style="@style/write_9_question" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/write_9s_1_item1" android:text="日齢※"></TextView>
+							<TextView style="@style/write_9_question" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/write_9s_1_item2" android:text="体重(g)"></TextView>
+							<TextView style="@style/write_9_question" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView01" android:text="哺乳力"></TextView>
+							<TextView style="@style/write_9_question" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView02" android:text="栄養法"></TextView>
+							<TextView style="@style/write_9_question" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView03" android:text="その他"></TextView>
+						</TableRow>
+						<TableRow android:layout_width="wrap_content" android:id="@+id/tableRow2" android:layout_height="wrap_content">
+							<!-- 日齢 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_01" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+                            
+                            
+                            <!-- 体重 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_02" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+                            
+                            <!-- 哺乳力 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_03" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+                            
+                            <!-- 栄養法 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_04" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+                            
+                            <!-- その他 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_05" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+						
+						
+						</TableRow>
+						<TableRow android:layout_height="wrap_content" android:id="@+id/TableRow01" android:layout_width="wrap_content">
+							<!-- 日齢 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_06" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+                            
+                            
+                            <!-- 体重 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_07" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+                            
+                            <!-- 哺乳力 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_08" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+                            
+                            <!-- 栄養法 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_09" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+                            
+                            <!-- その他 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_10" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+						
+						</TableRow>
+					</TableLayout>
+					<TextView style="@style/write_9_question" android:layout_width="wrap_content" android:text="※生まれた当日は0日" android:layout_height="wrap_content" android:id="@+id/TextView04"></TextView>
+				</LinearLayout>
+			</HorizontalScrollView>
+
+
+		</LinearLayout>
+
+
+		<!-- 哺乳力 -->
+
+
+
+
+		<!-- 黄疸 -->
+
+
+
+
+		<!-- その他 -->
+
+
+		<!-- 出生時の異常 -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:id="@+id/write_9s_1_item10"
+				style="@style/write_9_question" android:text="指導事項"/>
+			                <!-- その他 -->
+                            <TextView style="@style/blackOnly"  
+                             android:id="@+id/write_child_9s_3_11" 
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:text="----"></TextView>
+		</LinearLayout>
+
+
+
+		<!-- その後の経過中の異常 -->
+
+	</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

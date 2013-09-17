@@ -1,0 +1,881 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:orientation="vertical" android:background="@drawable/background_pink">
+  
+  
+  <!-- 読込・保存ボタン -->
+    <TextView  android:id="@+id/TextView01" style="@style/write_9_title" android:text="予防接種の記録"></TextView>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_width="fill_parent">
+        
+       
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_10_1_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_10_1_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_10_1_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+        
+</LinearLayout>
+    
+    
+    
+    <ScrollView android:layout_height="wrap_content" android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_gravity="top">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/linearLayout4">
+            <TextView  style="@style/write_9_title" android:id="@+id/textView1" android:text="BCG"></TextView>
+            <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/LinearLayout01" android:layout_width="fill_parent" style="@style/write_9_question_box">
+                <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView04" android:layout_width="wrap_content" android:text="接種年月日"></TextView>
+                <LinearLayout android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    
+                    <!-- ○年 -->
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/write_child_10_1_01" 
+                        android:text="----" 
+                        android:layout_width="wrap_content"></TextView>
+                    
+                    
+                    
+                    
+                    <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView01" android:text="@string/write_1_year" android:layout_width="wrap_content"></TextView>
+                   
+                   <!-- ○月 -->
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/write_child_10_1_02" 
+                        android:text="--" 
+                        android:layout_width="wrap_content"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView01" android:text="@string/write_1_month" android:layout_width="wrap_content"></TextView>
+                    
+                    <!-- ○日 -->
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/write_child_10_1_03" 
+                        android:text="--" 
+                        android:layout_width="wrap_content"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView02" android:layout_width="wrap_content" android:text="日"></TextView>
+                </LinearLayout>
+                <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView01" android:layout_width="wrap_content" android:text="ロット"></TextView>
+                
+                <!-- ロット -->
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/write_child_10_1_04" 
+                        android:text="----" 
+                        android:layout_width="wrap_content"></TextView>
+                    
+                <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView09" android:layout_width="wrap_content" android:text="接種者署名"></TextView>
+                
+                <!-- 接種者署名 -->
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/write_child_10_1_05" 
+                        android:text="------" 
+                        android:layout_width="wrap_content"></TextView>
+                    
+                <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView03" android:layout_width="wrap_content" android:text="備考"></TextView>
+                <!-- 備考 -->
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/write_child_10_1_06" 
+                        android:text="--" 
+                        android:layout_width="wrap_content"></TextView>
+                    
+                    
+            </LinearLayout>
+            <TextView  android:id="@+id/TextView06" style="@style/write_9_title" android:text="ジフテリア・百日せき・破傷風"></TextView>
+            <LinearLayout style="@style/write_9_question_box" android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/LinearLayout03">
+                <TextView style="@style/blackOnly"  android:id="@+id/TextView12" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="第1期初回"></TextView>
+                <HorizontalScrollView android:id="@+id/horizontalScrollView1" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="horizontal" android:id="@+id/linearLayout3">
+                        <TableLayout android:id="@+id/tableLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tableRow2">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="時期"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ワクチンの種類"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種年月日"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="メーカー・ロット"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種者署名"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="備考"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tableRow1">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1回"></TextView>
+                                
+                                <!-- ワクチンの種類 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_07" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout02" android:layout_width="wrap_content">
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_07" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView08" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                   
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_08" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView08" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_09" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView07" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_10" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                <!-- ロット摂取者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_11" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_12" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow01">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2回"></TextView>
+                                
+                                <!-- ワクチンの種類 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_13" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout04" android:layout_width="wrap_content">
+                                     <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_14" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView18" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                     <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_15" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView18" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_16" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView19" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_17" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                <!-- ロット摂取者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_18" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_19" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow02">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3回"></TextView>
+                                
+                                
+                                <!-- ワクチンの種類 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_20" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout05" android:layout_width="wrap_content">
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_21" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView22" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_22" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView22" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                     <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_23" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView21" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_24" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                <!-- ロット摂取者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_25" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_26" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow03">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView23" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="追加"></TextView>
+                                <!-- ワクチンの種類 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_27" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout06" android:layout_width="wrap_content">
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_28" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView25" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_29" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView25" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_30" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView24" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_31" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                <!-- ロット摂取者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_32" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_33" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView style="@style/blackOnly"  android:id="@+id/TextView26" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="薬剤などのアレルギー記入欄"></TextView>
+                
+                
+                
+                                <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_34" 
+                                   android:text="----" 
+                                   android:layout_width="wrap_content"></TextView>
+                
+                </LinearLayout>
+            <TextView  android:id="@+id/TextView41" style="@style/write_9_title" android:text="ポリオ・麻しん・風しん"></TextView>
+            <LinearLayout style="@style/write_9_question_box" android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/LinearLayout10">
+                <HorizontalScrollView android:id="@+id/HorizontalScrollView01" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="horizontal" android:id="@+id/LinearLayout11">
+                        <TableLayout android:id="@+id/TableLayout01" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow07">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView32" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ワクチンの種類"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView33" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種年月日"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="メーカー・ロット"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView36" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種者署名"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView31" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="備考"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow08">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView34" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ポリオ"></TextView>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout07" android:layout_width="wrap_content">
+                                    
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_35" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView27" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_36" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView27" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_37" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView28" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_38" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                  <!-- ロット接種者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_39" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_40" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                            
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow04">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView29" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ポリオ"></TextView>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout08" android:layout_width="wrap_content">
+                                     <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_41" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView37" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_42" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView37" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_43" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView35" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_44" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                  <!-- ロット接種者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_45" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_46" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow05">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="麻しん　第1期"></TextView>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout09" android:layout_width="wrap_content">
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_47" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView38" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_48" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView38" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_49" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView39" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_50" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                  <!-- ロット接種者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_51" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_52" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow05">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="風しん　第2期"></TextView>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout09" android:layout_width="wrap_content">
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_53" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView38" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_54" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView38" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_55" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView39" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_56" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                  <!-- ロット接種者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_57" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_58" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <TextView   android:id="@+id/TextView44" android:layout_height="wrap_content" style="@style/write_9_title" android:text="日本脳炎"></TextView>
+            <LinearLayout style="@style/write_9_question_box" android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/LinearLayout12">
+                <TextView style="@style/blackOnly"  android:id="@+id/TextView48" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="第1期初回"></TextView>
+                <HorizontalScrollView android:id="@+id/HorizontalScrollView02" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="horizontal" android:id="@+id/LinearLayout17">
+                        <TableLayout android:id="@+id/TableLayout02" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow11">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView45" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="時期"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView49" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ワクチンの種類"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種年月日"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView46" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="メーカー・ロット"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView53" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種者署名"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView47" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="備考"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow12">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView51" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1回"></TextView>
+                                
+                                <!-- ワクチンの種類 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_59" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout13" android:layout_width="wrap_content">
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_60" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView42" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_61" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView42" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_62" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView43" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_63" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                  <!-- ロット接種者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_64" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_65" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow09">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView52" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2回"></TextView>
+                                <!-- ワクチンの種類 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_66" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout16" android:layout_width="wrap_content">
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_67" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView55" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_68" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView55" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_69" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView54" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_70" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                  <!-- ロット接種者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_71" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_72" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow10">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView56" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="追加"></TextView>
+                                <!-- ワクチンの種類 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_73" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout14" android:layout_width="wrap_content">
+                                    <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_74" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView58" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                   <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_75" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView58" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_76" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView57" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                               <!-- メーカー -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_77" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                  <!-- ロット接種者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_78" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_79" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            
+                            
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView style="@style/blackOnly"  android:id="@+id/TextView59" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="単抗原での予防接種を受けた場合は，それが分かるように備考欄もしくは，その他の予防接種欄に記入してください。"></TextView>
+            </LinearLayout>
+            <TextView  android:id="@+id/TextView60" style="@style/write_9_title" android:text="その他の予防接種"></TextView>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/write_9_question_box" android:id="@+id/LinearLayout19">
+                <HorizontalScrollView android:layout_width="wrap_content" android:id="@+id/HorizontalScrollView03" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/LinearLayout20">
+                        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/TableLayout03">
+                            <TableRow android:layout_height="wrap_content" android:id="@+id/TableRow13" android:layout_width="wrap_content">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView77" android:text="ワクチンの種類" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView68" android:text="接種年月日" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView63" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="年齢"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView64" android:text="メーカー・ロット" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView73" android:text="接種者署名" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView65" android:text="備考" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_height="wrap_content" android:id="@+id/TableRow06" android:layout_width="wrap_content">
+                               
+                               <!-- ワクチンの種類 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_80" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                
+                                <LinearLayout android:id="@+id/linearLayout5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                     <!-- ○年 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_81" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView66" android:text="年" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                    
+                                    
+                                    <!-- ○月 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_81" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView62" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="月"></TextView>
+                                    <!-- ○日 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_82" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView70" android:text="日" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                </LinearLayout>
+                                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/LinearLayout15">
+                                    <!-- 年齢 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_83" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView69" android:text="歳" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                </LinearLayout>
+                                <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_84" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                
+                                  <!-- ロット接種者署名 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_85" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                                  
+                                  <!-- 備考 -->
+                                  <TextView style="@style/blackOnly"  
+                                   android:layout_height="wrap_content" 
+                                   android:id="@+id/write_child_10_1_86" 
+                                   android:text="--" 
+                                   android:layout_width="wrap_content"></TextView>
+                            
+                            
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>

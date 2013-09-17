@@ -1,0 +1,376 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/background_pink">
+
+<!-- 読込・保存ボタン -->
+    <TextView style="@style/write_9_title" android:text="@string/write_9_12_title" android:id="@+id/write_9_12_title"></TextView>
+<LinearLayout
+         android:layout_height="wrap_content" 
+         android:id="@+id/linearLayout8" 
+         android:layout_width="match_parent" 
+         style="@style/write_9_question_box">
+        
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9_12_1_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9_12_1_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9_12_1_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+    </LinearLayout>
+<!-- 読込・保存ボタン -->
+
+
+
+<ScrollView
+	android:id="@+id/ScrollView01"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<!-- ６歳の頃 -->
+
+		<LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  style="@style/write_9_question_box" android:baselineAligned="false" android:orientation="vertical">
+			<TextView style="@style/write_9_question" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView01" android:text="記録日"></TextView>
+
+			<LinearLayout
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:orientation="horizontal">
+				<!-- ○年 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_01" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+                  
+				<TextView
+					android:text="@string/write_year"
+					android:id="@+id/write_year"
+					style="@style/write_9_question"/>
+				<!-- ○月 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_02" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+				<TextView
+					android:text="@string/write_month"
+					android:id="@+id/write_month"
+					style="@style/write_9_question" />
+				<!-- ○日 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_03" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+				<TextView
+					android:id="@+id/write_datekiroku"
+					style="@style/write_9_question" android:text="日"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+
+
+		<LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  android:orientation="vertical"
+		  style="@style/write_9_question_box">
+
+			<LinearLayout
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:orientation="horizontal">
+				<!-- ○年 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_04" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+				<TextView
+					android:text="@string/write_year"
+					android:id="@+id/write_year"
+					style="@style/write_9_question"/>
+				<!-- ○月 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_05" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+
+				
+				<TextView
+					android:text="@string/write_month"
+					android:id="@+id/write_month"
+					style="@style/write_9_question" />
+				
+				<!-- ○日 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_06" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+				
+				<TextView
+					android:text="@string/write_date"
+					android:id="@+id/write_date"
+					style="@style/write_9_question"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:text="@string/write_9_12_item1"
+				android:id="@+id/write_9_12_item1"
+				style="@style/write_9_question"/>
+
+		</LinearLayout>
+
+
+		<!-- 質問１ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q1"
+				android:id="@+id/write_9_12_q1"
+				style="@style/write_9_question"/>
+			
+			<!-- 片足で5～10秒間立っていられますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_07" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+                  
+		</LinearLayout>
+
+
+
+		<!-- 質問２ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q2"
+				android:id="@+id/write_9_12_q2"
+				style="@style/write_9_question"/>
+			
+			<!-- 四角の形をまねて，書けますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_08" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+			
+		</LinearLayout>
+
+
+
+		<!-- 質問３ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q3"
+				android:id="@+id/write_9_12_q3"
+				style="@style/write_9_question"/>
+			
+			<!-- 自分の「前後」「左右」がおおよそわかりますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_09" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+			
+		</LinearLayout>
+
+
+
+
+		<!-- 質問４ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q4"
+				android:id="@+id/write_9_12_q4"
+				style="@style/write_9_question"/>
+			<!-- ひらがなの自分の名前を読んだり，書いたりできますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_10" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+
+
+
+		<!-- 質問５ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q5"
+				android:id="@+id/write_9_12_q5"
+				style="@style/write_9_question"/>
+			<!-- おもちゃやお菓子などをほしくても我慢できるようになりますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_11" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+
+
+		<!-- 質問６ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q6"
+				android:id="@+id/write_9_12_q6"
+				style="@style/write_9_question"/>
+			<!-- 約束やルールを守って遊べますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_12" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+
+
+		<!-- 質問７ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q7"
+				android:id="@+id/write_9_12_q7"
+				style="@style/write_9_question"/>
+			<!-- 6歳臼歯(乳歯列の奥に生える永久歯)は生えましたか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_13" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+
+
+		<!-- 質問８ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q8"
+				android:id="@+id/write_9_12_q8"
+				style="@style/write_9_question"/>
+			<!-- 保護者が歯の仕上げみがきをしてあげていますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_14" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+
+
+		<!-- 質問９ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q9"
+				android:id="@+id/write_9_12_q9"
+				style="@style/write_9_question"/>
+			<!-- 朝食を毎日食べますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_15" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+
+		<!-- 質問１０ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_12_q10"
+				android:id="@+id/write_9_12_q10"
+				style="@style/write_9_question"/>
+			<!-- 育児の心配，かかった病気，感想などを自由に記入してください -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_12_16" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
+

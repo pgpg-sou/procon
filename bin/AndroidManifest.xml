@@ -1,0 +1,258 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dneshiboshiken"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="16" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/tile_bg"
+        android:label="@string/app_name"
+        android:uiOptions="none"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.dneshiboshiken.MainActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity android:name=".XmlMyFunc"></activity>
+
+     <activity android:name=".ViewControlMyFunc"></activity>
+
+     <activity android:name=".EMCHH"></activity>
+     <activity android:name=".IndexRead"></activity>
+     <activity android:name=".IndexWrite"></activity>
+     <activity android:name=".IndexWrite_0"></activity>
+     <activity android:name=".IndexWrite_pregnant"></activity>
+     <activity android:name=".IndexWrite_child"></activity>
+     <activity android:name=".android.denshiboshi.Write_child_14"></activity>
+     <activity android:name=".Write_child_9_index"></activity>
+     <activity android:name=".Write_child_9s_index"></activity>
+     <activity android:name=".Schedule"></activity>
+     <activity android:name=".CalendarMode"></activity>
+     <activity android:name=".Share"></activity>
+
+
+
+    <activity android:name=".Read1"></activity>
+    <activity android:name=".Read2"></activity>
+    <activity android:name=".Read3"></activity>
+    <activity android:name=".Read4"></activity>
+    <activity android:name=".Read5"></activity>
+    <activity android:name=".Read5no1"></activity>
+    <activity android:name=".Read5no2"></activity>
+    <activity android:name=".Read5no3"></activity>
+    <activity android:name=".Read5no4"></activity>
+    <activity android:name=".Read5no5"></activity>
+    <activity android:name=".Read5no6"></activity>
+    <activity android:name=".Read5no7"></activity>
+    <activity android:name=".Read6"></activity>
+    <activity android:name=".Read7"></activity>
+    <activity android:name=".Read8"></activity>
+    <activity android:name=".Read9_1"></activity>
+    <activity android:name=".Read9"></activity>
+    <activity android:name=".Read10_0"></activity>
+    <activity android:name=".Read10_3"></activity>
+    <activity android:name=".Read10"></activity>
+    <activity android:name=".Read11"></activity>
+    <activity android:name=".Read12no1"></activity>
+    <activity android:name=".Read12no2"></activity>
+    <activity android:name=".Read12no3"></activity>
+    <activity android:name=".Read18index3"></activity>
+    <activity android:name=".Read18_1"></activity>
+    <activity android:name=".Read18_2"></activity>
+
+
+
+    <activity android:name=".Write1"></activity>
+    <activity android:name=".Write2"></activity>
+    <activity android:name=".Write3"></activity>
+    <activity android:name=".Write4"></activity>
+    <activity android:name=".Write_0_11"></activity>
+    <activity android:name=".Write_0_21"></activity>
+    <activity android:name=".Write_0_31"></activity>
+    <activity android:name=".Write_0_41"></activity>
+    <activity android:name=".Write_0_51"></activity>
+
+
+    <activity android:name=".Write_pregnant_41"></activity>
+    <activity android:name=".Write_pregnant_42"></activity>
+    <activity android:name=".Write_pregnant_51"></activity>
+    <activity android:name=".Write_pregnant_52"></activity>
+    <activity android:name=".Write_pregnant_61"></activity>
+    <activity android:name=".Write_pregnant_62"></activity>
+    <activity android:name=".Write_pregnant_71"></activity>
+    <activity android:name=".Write_pregnant_72"></activity>
+    <activity android:name=".Write_pregnant_81"></activity>
+    <activity android:name=".Write_pregnant_82"></activity>
+
+
+    <activity android:name=".Write_child_9_1_1"></activity>
+    <activity android:name=".Write_child_9_1_2"></activity>
+    <activity android:name=".Write_child_9_2_1"></activity>
+    <activity android:name=".Write_child_9_2_2"></activity>
+    <activity android:name=".Write_child_9_3_1"></activity>
+    <activity android:name=".Write_child_9_3_2"></activity>
+    <activity android:name=".Write_child_9_4_1"></activity>
+    <activity android:name=".Write_child_9_4_2"></activity>
+    <activity android:name=".Write_child_9_5_1"></activity>
+    <activity android:name=".Write_child_9_5_2"></activity>
+    <activity android:name=".Write_child_9_6_1"></activity>
+    <activity android:name=".Write_child_9_6_2"></activity>
+    <activity android:name=".Write_child_9_7_1"></activity>
+    <activity android:name=".Write_child_9_7_2"></activity>
+    <activity android:name=".Write_child_9_8_1"></activity>
+    <activity android:name=".Write_child_9_8_2"></activity>
+    <activity android:name=".Write_child_9_9_1"></activity>
+    <activity android:name=".Write_child_9_9_2"></activity>
+    <activity android:name=".Write_child_9_10_1"></activity>
+    <activity android:name=".Write_child_9_10_2"></activity>
+    <activity android:name=".Write_child_9_11_1"></activity>
+    <activity android:name=".Write_child_9_11_2"></activity>
+    <activity android:name=".Write_child_9_12_1"></activity>
+    <activity android:name=".Write_child_9_12_2"></activity>
+
+
+
+
+
+    <activity android:name=".Write_child_9s_1_1"></activity>
+    <activity android:name=".Write_child_9s_1_2"></activity>
+    <activity android:name=".Write_child_9s_2_1"></activity>
+    <activity android:name=".Write_child_9s_2_2"></activity>
+    <activity android:name=".Write_child_9s_3_1"></activity>
+    <activity android:name=".Write_child_9s_3_2"></activity>
+    <activity android:name=".Write_child_9s_4_1"></activity>
+    <activity android:name=".Write_child_9s_4_2"></activity>
+    <activity android:name=".Write_child_9s_5_1"></activity>
+    <activity android:name=".Write_child_9s_5_2"></activity>
+    <activity android:name=".Write_child_9s_6_1"></activity>
+    <activity android:name=".Write_child_9s_6_2"></activity>
+    <activity android:name=".Write_child_9s_7_1"></activity>
+    <activity android:name=".Write_child_9s_7_2"></activity>
+    <activity android:name=".Write_child_9s_8_1"></activity>
+    <activity android:name=".Write_child_9s_8_2"></activity>
+    <activity android:name=".Write_child_9s_9_1"></activity>
+    <activity android:name=".Write_child_9s_9_2"></activity>
+    <activity android:name=".Write_child_9s_10_1"></activity>
+    <activity android:name=".Write_child_9s_10_2"></activity>
+    <activity android:name=".Write_child_9s_11_1"></activity>
+    <activity android:name=".Write_child_9s_11_2"></activity>
+    <activity android:name=".Write_child_9s_12_1"></activity>
+    <activity android:name=".Write_child_9s_12_2"></activity>
+　　<activity android:name=".Write_child_9s_13_1"></activity>
+    <activity android:name=".Write_child_9s_13_2"></activity>
+    <activity android:name=".Write_child_9s_14_1"></activity>
+    <activity android:name=".Write_child_9s_14_2"></activity>
+
+    <activity android:name=".Write_child_10_1"></activity>
+    <activity android:name=".Write_child_10_2"></activity>
+    <activity android:name=".Write_child_11_1"></activity>
+    <activity android:name=".Write_child_11_2"></activity>
+    <activity android:name=".Write_child_12_1"></activity>
+    <activity android:name=".Write_child_12_2"></activity>
+    <activity android:name=".Write_child_13_1"></activity>
+    <activity android:name=".Write_child_13_2"></activity>
+    <activity android:name=".Write_child_14"></activity>
+
+    <activity android:name=".SearchActivity"></activity>
+    <activity android:name=".YahooActivity"></activity>
+    <activity android:name=".IndexActivity"></activity>
+	<activity android:name=".WriteActivity"></activity>
+	<activity android:name=".WriteCheckup"></activity>
+	<activity android:name=".WriteCheckup_0"></activity>
+	<activity android:name=".WriteCheckup_0p"></activity>
+	<activity android:name=".WriteCheckup_1"></activity>
+	<activity android:name=".WriteCheckup_1p"></activity>
+	<activity android:name=".WriteCheckup_2"></activity>
+	<activity android:name=".WriteCheckup_2p"></activity>
+	<activity android:name=".WriteCheckup_3"></activity>
+	<activity android:name=".WriteCheckup_3p"></activity>
+	<activity android:name=".WriteCheckup_4"></activity>
+	<activity android:name=".WriteCheckup_4p"></activity>
+	<activity android:name=".WriteCheckup_5"></activity>
+	<activity android:name=".WriteCheckup_5p"></activity>
+	<activity android:name=".WriteCheckup_6"></activity>
+	<activity android:name=".WriteCheckup_6p"></activity>
+	<activity android:name=".WriteCheckup_7"></activity>
+	<activity android:name=".WriteCheckup_8"></activity>
+	<activity android:name=".WriteCheckup_9"></activity>
+	<activity android:name=".WriteCheckup_10"></activity>
+	<activity android:name=".WriteCheckup_11"></activity>
+	<activity android:name=".WriteCheckup_12"></activity>
+	<activity android:name=".WriteCheckup_13"></activity>
+	<activity android:name=".WriteCheckup_7p"></activity>
+	<activity android:name=".WriteCheckup_8p"></activity>
+	<activity android:name=".WriteCheckup_9p"></activity>
+	<activity android:name=".WriteCheckup_10p"></activity>
+	<activity android:name=".WriteCheckup_11p"></activity>
+	<activity android:name=".WriteCheckup_12p"></activity>
+	<activity android:name=".WriteCheckup_13p"></activity>
+
+	<activity android:name=".immunization_main"></activity>
+
+	<activity android:name=".PregnancyActivity"></activity>
+	<activity android:name=".pregnancy_write"></activity>
+	<activity android:name=".pregnancy_write_edit"></activity>
+	<activity android:name=".pregnancy_write_health"></activity>
+	<activity android:name=".pregnancy_write_healthp"></activity>
+	<activity android:name=".pregnancy_inspection_record"></activity>
+	<activity android:name=".pregnancy_inspection_recordp"></activity>
+	<activity android:name=".pregnancy_parenting_class_record"></activity>
+	<activity android:name=".pregnancy_parenting_class_recordp"></activity>
+	<activity android:name=".pregnancy_teeth_report"></activity>
+	<activity android:name=".pregnancy_teeth_reportp"></activity>
+	<activity android:name=".pregnancy_parenting_record_of_delivery"></activity>
+	<activity android:name=".pregnancy_parenting_record_of_deliveryp"></activity>
+	<activity android:name=".pregnancy_about_parents"></activity>
+	<activity android:name=".pregnancy_about_parentsp"></activity>
+	<activity android:name=".pregnancy_birth_registration"></activity>
+	<activity android:name=".pregnancy_birth_registrationp"></activity>
+
+	<activity android:name=".immunization_b"></activity>pregnancy_teeth_reportp
+	<activity android:name=".immunization_bcg"></activity>
+    <activity android:name=".immunization_dpt"></activity>
+    <activity android:name=".immunization_dt"></activity>
+    <activity android:name=".immunization_hib"></activity>
+    <activity android:name=".immunization_hpv"></activity>
+    <activity android:name=".immunization_japan"></activity>
+	<activity android:name=".immunization_mr"></activity>
+	<activity android:name=".immunization_mumps"></activity>
+	<activity android:name=".immunization_seven"></activity>
+	<activity android:name=".immunization_varicella"></activity>
+	<activity android:name=".immunization_save"></activity>
+	<activity android:name=".immunization_save2"></activity>
+	
+	<activity android:name=".write_condition"></activity>
+	<activity android:name=".write_condition_0"></activity>
+	<activity android:name=".write_condition_0p"></activity>
+
+	<activity android:name=".Album_Main"></activity>
+	<activity android:name=".Album_ShowDetails"></activity>
+	<activity android:name=".Album_ShowList"></activity>
+
+	<activity android:name=".diary_main"></activity>
+	<activity android:name=".diary_mainp"></activity>
+	<activity android:name="calendar"></activity>
+	<activity android:name="DetailData"></activity>
+
+    </application>
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+	<uses-permission android:name="android.permission.CAMERA" />
+	<uses-permission android:name="android.permission.RECORD_AUDIO" />
+	<uses-feature android:name="android.hardware.camera" android:required="false" />
+	<uses-feature android:name="android.hardware.camera.autofocus" />
+
+</manifest>

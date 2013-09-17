@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical" android:background="@drawable/background_pink">
+
+<!-- 生後4週間まで -->
+        <TextView
+            android:text="@string/write_9_1_title"
+            android:id="@+id/write_9_1_title"
+            style="@style/write_9_title" />
+
+
+<LinearLayout
+             android:layout_height="wrap_content"
+             android:id="@+id/linearLayout8"
+             android:layout_width="match_parent"
+             style="@style/write_9_question_box">
+
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/ButtonSave_write_child_9_1_2"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="編集する"></Button>
+
+        <Button
+            android:layout_height="wrap_content"
+            android:id="@+id/ButtonCancel_write_child_9_1_2"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:text="キャンセル"></Button>
+    </LinearLayout>
+
+
+
+<ScrollView
+	android:id="@+id/ScrollView01"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+
+
+
+		<!-- 体重・身長・胸囲・頭囲 -->
+		<LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  android:orientation="vertical"
+		  style="@style/write_9_question_box">
+
+			<TextView
+				android:id="@+id/write_9_1_item1"
+				style="@style/write_9_question" android:text="生まれたときの状態"/>
+
+			<TextView
+				android:text="@string/write_9_1_item2"
+				android:id="@+id/write_9_1_item2"
+				style="@style/write_9_question"/>
+
+
+			<LinearLayout
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:orientation="horizontal">
+
+				<TextView
+					android:text="@string/write_weight"
+					android:id="@+id/write_weight"
+					style="@style/write_9_question"
+					android:layout_weight="1"/>
+
+				<EditText
+					style="@style/write_9s_edittext"
+					android:id="@+id/EditText_write_child_9_1_2_01"
+					android:text="@+id/EditText_write_child_9_1_2_01" />
+
+				<TextView
+					android:text="@string/write_g"
+					android:id="@+id/write_g"
+					android:layout_width="wrap_content"
+					style="@style/write_9_question"
+					android:layout_weight="1"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:text="@string/write_height"
+					android:id="@+id/write_height"
+					style="@style/write_9_question"/>
+
+
+				<EditText
+				    android:id="@+id/EditText_write_child_9_1_2_02"
+				    android:text="@+id/EditText_write_child_9_1_2_02"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    style="@style/write_9s_edittext"></EditText>
+
+				<TextView
+					android:text="@string/write_cm"
+					android:id="@+id/write_cm"
+					android:layout_width="wrap_content"
+					style="@style/write_9_question"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:orientation="horizontal">
+
+				<TextView
+					android:text="@string/write_chest"
+					android:id="@+id/write_chest"
+					style="@style/write_9_question"/>
+
+				<EditText
+				    android:text="@+id/EditText_write_child_9_1_2_03"
+				    android:id="@+id/EditText_write_child_9_1_2_03"
+				    android:layout_width="wrap_content"
+				    style="@style/write_9s_edittext"
+				    android:layout_height="wrap_content"></EditText>
+
+				<TextView
+					android:text="@string/write_cm"
+					android:id="@+id/write_cm"
+					android:layout_width="wrap_content"
+					style="@style/write_9_question"/>
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:text="@string/write_head"
+					android:id="@+id/write_head"
+					style="@style/write_9_question"/>
+
+				<EditText android:text="@+id/EditText_write_child_9_1_2_04"
+				    android:id="@+id/EditText_write_child_9_1_2_04"
+				    android:layout_width="wrap_content"
+				    style="@style/write_9s_edittext"
+				    android:layout_height="wrap_content"></EditText>
+
+				<TextView
+					android:text="@string/write_cm"
+					android:id="@+id/write_cm"
+					android:layout_width="wrap_content"
+					style="@style/write_9_question"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+
+		<!-- 質問１ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:id="@+id/write_9_1_q1_1"
+				style="@style/write_9_question" android:text="赤ちゃんに初めてお乳を飲ませたのは"/>
+
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+
+				<TextView
+					android:text="@string/write_9_1_q1_2"
+					android:id="@+id/write_9_1_q1_2"
+					android:layout_width="wrap_content"
+					style="@style/write_9_question"/>
+
+				<EditText android:text="@+id/EditText_write_child_9_1_2_05"
+				    android:id="@+id/EditText_write_child_9_1_2_05"
+				    android:layout_width="wrap_content"
+				    style="@style/write_9s_edittext"
+				    android:layout_height="wrap_content"></EditText>
+
+				<TextView
+					android:id="@+id/write_9_1_q1_3"
+					android:layout_width="wrap_content"
+					style="@style/write_9_question" android:text="時間目"/>
+
+			</LinearLayout>
+		</LinearLayout>
+
+
+
+
+		<!-- 質問２ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:id="@+id/write_9_1_q2_1"
+				style="@style/write_9_question" android:text="そのとき，与えたお乳は"/>
+			<Spinner android:id="@+id/Spinner01" android:layout_width="fill_parent" android:layout_height="wrap_content"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問３ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:id="@+id/write_9_1_q3"
+				style="@style/write_9_question" android:text="先天性代謝異常等審査を受けましたか。"/>
+			<Spinner android:id="@+id/Spinner02" android:layout_width="fill_parent" android:layout_height="wrap_content"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問４ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_1_q4"
+				android:id="@+id/write_9_1_q4"
+				style="@style/write_9_question"/>
+
+			<EditText android:text="@+id/EditText_write_child_9_1_2_06"
+			    android:id="@+id/EditText_write_child_9_1_2_06"
+			    android:layout_width="wrap_content"
+			    style="@style/write_9s_edittext"
+			    android:layout_height="wrap_content"></EditText>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
+
+
+<!-- edittext 1～9 -->

@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical" android:background="@drawable/background_pink">
+
+
+    <TextView style="@style/write_9_title" android:text="@string/write_9_9_title" android:id="@+id/write_9_8_title"></TextView>
+<LinearLayout
+             android:layout_height="wrap_content" 
+             android:id="@+id/linearLayout8" 
+             android:layout_width="match_parent" 
+             style="@style/write_9_question_box">
+             
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonLock" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="編集する"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content"
+             android:id="@+id/ButtonUnlock" 
+             android:layout_width="wrap_content" 
+             android:layout_weight="1" 
+             android:text="編集終了"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonCancel" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="キャンセル"></Button>
+    </LinearLayout>
+
+<ScrollView
+	android:id="@+id/ScrollView01"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<!-- ３歳の頃 -->
+		<LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  style="@style/write_9_question_box" android:orientation="vertical">
+			<TextView style="@style/write_9_question" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView01" android:text="記録日"></TextView>
+
+			<LinearLayout
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:orientation="horizontal">
+			  
+				<EditText android:id="@+id/EditText_write_child_9_9_2_01" 
+				    android:text="@+id/EditText_write_child_9_9_2_01" 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"></EditText>
+
+				<TextView
+					android:text="@string/write_year"
+					android:id="@+id/write_year"
+					style="@style/write_9_question"/>
+				
+				<EditText android:id="@+id/EditText_write_child_9_9_2_02" 
+				    android:text="@+id/EditText_write_child_9_9_2_02" 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"></EditText>
+
+				<TextView
+					android:text="@string/write_month"
+					android:id="@+id/write_month"
+					style="@style/write_9_question" />
+				
+				<EditText android:id="@+id/EditText_write_child_9_9_2_03" 
+				    android:text="@+id/EditText_write_child_9_9_2_03" 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"></EditText>
+
+				<TextView
+					android:id="@+id/write_datekiroku"
+					style="@style/write_9_question" android:text="日"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+
+
+		<LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  android:orientation="vertical"
+		  style="@style/write_9_question_box">
+
+			<LinearLayout
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:orientation="horizontal">
+				
+				<EditText android:id="@+id/EditText_write_child_9_9_2_04" 
+				    android:text="@+id/EditText_write_child_9_9_2_04" 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"></EditText>
+
+				<TextView
+					android:text="@string/write_year"
+					android:id="@+id/write_year"
+					style="@style/write_9_question"/>
+				
+				<EditText android:id="@+id/EditText_write_child_9_9_2_05" 
+				    android:text="@+id/EditText_write_child_9_9_2_05" 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"></EditText>
+
+				<TextView
+					android:text="@string/write_month"
+					android:id="@+id/write_month"
+					style="@style/write_9_question" />
+				
+				<EditText android:id="@+id/EditText_write_child_9_9_2_06" 
+				    android:text="@+id/EditText_write_child_9_9_2_06" 
+				    android:layout_height="wrap_content" 
+				    android:layout_width="wrap_content"></EditText>
+
+				<TextView
+					android:text="@string/write_date"
+					android:id="@+id/write_date"
+					style="@style/write_9_question"/>
+
+			</LinearLayout>
+
+			<TextView
+				android:text="@string/write_9_9_item1"
+				android:id="@+id/write_9_9_item1"
+				style="@style/write_9_question"/>
+
+		</LinearLayout>
+
+
+		<!-- 質問１ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q1"
+				android:id="@+id/write_9_9_q1"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner01" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問２ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q2"
+				android:id="@+id/write_9_9_q2"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner02" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問３ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q3"
+				android:id="@+id/write_9_9_q3"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner03" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+
+		<!-- 質問４ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+			
+			<TextView
+				android:text="@string/write_9_9_q4"
+				android:id="@+id/write_9_9_q4"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner04" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+
+		<!-- 質問５ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q5"
+				android:id="@+id/write_9_9_q5"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner05" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問６ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q6"
+				android:id="@+id/write_9_9_q6"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner06" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問７ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q7"
+				android:id="@+id/write_9_9_q7"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner07" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問８ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q8"
+				android:id="@+id/write_9_9_q8"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner08" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問９ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q9"
+				android:id="@+id/write_9_9_q9"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner09" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問１０ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q10"
+				android:id="@+id/write_9_9_q10"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner10" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問１１ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q11"
+				android:id="@+id/write_9_9_q11"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner11" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問１２ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q12"
+				android:id="@+id/write_9_9_q12"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner12" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問１３ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q13"
+				android:id="@+id/write_9_9_q13"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner13" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問１３ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q14"
+				android:id="@+id/write_9_9_q14"
+				style="@style/write_9_question"/>
+			<Spinner android:layout_height="wrap_content" android:id="@+id/Spinner14" android:layout_width="fill_parent"></Spinner>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問１５ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_9_q15"
+				android:id="@+id/write_9_9_q15"
+				style="@style/write_9_question"/>
+			
+			<EditText android:id="@+id/EditText_write_child_9_9_2_07" 
+			    android:text="@+id/EditText_write_child_9_9_2_07" 
+			    android:layout_height="wrap_content" 
+			    android:layout_width="wrap_content"></EditText>
+
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
+

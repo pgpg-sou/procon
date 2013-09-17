@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content" 
+  android:orientation="vertical" 
+  android:background="@drawable/background_pink">
+  
+    
+    
+  <!-- 読込・保存ボタン -->
+    <TextView android:id="@+id/TextView01" 
+        style="@style/write_9_title" 
+        android:text="妊娠中と産後の歯の状態"></TextView>
+    
+    
+<LinearLayout
+         android:layout_height="wrap_content" 
+         android:id="@+id/linearLayout8" 
+         android:layout_width="match_parent" 
+         style="@style/write_9_question_box">
+        
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_71_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_71_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_71_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+    </LinearLayout>
+    
+    
+    
+    <ScrollView android:layout_height="wrap_content" 
+        android:id="@+id/scrollView1" 
+        android:layout_width="fill_parent" 
+        android:layout_gravity="top">
+        
+        <LinearLayout android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:orientation="vertical" 
+            android:id="@+id/linearLayout4">
+            
+            
+            <TextView  android:id="@+id/TextView04" 
+                style="@style/write_9_title" 
+                android:text="初回診察"></TextView>
+            
+            <LinearLayout android:layout_height="wrap_content" 
+                android:orientation="vertical" 
+                android:id="@+id/LinearLayout01" 
+                android:layout_width="fill_parent" 
+                style="@style/write_9_question_box">
+                
+                <LinearLayout android:layout_height="fill_parent" 
+                    android:id="@+id/LinearLayout03" 
+                    android:layout_width="wrap_content">
+                    <!-- ○年 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_01" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/TextView03" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="年"></TextView>
+                    
+                    <!-- ○月 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_02" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/TextView05" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="月"></TextView>
+                    
+                    <!-- ○日 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_03" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/TextView06" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="日検診"></TextView>
+                </LinearLayout>
+                
+                
+                <LinearLayout android:layout_height="fill_parent" 
+                    android:id="@+id/LinearLayout07" 
+                    android:layout_width="wrap_content">
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/textView1" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="妊娠"></TextView>
+                    
+                    <!-- 妊娠○週 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_04" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/TextView14" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="週"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView34" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="むし歯"></TextView>
+                
+                <TableLayout android:layout_height="wrap_content" 
+                    android:layout_width="fill_parent" 
+                    android:id="@+id/tableLayout2">
+                    
+                    <TableRow android:id="@+id/tableRow2" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content">
+                        
+                        <TextView style="@style/blackOnly"  
+                            android:id="@+id/TextView02" 
+                            android:text="処置歯" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"></TextView>
+                        
+                        <!-- ○本 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_05" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                        
+                        <TextView style="@style/blackOnly"  
+                            android:id="@+id/TextView35" 
+                            android:text="本" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"></TextView>
+                    </TableRow>
+                    
+                    
+                    <TableRow android:id="@+id/TableRow06" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content">
+                        
+                        <TextView style="@style/blackOnly"  
+                            android:id="@+id/TextView37" 
+                            android:text="未処理歯" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"></TextView>
+                        
+                        
+                        <!-- ○本 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_06" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                        
+                        
+                        <TextView style="@style/blackOnly"  
+                            android:id="@+id/TextView36" 
+                            android:text="本" android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content"></TextView>
+                    </TableRow>
+                </TableLayout>
+                
+                
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView38" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="歯石"></TextView>
+                
+                
+                <!-- 歯石 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_07" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView39" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="歯周疾患"></TextView>
+                
+                
+               <!-- 歯肉炎 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_08" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <!-- 歯周病 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_09" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <TextView style="@style/blackOnly" 
+                     android:id="@+id/TextView10" 
+                     android:layout_height="wrap_content" 
+                     android:layout_width="wrap_content" 
+                     android:text="その他"></TextView>
+                
+                <!-- その他 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_10" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView40" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="指導メモ"></TextView>
+                
+                
+                <!-- 指導メモ -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_11" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView08" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="施設名または歯科医師名"></TextView>
+                
+                <!-- 施設名または歯科医師名 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_12" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+            </LinearLayout>
+            
+            <TextView  android:id="@+id/TextView42" 
+                style="@style/write_9_title" 
+                android:text="二回目以降"></TextView>
+            
+            <LinearLayout android:id="@+id/LinearLayout08" 
+                android:orientation="vertical" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                style="@style/write_9_question_box">
+                
+                <LinearLayout android:id="@+id/LinearLayout06" 
+                    android:layout_height="fill_parent" 
+                    android:layout_width="wrap_content">
+                    
+                    <!-- ○年 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_13" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/TextView57" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="年"></TextView>
+                    
+                    <!-- ○月 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_14" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/TextView45" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="月"></TextView>
+                    
+                    <!-- ○日 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_15" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/TextView44" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="日診査"></TextView>
+                </LinearLayout>
+                
+                <LinearLayout android:id="@+id/LinearLayout09" 
+                    android:layout_height="fill_parent" 
+                    android:layout_width="wrap_content">
+                    
+                    <!-- 妊娠・産後スピナー -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_16" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    <!-- ○週 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_17" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/TextView46" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="週"></TextView>
+                </LinearLayout>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView53" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="歯石"></TextView>
+                
+                <!-- 歯石 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_18" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView52" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="歯周疾患"></TextView>
+                
+                <!-- 歯肉炎 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_19" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <!-- 歯周病 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_20" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView48" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="歯の状態"></TextView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView41" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="歯の状態記号：未処置う歯C　健全歯/　喪失歯△　処置歯○"></TextView>
+                
+                <HorizontalScrollView android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/horizontalScrollView1">
+                    
+                    <LinearLayout android:id="@+id/linearLayout2" 
+                        android:orientation="horizontal" 
+                        android:layout_height="fill_parent" 
+                        android:layout_width="fill_parent" 
+                        style="@style/write_9_question_box">
+                        
+                        <TableLayout android:layout_height="fill_parent" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/tableLayout1">
+                            
+                            <TableRow android:id="@+id/TableRow02" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView27" 
+                                    android:gravity="center" 
+                                    android:text="8" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView27" 
+                                    android:gravity="center" 
+                                    android:text="7" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView27" 
+                                    android:gravity="center" 
+                                    android:text="6" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView33" 
+                                    android:gravity="center" 
+                                    android:text="5" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView30" 
+                                    android:gravity="center" 
+                                    android:text="4" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView25" 
+                                    android:gravity="center" 
+                                    android:text="3" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly" 
+                                     android:id="@+id/TextView31" 
+                                     android:gravity="center" 
+                                     android:text="2" 
+                                     android:layout_width="wrap_content" 
+                                     android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView29" 
+                                    android:gravity="center" 
+                                    android:text="1" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView32" 
+                                    android:gravity="center" 
+                                    android:text="1"
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView28" 
+                                    android:gravity="center" 
+                                    android:text="2" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView24" 
+                                    android:gravity="center" 
+                                    android:text="3" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView26" 
+                                    android:gravity="center" 
+                                    android:text="4" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView27" 
+                                    android:gravity="center" 
+                                    android:text="5" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView33" 
+                                    android:gravity="center" 
+                                    android:text="6" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView33" 
+                                    android:gravity="center" 
+                                    android:text="7" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView33" 
+                                    android:gravity="center" 
+                                    android:text="8" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                            </TableRow>
+                            
+                            
+                            <TableRow android:id="@+id/tableRow1" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <Spinner 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner01" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner02" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner03" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner04" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner05" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner06" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner07" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner08" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner09" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner10" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner11" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner12" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner13" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner14" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner15" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner16" 
+                                    android:layout_height="wrap_content"></Spinner>
+                            </TableRow>
+                            
+                            
+                            
+                            <TableRow android:id="@+id/TableRow03" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner17" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner18" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner19" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner20" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner21" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner22" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner23" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner24" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner25" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner26" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner27" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner28" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner29" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner30" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner31" 
+                                    android:layout_height="wrap_content"></Spinner>
+                                
+                                <Spinner android:layout_width="wrap_content" 
+                                    android:id="@+id/Spinner32" 
+                                    android:layout_height="wrap_content"></Spinner>
+                            </TableRow>
+                            
+                            
+                            
+                            
+                            <TableRow android:id="@+id/TableRow02" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView27" 
+                                    android:gravity="center" 
+                                    android:text="8" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView27" 
+                                    android:gravity="center" 
+                                    android:text="7" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView27" 
+                                    android:gravity="center" 
+                                    android:text="6" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView33" 
+                                    android:gravity="center" 
+                                    android:text="5" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView30" 
+                                    android:gravity="center" 
+                                    android:text="4" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView25" 
+                                    android:gravity="center" 
+                                    android:text="3" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView31" 
+                                    android:gravity="center" 
+                                    android:text="2" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView29" 
+                                    android:gravity="center" 
+                                    android:text="1" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView32" 
+                                    android:gravity="center" 
+                                    android:text="1" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView28" 
+                                    android:gravity="center" 
+                                    android:text="2" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView24" 
+                                    android:gravity="center" 
+                                    android:text="3" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView26" 
+                                    android:gravity="center" 
+                                    android:text="4" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView27" 
+                                    android:gravity="center" 
+                                    android:text="5" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView33" 
+                                    android:gravity="center" 
+                                    android:text="6" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView33" 
+                                    android:gravity="center" 
+                                    android:text="7" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                                <TextView style="@style/blackOnly"  
+                                    android:id="@+id/TextView33" 
+                                    android:gravity="center" 
+                                    android:text="8" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"></TextView>
+                             </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView47" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="その他"></TextView>
+                
+                <!-- その他 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_13" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView56" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="指導メモ"></TextView>
+                
+                <!-- 指導メモ -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_13" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+                
+                <TextView style="@style/blackOnly"  
+                    android:id="@+id/TextView43" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:text="施設名または歯科医師名"></TextView>
+                
+                <!-- 施設名または歯科医師名 -->
+                    <TextView style="@style/blackOnly"  
+                        android:id="@+id/write_pregnant_71_13" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:text="-------"></TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>

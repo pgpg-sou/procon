@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/tile_bg"
+    android:gravity="center"
+    android:orientation="vertical" >
+    
+ <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" >
+
+    <ImageButton
+        android:id="@+id/Button_dayindex_main"
+        style="@style/button_style"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:adjustViewBounds="true"
+        android:src="@drawable/top_button"
+        android:background="@null" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="1" >
+
+        <Button
+            android:id="@+id/Button_daywrite_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+        	android:textColor="#ffffff"
+            android:layout_marginBottom="5dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+            android:textSize="17sp"
+            android:background="@drawable/my_button"
+            android:text="日々の健康記録" />
+
+        <Button
+            android:id="@+id/Button_watch_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+        	android:textColor="#ffffff"
+            android:layout_marginBottom="5dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+            android:textSize="17sp"
+            android:background="@drawable/my_button"
+            android:text="見守る" />
+
+        <Button
+            android:id="@+id/Button_write_main"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+        	android:textColor="#ffffff"
+            android:layout_marginBottom="5dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+            android:textSize="17sp"
+            android:background="@drawable/my_button"
+            android:text="記録する" />
+
+         <Button
+             android:id="@+id/Button_search_main"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+       		android:layout_weight="1"
+        	android:textColor="#ffffff"
+            android:layout_marginBottom="10dp"
+			android:layout_marginLeft="20dp"
+			android:layout_marginRight="20dp"
+            android:textSize="17sp"
+            android:background="@drawable/my_button"
+             android:text="調べる" />
+
+    </LinearLayout>
+
+</LinearLayout>

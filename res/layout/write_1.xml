@@ -1,0 +1,1045 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="fill_parent" 
+  android:layout_width="fill_parent" 
+  android:orientation="vertical" 
+  android:background="@drawable/background_pink">
+  
+    
+  
+    <TextView 
+        android:layout_height="wrap_content" 
+        style="@style/write_9_title" 
+        android:layout_width="fill_parent" 
+        android:id="@+id/TextView01" 
+        android:text="保護者・出生届済証明"></TextView>
+    
+    
+    
+    <!-- 読込・保存ボタン -->
+    <LinearLayout
+         android:layout_height="wrap_content" 
+         android:id="@+id/linearLayout8" 
+         android:layout_width="match_parent" 
+         style="@style/write_9_question_box">
+        
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonSave_write_1" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="保存"></Button>
+        
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonCancel_write_1" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="キャンセル"></Button>
+    </LinearLayout>
+    
+    
+    
+    <ScrollView
+         android:layout_height="wrap_content" 
+         android:id="@+id/scrollView1" 
+         android:layout_width="fill_parent" 
+         android:layout_gravity="top">
+        
+
+        <LinearLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:orientation="vertical" 
+            android:id="@+id/linearLayout4">
+            
+            <!--メッセージ -->
+            <TextView
+                android:id="@+id/message"
+                android:textSize="24sp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp"
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content"/>
+            <!-- メッセージおわり -->
+            
+            
+            <TextView android:text="母(妊婦)" style="@style/write_9_title" android:id="@+id/textView1"></TextView>
+            
+            <LinearLayout
+                 android:layout_height="wrap_content" 
+                 android:orientation="vertical" 
+                 android:id="@+id/LinearLayout01" 
+                 android:layout_width="fill_parent" 
+                 style="@style/write_9_question_box">
+                
+                <HorizontalScrollView 
+                    android:id="@+id/horizontalScrollView1" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content">
+                    
+                    <LinearLayout 
+                        android:id="@+id/linearLayout5" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="match_parent" 
+                        android:orientation="horizontal">
+                        
+                        <TableLayout
+                             android:layout_height="wrap_content"
+                              android:id="@+id/tableLayout1" 
+                              android:layout_width="match_parent">
+                            
+                            <TableRow 
+                                android:id="@+id/tableRow1"
+                                 android:layout_width="wrap_content" 
+                                 android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:text="氏名" style="@style/blackOnly" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/TextView04"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper01">
+                                    
+                                    <EditText 
+                                        android:text="@+id/EditText_write_1_01" 
+                                        android:layout_height="wrap_content"
+                                         android:id="@+id/EditText_write_1_01"
+                                          android:layout_width="fill_parent"></EditText>
+                                    
+                                    <TextView 
+                                        android:text="氏名" 
+                                        style="@style/blackOnly" 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/TextView15" 
+                                        android:layout_width="wrap_content" 
+                                        android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                    
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            
+                            <TableRow 
+                                android:id="@+id/tableRow2" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:text="生年月日" 
+                                    style="@style/blackOnly"
+                                     android:layout_width="wrap_content" 
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/TextView01"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper02">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/linearLayout2" 
+                                        android:layout_height="wrap_content">
+                                        
+                                        <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_1_02" 
+                                             android:id="@+id/EditText_write_1_02" 
+                                             android:layout_width="100px"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="@string/write_1_year" 
+                                            style="@style/blackOnly" 
+                                            android:layout_height="wrap_content" 
+                                            android:id="@+id/TextView01" 
+                                            android:layout_width="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_03"
+                                             android:layout_height="wrap_content"
+                                              android:layout_width="50px" 
+                                              android:text="@+id/EditText_write_1_03"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="@string/write_1_month"
+                                             style="@style/blackOnly" 
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView01" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        
+                                        
+                                        <EditText android:id="@+id/EditText_write_1_04"
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="50px" 
+                                             android:text="@+id/EditText_write_1_04"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="日生　"
+                                             style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView02" 
+                                              android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名" 
+                                        style="@style/blackOnly" 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/TextView16" 
+                                        android:layout_width="wrap_content"
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            <TableRow
+                                  android:id="@+id/TableRow01"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content">
+                                
+                                <TextView
+                                     android:text="年齢" style="@style/blackOnly" 
+                                     android:layout_width="wrap_content" 
+                                     android:layout_height="wrap_content"
+                                      android:id="@+id/TextView14"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper03">
+                                    
+                                    <LinearLayout
+                                         android:layout_width="wrap_content" 
+                                         android:id="@+id/linearLayout3"
+                                          android:layout_height="wrap_content">
+                                        
+                                        <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_1_05" 
+                                             android:id="@+id/EditText_write_1_05" 
+                                             android:layout_width="fill_parent"></EditText>
+                                        
+                                        <TextView android:text="歳" 
+                                            style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView03" 
+                                              android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView android:text="氏名" 
+                                        style="@style/blackOnly" 
+                                        android:layout_height="wrap_content"
+                                         android:id="@+id/TextView17" 
+                                         android:layout_width="wrap_content"
+                                          android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow03"
+                                 android:layout_width="wrap_content" 
+                                 android:layout_height="wrap_content">
+                                
+                                <TextView
+                                     android:text="血液型" 
+                                     style="@style/blackOnly"
+                                      android:layout_width="wrap_content" 
+                                      android:layout_height="wrap_content" 
+                                      android:id="@+id/TextView09"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout05" 
+                                         android:layout_height="wrap_content">
+                                        
+                                        <Spinner 
+                                            android:layout_height="wrap_content" 
+                                            android:id="@+id/spinner01" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                        
+                                        <TextView 
+                                            android:text="型" style="@style/blackOnly" 
+                                            android:layout_height="wrap_content" 
+                                            android:id="@+id/TextView10" 
+                                            android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow04" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:text="@string/write_1_job" 
+                                    style="@style/blackOnly" 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/TextView01"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content"
+                                      android:id="@+id/ViewFlipper05">
+                                    
+                                    <EditText 
+                                        android:text="@+id/EditText_write_1_06" 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/EditText_write_1_06" 
+                                        android:layout_width="fill_parent"></EditText>
+                                    
+                                    <TextView 
+                                        android:text="氏名" 
+                                        style="@style/blackOnly" 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/TextView19" 
+                                        android:layout_width="wrap_content" 
+                                        android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            
+            
+            
+            <!-- 父親 -->
+            <TextView  
+                style="@style/write_9_title" 
+                android:id="@+id/TextView07" 
+                android:text="父"></TextView>
+            
+            
+            <LinearLayout
+                 android:id="@+id/linearLayout1" 
+                 android:layout_height="wrap_content" 
+                 android:layout_width="match_parent" 
+                 style="@style/write_9_question_box">
+                
+                <HorizontalScrollView 
+                    android:id="@+id/horizontalScrollView2" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:layout_width="fill_parent" 
+                        android:id="@+id/LinearLayout04" 
+                        android:orientation="vertical" 
+                        android:layout_height="wrap_content">
+                        
+                        <TableLayout 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="match_parent" 
+                            android:id="@+id/tableLayout2">
+                            
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="氏名" 
+                                     android:layout_width="wrap_content"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper06" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <EditText 
+                                        android:id="@+id/EditText_write_1_07" 
+                                        android:layout_width="fill_parent" 
+                                        android:text="@+id/EditText_write_1_07" 
+                                        android:layout_height="wrap_content"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView20" 
+                                        android:text="氏名" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow4" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView11" 
+                                    android:text="生年月日" 
+                                    android:layout_width="wrap_content"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper07" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <LinearLayout 
+                                        android:id="@+id/LinearLayout02"
+                                         android:layout_height="wrap_content"
+                                          android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_08"
+                                             android:text="@+id/EditText_write_1_08" 
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="100px"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:id="@+id/TextView11" 
+                                            android:text="@string/write_1_year" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_09" 
+                                            android:text="@+id/EditText_write_1_09" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50px"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly"
+                                             android:id="@+id/TextView11" 
+                                             android:text="@string/write_1_month" 
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="wrap_content"></TextView>
+                                        
+                                        <EditText
+                                              android:id="@+id/EditText_write_1_10"
+                                              android:text="@+id/EditText_write_1_10" 
+                                              android:layout_height="wrap_content" 
+                                              android:layout_width="50px"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:id="@+id/TextView08" 
+                                            android:text="日生　" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView06" 
+                                        android:text="生年月日" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TableRow02" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView22" 
+                                    android:text="年齢" 
+                                    android:layout_width="wrap_content"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper08" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <LinearLayout 
+                                        android:id="@+id/LinearLayout03"
+                                         android:layout_height="fill_parent" 
+                                         android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_11" 
+                                            android:text="@+id/EditText_write_1_11" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="50px"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:id="@+id/TextView13"
+                                             android:text="歳"
+                                              android:layout_height="wrap_content" 
+                                              android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView28" 
+                                        android:text="生年月日" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TableRow05" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView25"
+                                    android:text="血液型" 
+                                    android:layout_width="wrap_content"></TextView>
+                                
+                                
+                                <ViewFlipper 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper09" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <LinearLayout 
+                                        android:id="@+id/LinearLayout07" 
+                                        android:layout_height="fill_parent" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <Spinner 
+                                            android:id="@+id/spinner02" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:id="@+id/TextView05" 
+                                            android:text="型" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView21" 
+                                        android:text="生年月日" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow 
+                                android:layout_width="wrap_content"
+                                 android:id="@+id/TableRow06" 
+                                 android:layout_height="wrap_content">
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView11" 
+                                    android:text="@string/write_1_job" 
+                                    android:layout_width="wrap_content"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper10" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <EditText 
+                                        android:id="@+id/EditText_write_1_12" 
+                                        android:layout_width="fill_parent" 
+                                        android:text="@+id/EditText_write_1_12" 
+                                        android:layout_height="wrap_content"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView29" 
+                                        android:text="生年月日" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            
+            <TextView 
+                style="@style/write_9_title" 
+                android:layout_height="wrap_content" 
+                android:id="@+id/TextView27" 
+                android:text="居住地" 
+                android:layout_width="fill_parent"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:layout_height="wrap_content" 
+                android:layout_width="match_parent" 
+                android:id="@+id/LinearLayout06">
+                
+                <HorizontalScrollView 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/HorizontalScrollView01" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:orientation="vertical" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout11">
+                        
+                        <TableLayout 
+                            android:id="@+id/TableLayout01" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="match_parent">
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="住所"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:id="@+id/ViewFlipper13" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <EditText 
+                                        android:id="@+id/EditText_write_1_13" 
+                                        android:text="@+id/EditText_write_1_13" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="fill_parent"></EditText>
+                                    
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="生年月日" 
+                                        android:id="@+id/TextView30" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow11" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView32" 
+                                    android:text="電話"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:id="@+id/ViewFlipper14" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <EditText 
+                                        android:id="@+id/EditText_write_1_14" 
+                                        android:text="@+id/EditText_write_1_14" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="fill_parent"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="氏名" 
+                                        android:id="@+id/TextView36" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            <!-- 子供 -->            
+            <TextView 
+                style="@style/write_9_title" 
+                android:id="@+id/TextView23" 
+                android:layout_height="wrap_content" 
+                android:text="子" 
+                android:layout_width="fill_parent"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box"
+                 android:layout_height="wrap_content" 
+                 android:layout_width="match_parent" 
+                 android:id="@+id/LinearLayout09">
+                
+                <HorizontalScrollView 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/HorizontalScrollView02" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:orientation="vertical"
+                         android:layout_width="fill_parent" 
+                         android:layout_height="wrap_content" 
+                         android:id="@+id/LinearLayout08">
+                        
+                        <TableLayout 
+                            android:id="@+id/TableLayout02" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="match_parent">
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="氏名"></TextView>
+                                
+                                
+                                <ViewFlipper 
+                                    android:id="@+id/ViewFlipper12" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <EditText 
+                                        android:id="@+id/EditText_write_1_15" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_1_15" 
+                                        android:layout_width="fill_parent"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="生年月日" 
+                                        android:id="@+id/TextView26" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow07" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView24" 
+                                    android:text="性別"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:id="@+id/ViewFlipper11" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <Spinner 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/spinner03"></Spinner>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="生年月日" 
+                                        android:id="@+id/TextView31" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow09"
+                                 android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly"
+                                     android:layout_height="wrap_content" 
+                                     android:layout_width="wrap_content"
+                                      android:id="@+id/TextView35" 
+                                      android:text="出生の場所"></TextView>
+                                
+                                
+                                <ViewFlipper 
+                                    android:id="@+id/ViewFlipper15"
+                                     android:layout_height="wrap_content"
+                                      android:layout_width="wrap_content">
+                                    
+                                    <EditText 
+                                        android:id="@+id/EditText_write_1_16" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_1_16" 
+                                        android:layout_width="fill_parent"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly"
+                                         android:layout_width="wrap_content" 
+                                         android:text="生年月日" 
+                                         android:id="@+id/TextView37"
+                                          android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow12" 
+                                android:layout_width="wrap_content"
+                                 android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:text="生年月日" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView38"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:id="@+id/ViewFlipper16" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout10"
+                                         android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_17" 
+                                            android:layout_width="100px" 
+                                            android:text="@+id/EditText_write_1_17" 
+                                            android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly"
+                                             android:layout_width="wrap_content"
+                                              android:text="@string/write_1_year" 
+                                              android:id="@+id/TextView38" 
+                                              android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_18"
+                                             android:layout_width="50px" 
+                                             android:text="@+id/EditText_write_1_18" 
+                                             android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:layout_width="wrap_content"
+                                             android:text="@string/write_1_month" 
+                                             android:id="@+id/TextView38" 
+                                             android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_19" 
+                                            android:layout_width="50px"
+                                             android:text="@+id/EditText_write_1_19" 
+                                             android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:layout_width="wrap_content" 
+                                            android:text="日生　" 
+                                            android:id="@+id/TextView39" 
+                                            android:layout_height="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="生年月日" 
+                                        android:id="@+id/TextView40" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            
+            <!-- 出生届出済証明 -->
+            <TextView 
+                style="@style/write_9_title" 
+                android:id="@+id/TextView47" 
+                android:layout_height="wrap_content" 
+                android:text="出生届出済証明" 
+                android:layout_width="fill_parent"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:layout_height="wrap_content" 
+                android:layout_width="match_parent" 
+                android:id="@+id/LinearLayout13">
+                
+                <HorizontalScrollView 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/HorizontalScrollView03" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout12" 
+                        android:orientation="vertical">
+                        
+                        <ViewFlipper 
+                            android:id="@+id/ViewFlipper17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <TableLayout 
+                                android:id="@+id/TableLayout04" 
+                                android:layout_height="wrap_content"
+                                 android:layout_width="match_parent">
+                                
+                                <TableRow 
+                                    android:id="@+id/TableRow19" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content">
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView54" 
+                                        android:text="受理日"></TextView>
+                                    
+                                    <LinearLayout 
+                                        android:layout_height="wrap_content" 
+                                        android:id="@+id/LinearLayout14" 
+                                        android:layout_width="wrap_content">
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_20" 
+                                            android:layout_width="100px" 
+                                            android:text="@+id/EditText_write_1_20" 
+                                            android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:layout_width="wrap_content" 
+                                            android:text="@string/write_1_year" 
+                                            android:id="@+id/TextView46" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_21" 
+                                            android:layout_width="50px" 
+                                            android:text="@+id/EditText_write_1_21" 
+                                            android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:layout_width="wrap_content" 
+                                            android:text="@string/write_1_month" 
+                                            android:id="@+id/TextView46" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_1_22" 
+                                            android:layout_width="50px" 
+                                            android:text="@+id/EditText_write_1_22" 
+                                            android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:layout_width="wrap_content" 
+                                            android:id="@+id/TextView45" 
+                                            android:layout_height="wrap_content" 
+                                            android:text="日"></TextView>
+                                    </LinearLayout>
+                                </TableRow>
+                                
+                                
+                                
+                                <TableRow 
+                                    android:id="@+id/TableRow18" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content">
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView60" 
+                                        android:text="市区町村長氏名"></TextView>
+                                    
+                                    
+                                    <EditText 
+                                        android:id="@+id/EditText_write_1_23" 
+                                        android:layout_width="50px" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_1_23"></EditText>
+                                </TableRow>
+                            </TableLayout>
+                            
+                            
+                            
+                            
+                            <LinearLayout 
+                                android:orientation="vertical" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/linearLayout6" 
+                                android:layout_width="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_width="wrap_content" 
+                                    android:text="生年月日" 
+                                    android:id="@+id/TextView49" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                            </LinearLayout>
+                        </ViewFlipper>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>

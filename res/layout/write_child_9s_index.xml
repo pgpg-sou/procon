@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" android:orientation="vertical" android:background="@drawable/background_pink">
+
+    <TextView style="@style/write_9_title" 
+        android:id="@+id/TextView01" 
+        android:text="健康診査等(新生児～6歳)"></TextView>
+    
+    
+    <LinearLayout
+         android:layout_height="wrap_content" 
+         android:id="@+id/linearLayout8" 
+         android:layout_width="match_parent" 
+         style="@style/write_9_question_box">
+        
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9s_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9s_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="目次へ"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9s_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+    </LinearLayout>
+    
+    
+    
+<ScrollView android:id="@+id/ScrollView9" android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+
+<LinearLayout
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content" android:orientation="vertical">
+
+	<Button android:text="@string/write_9s_1_title1" android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/write_9s_1_1_button" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9s_1_title2" android:id="@+id/write_9s_1_2_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9s_1_title3" android:layout_height="wrap_content" android:layout_width="fill_parent" android:id="@+id/write_9s_1_3_button" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_2_title" android:id="@+id/write_9s_2_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_3_title" android:id="@+id/write_9s_3_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_4_title" android:id="@+id/write_9s_4_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_5_title" android:id="@+id/write_9s_5_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_6_title" android:id="@+id/write_9s_6_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_7_title" android:id="@+id/write_9s_7_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_8_title" android:id="@+id/write_9s_8_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_9_title" android:id="@+id/write_9s_9_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_10_title" android:id="@+id/write_9s_10_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_11_title" android:id="@+id/write_9s_11_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+	<Button android:text="@string/write_9_12_title" android:id="@+id/write_9s_12_button" android:layout_height="wrap_content" android:layout_width="fill_parent" style="@style/button_style"></Button>
+
+</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

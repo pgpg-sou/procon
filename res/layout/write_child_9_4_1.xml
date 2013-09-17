@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content"
+	android:orientation="vertical" android:background="@drawable/background_pink">
+
+
+    <TextView style="@style/write_9_title" android:text="@string/write_9_4_title" android:id="@+id/write_9_4_title"></TextView>
+<LinearLayout
+         android:layout_height="wrap_content" 
+         android:id="@+id/linearLayout8" 
+         android:layout_width="match_parent" 
+         style="@style/write_9_question_box">
+        
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9_4_1_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9_4_1_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_9_4_1_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+    </LinearLayout>
+
+
+<ScrollView
+	android:id="@+id/ScrollView01"
+	android:layout_width="fill_parent"
+	android:layout_height="wrap_content">
+
+	<LinearLayout
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="vertical">
+
+		<!-- ６～７か月頃 -->
+
+		<LinearLayout
+		  android:layout_width="fill_parent"
+		  android:layout_height="wrap_content"
+		  style="@style/write_9_question_box" android:orientation="vertical">
+			<TextView style="@style/write_9_question" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/TextView01" android:text="記録日"></TextView>
+
+			<LinearLayout
+			  android:layout_width="wrap_content"
+			  android:layout_height="wrap_content"
+			  android:orientation="horizontal">
+				<!-- 〇年 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_01" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+				<TextView
+					android:text="@string/write_year"
+					android:id="@+id/write_year"
+					style="@style/write_9_question"/>
+				
+				<!-- ○月 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_02" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+				
+				<TextView
+					android:text="@string/write_month"
+					android:id="@+id/write_month"
+					style="@style/write_9_question" />
+				
+				<!-- 〇日 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_03" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+				
+				<TextView
+					android:id="@+id/write_datekiroku"
+					style="@style/write_9_question" android:text="日"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問１ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_4_q1"
+				android:id="@+id/write_9_4_q1"
+				style="@style/write_9_question"/>
+			
+			<!-- 寝返りしますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_04" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+
+
+		<!-- 質問２ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_4_q2_1"
+				android:id="@+id/write_9_4_q2_1"
+				style="@style/write_9_question"/>
+			
+			<!-- おすわりをしますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_05" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+			
+			<TextView
+				android:text="@string/write_9_4_q2_2"
+				android:id="@+id/write_9_4_q2_2"
+				style="@style/write_9_question"/>
+
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal">
+				
+			    <!-- 〇月 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_06" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+			    
+				<TextView
+					android:text="@string/write_month"
+					android:id="@+id/write_month"
+					style="@style/write_9_question" />
+				
+				<!-- 〇日 -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_07" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+				
+				<TextView
+					android:text="@string/write_dateabout"
+					android:id="@+id/write_dateabout"
+					style="@style/write_9_question"/>
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問３ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_4_q3"
+				android:id="@+id/write_9_4_q3"
+				style="@style/write_9_question"/>
+			
+			<!-- 家族といっしょにいるとき，話しかけるような声をだしますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_08" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+			
+		</LinearLayout>
+
+
+
+
+		<!-- 質問４ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_4_q4"
+				android:id="@+id/write_9_4_q4"
+				style="@style/write_9_question"/>
+			
+			<!-- テレビやラジオの音がし始めると，すぐそちらをみますか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_09" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+
+
+
+		<!-- 質問５ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_4_q5"
+				android:id="@+id/write_9_4_q5"
+				style="@style/write_9_question"/>
+			
+			<!-- 離乳食をはじめましたか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_10" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+			
+		</LinearLayout>
+
+
+
+		<!-- 質問６ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_4_q6_1"
+				android:id="@+id/write_9_4_q6_1"
+				style="@style/write_9_question"/>
+			
+			<!-- 離乳食をはじめましたか -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_11" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+			<TextView
+				android:text="@string/write_9_4_q6_2"
+				android:id="@+id/write_9_4_q6_2"
+				style="@style/write_9_question"/>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問７ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_4_q7_1"
+				android:id="@+id/write_9_4_q7_1"
+				style="@style/write_9_question"/>
+			
+			<!-- 瞳がしろく見えたり，黄緑色に光って -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_12" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+			<TextView
+				android:text="@string/write_9_4_q7_2"
+				android:id="@+id/write_9_4_q7_2"
+				style="@style/write_9_question"/>
+
+		</LinearLayout>
+
+
+
+		<!-- 質問８ -->
+		<LinearLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:orientation="vertical"
+			style="@style/write_9_question_box">
+
+			<TextView
+				android:text="@string/write_9_4_q8"
+				android:id="@+id/write_9_4_q8"
+				style="@style/write_9_question"/>
+			
+			<!-- 育児の心配，かかった病気，感想などを自由に記入しましょう -->
+                  <TextView style="@style/blackOnly"  
+                   android:id="@+id/write_child_9_4_13" 
+                   android:layout_height="wrap_content" 
+                   android:layout_width="wrap_content" 
+                   android:text="----"></TextView>
+		</LinearLayout>
+
+	</LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>
+

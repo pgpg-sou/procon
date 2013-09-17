@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:background="@drawable/background_pink">
+
+
+    
+   
+    
+    
+    
+
+    <ImageView
+        android:id="@+id/ImageView01"
+        android:src="@drawable/index_write_title"
+        android:padding="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"></ImageView>
+
+    
+     <LinearLayout
+         android:layout_height="wrap_content" 
+         android:id="@+id/linearLayout8" 
+         android:layout_width="match_parent" 
+         style="@style/write_9_question_box">
+        
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_14_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_14_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_14_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+    </LinearLayout>
+    
+    
+    
+
+<ScrollView android:id="@+id/ScrollView01" android:layout_width="fill_parent" android:layout_height="wrap_content">
+
+</ScrollView>
+
+
+
+
+
+<LinearLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center"
+    android:orientation="vertical" >
+
+
+
+    <Button
+        android:id="@+id/write_button_grow_1"
+        style="@style/button_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/index_write_10" />
+
+
+
+
+    <Button
+        android:id="@+id/write_button_grow_2"
+        style="@style/button_style"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/index_write_11" />
+
+
+
+
+        
+</LinearLayout>
+
+</LinearLayout>

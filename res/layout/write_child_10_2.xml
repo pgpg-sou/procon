@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_width="fill_parent"
+  android:layout_height="fill_parent" android:orientation="vertical" android:background="@drawable/background_pink">
+  <!-- 読込・保存ボタン -->
+  
+    <TextView  android:id="@+id/TextView01" style="@style/write_9_title" android:text="予防接種の記録"></TextView>
+    <LinearLayout android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_width="fill_parent">
+       
+       <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_10_2_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="編集する"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_10_2_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集終了"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_child_10_2_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="キャンセル"></Button>
+        
+</LinearLayout>
+    
+    
+    <ScrollView android:layout_height="wrap_content" android:id="@+id/scrollView1" android:layout_width="fill_parent" android:layout_gravity="top">
+        <LinearLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/linearLayout4">
+            <TextView  style="@style/write_9_title" android:id="@+id/textView1" android:text="BCG"></TextView>
+            <LinearLayout android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/LinearLayout01" android:layout_width="fill_parent" style="@style/write_9_question_box">
+                <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView04" android:layout_width="wrap_content" android:text="接種年月日"></TextView>
+                <LinearLayout android:id="@+id/linearLayout2" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                    
+                    <EditText android:text="@+id/EditText_write_child_10_2_01" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText_write_child_10_2_01"></EditText>
+                    
+                    <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView01" android:text="@string/write_1_year" android:layout_width="wrap_content"></TextView>
+                    
+                    <EditText android:text="@+id/EditText_write_child_10_2_02" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText_write_child_10_2_02"></EditText>
+                    
+                    <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView01" android:text="@string/write_1_month" android:layout_width="wrap_content"></TextView>
+                   
+                    <EditText android:text="@+id/EditText_write_child_10_2_03" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText_write_child_10_2_03"></EditText>
+                    
+                    <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView02" android:layout_width="wrap_content" android:text="日"></TextView>
+                </LinearLayout>
+                <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView01" android:layout_width="wrap_content" android:text="ロット"></TextView>
+                <EditText android:text="@+id/EditText_write_child_10_2_04" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/EditText_write_child_10_2_04"></EditText>
+                
+                <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView09" android:layout_width="wrap_content" android:text="接種者署名"></TextView>
+                <EditText android:text="@+id/EditText_write_child_10_2_05" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/EditText_write_child_10_2_05"></EditText>
+                
+                <TextView style="@style/blackOnly"  android:layout_height="wrap_content" android:id="@+id/TextView03" android:layout_width="wrap_content" android:text="備考"></TextView>
+                <EditText android:text="@+id/EditText_write_child_10_2_06" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/EditText_write_child_10_2_06"></EditText>
+            </LinearLayout>
+            
+            <TextView  android:id="@+id/TextView06" style="@style/write_9_title" android:text="ジフテリア・百日せき・破傷風"></TextView>
+            <LinearLayout style="@style/write_9_question_box" android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/LinearLayout03">
+                <TextView style="@style/blackOnly"  android:id="@+id/TextView12" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="第1期初回"></TextView>
+                <HorizontalScrollView android:id="@+id/horizontalScrollView1" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="horizontal" android:id="@+id/linearLayout3">
+                        <TableLayout android:id="@+id/tableLayout1" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tableRow2">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView05" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="時期"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView13" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ワクチンの種類"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種年月日"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView14" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="メーカー・ロット"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView16" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種者署名"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView15" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="備考"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/tableRow1">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1回"></TextView>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_07" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_07"></EditText>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout02" android:layout_width="wrap_content">
+                                    
+                                    <EditText android:id="@+id/EditText_write_child_10_2_08" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_08"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView08" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    
+                                    <EditText android:id="@+id/EditText_write_child_10_2_09" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_09"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView08" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    
+                                    <EditText android:id="@+id/EditText_write_child_10_2_10" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_10"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView07" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:id="@+id/EditText_write_child_10_2_11" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"
+                                     android:text="@+id/EditText_write_child_10_2_11"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_12" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_12"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_13" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_13"></EditText>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow01">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView17" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2回"></TextView>
+                                <EditText android:id="@+id/EditText_write_child_10_2_14" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_14"></EditText>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout04" android:layout_width="wrap_content">
+                                    <EditText android:id="@+id/EditText_write_child_10_2_15" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_15"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView18" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_16" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_16"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView18" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_17" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_17"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView19" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:id="@+id/EditText_write_child_10_2_18" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_18"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_19" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_19"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_20" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_20"></EditText>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow02">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView20" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="3回"></TextView>
+                                <EditText android:id="@+id/EditText_write_child_10_2_21" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_21"></EditText>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout05" android:layout_width="wrap_content">
+                                    <EditText android:id="@+id/EditText_write_child_10_2_22" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_22"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView22" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_23" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_23"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView22" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_24" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_24"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView21" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:id="@+id/EditText_write_child_10_2_25" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content"
+                                     android:text="@+id/EditText_write_child_10_2_25"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_26" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_26"></EditText>
+                                
+                                <EditText android:id="@+id/EditText27" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@+id/EditText27"></EditText>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow03">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView23" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="追加"></TextView>
+                                <EditText android:id="@+id/EditText_write_child_10_2_28" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_28"></EditText>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout06" android:layout_width="wrap_content">
+                                    <EditText android:id="@+id/EditText_write_child_10_2_29" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_29"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView25" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_30" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_30"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView25" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_31" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_31"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView24" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:id="@+id/EditText_write_child_10_2_32" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_32"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_33" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_33"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_34" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_34"></EditText>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView style="@style/blackOnly"  android:id="@+id/TextView26" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="薬剤などのアレルギー記入欄"></TextView>
+                
+                <EditText android:text="@+id/EditText_write_child_10_2_35" 
+                    android:id="@+id/EditText_write_child_10_2_35" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content"></EditText>
+                
+            </LinearLayout>
+            <TextView  android:id="@+id/TextView41" style="@style/write_9_title" android:text="ポリオ・麻しん・風しん"></TextView>
+            <LinearLayout style="@style/write_9_question_box" android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/LinearLayout10">
+                <HorizontalScrollView android:id="@+id/HorizontalScrollView01" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="horizontal" android:id="@+id/LinearLayout11">
+                        <TableLayout android:id="@+id/TableLayout01" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow07">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView32" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ワクチンの種類"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView33" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種年月日"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView30" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="メーカー・ロット"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView36" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種者署名"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView31" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="備考"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow08">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView34" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ポリオ"></TextView>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout07" android:layout_width="wrap_content">
+                                    
+                                    <EditText android:id="@+id/EditText_write_child_10_2_36" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_36"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView27" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    
+                                    <EditText android:id="@+id/EditText_write_child_10_2_37" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_37"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView27" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    
+                                    <EditText android:id="@+id/EditText_write_child_10_2_38" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_38"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView28" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_39" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_39"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_40" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_40"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_41" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_41"></EditText>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow04">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView29" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ポリオ"></TextView>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout08" android:layout_width="wrap_content">
+                                    <EditText android:id="@+id/EditText_write_child_10_2_42" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_42"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView37" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_43" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_43"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView37" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_44" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_44"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView35" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:id="@+id/EditText_write_child_10_2_45" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_45"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_46" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_46"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_47" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_47"></EditText>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow05">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="麻しん　第1期"></TextView>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout09" android:layout_width="wrap_content">
+                                    <EditText android:id="@+id/EditText_write_child_10_2_48" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_48"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView38" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_49" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_49"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView38" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_50" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_t50"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView39" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:id="@+id/EditText_write_child_10_2_51" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_51"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_52" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_52"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_53" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_53"></EditText>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow05">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView40" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="風しん　第2期"></TextView>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout09" android:layout_width="wrap_content">
+                                    <EditText android:id="@+id/EditText_write_child_10_2_54" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_54"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView38" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_55" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_55"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView38" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_56" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_56"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView39" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:id="@+id/EditText_write_child_10_2_57" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_57"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_58" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_58"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_59" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_59"></EditText>
+                                
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            <TextView   android:id="@+id/TextView44" android:layout_height="wrap_content" style="@style/write_9_title" android:text="日本脳炎"></TextView>
+            <LinearLayout style="@style/write_9_question_box" android:layout_height="wrap_content" android:orientation="vertical" android:layout_width="fill_parent" android:id="@+id/LinearLayout12">
+                <TextView style="@style/blackOnly"  android:id="@+id/TextView48" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="第1期初回"></TextView>
+                <HorizontalScrollView android:id="@+id/HorizontalScrollView02" android:layout_height="wrap_content" android:layout_width="wrap_content">
+                    <LinearLayout android:layout_width="fill_parent" android:layout_height="fill_parent" android:orientation="horizontal" android:id="@+id/LinearLayout17">
+                        <TableLayout android:id="@+id/TableLayout02" android:layout_height="wrap_content" android:layout_width="fill_parent">
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow11">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView45" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="時期"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView49" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ワクチンの種類"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView50" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種年月日"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView46" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="メーカー・ロット"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView53" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="接種者署名"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView47" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="備考"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow12">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView51" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="1回"></TextView>
+                                <EditText android:id="@+id/EditText_write_child_10_2_60" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_60"></EditText>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout13" android:layout_width="wrap_content">
+                                    <EditText android:id="@+id/EditText_write_child_10_2_61" 
+                                        android:layout_width="wrap_content" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_61"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView42" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_62" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_62"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView42" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_63" 
+                                        android:id="@+id/EditText_write_child_10_2_63"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView43" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_64" 
+                                    android:id="@+id/EditText_write_child_10_2_64"></EditText>
+                                
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_65" 
+                                    android:id="@+id/EditText_write_child_10_2_65"></EditText>
+                                
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_66" 
+                                    android:id="@+id/EditText_write_child_10_2_66"></EditText>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow09">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView52" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="2回"></TextView>
+                                <EditText android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@+id/EditText77" android:id="@+id/EditText67"></EditText>
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout16" android:layout_width="wrap_content">
+                                    <EditText android:id="@+id/EditText_write_child_10_2_68" 
+                                        android:layout_width="wrap_content" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_68"></EditText>
+                                    
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView55" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_69" 
+                                        android:layout_width="wrap_content" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_69"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView55" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:id="@+id/EditText_write_child_10_2_70" 
+                                        android:layout_width="wrap_content" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_70"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView54" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_71" 
+                                    android:id="@+id/EditText_write_child_10_2_71"></EditText>
+                                
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_72" 
+                                    android:id="@+id/EditText_write_child_10_2_72"></EditText>
+                                
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_73" 
+                                    android:id="@+id/EditText_write_child_10_2_73"></EditText>
+                            </TableRow>
+                            <TableRow android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/TableRow10">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView56" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="追加"></TextView>
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_74" 
+                                    android:id="@+id/EditText_write_child_10_2_74"></EditText>
+                                
+                                <LinearLayout android:layout_height="wrap_content" android:id="@+id/LinearLayout14" android:layout_width="wrap_content">
+                                    <EditText android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_75" 
+                                        android:id="@+id/EditText_write_child_10_2_75"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView58" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_year"></TextView>
+                                    <EditText android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_76" 
+                                        android:id="@+id/EditText_write_child_10_2_76"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView58" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="@string/write_1_month"></TextView>
+                                    <EditText android:layout_height="wrap_content" 
+                                        android:layout_width="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_77" 
+                                        android:id="@+id/EditText_write_child_10_2_77"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView57" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="日"></TextView>
+                                </LinearLayout>
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_78" 
+                                    android:id="@+id/EditText_write_child_10_2_78"></EditText>
+                                
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_79" 
+                                    android:id="@+id/EditText_write_child_10_2_79"></EditText>
+                                
+                                <EditText android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_80" 
+                                    android:id="@+id/EditText_write_child_10_2_80"></EditText>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+                <TextView style="@style/blackOnly"  android:id="@+id/TextView59" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="単抗原での予防接種を受けた場合は，それが分かるように備考欄もしくは，その他の予防接種欄に記入してください。"></TextView>
+            </LinearLayout>
+            <TextView  android:id="@+id/TextView60" style="@style/write_9_title" android:text="その他の予防接種"></TextView>
+            <LinearLayout android:orientation="vertical" android:layout_width="fill_parent" android:layout_height="wrap_content" style="@style/write_9_question_box" android:id="@+id/LinearLayout19">
+                <HorizontalScrollView android:layout_width="wrap_content" android:id="@+id/HorizontalScrollView03" android:layout_height="wrap_content">
+                    <LinearLayout android:orientation="horizontal" android:layout_height="fill_parent" android:layout_width="fill_parent" android:id="@+id/LinearLayout20">
+                        <TableLayout android:layout_width="fill_parent" android:layout_height="wrap_content" android:id="@+id/TableLayout03">
+                            <TableRow android:layout_height="wrap_content" android:id="@+id/TableRow13" android:layout_width="wrap_content">
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView77" android:text="ワクチンの種類" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView68" android:text="接種年月日" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView63" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="年齢"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView64" android:text="メーカー・ロット" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView73" android:text="接種者署名" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                <TextView style="@style/blackOnly"  android:id="@+id/TextView65" android:text="備考" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                            </TableRow>
+                            <TableRow android:layout_height="wrap_content" android:id="@+id/TableRow06" android:layout_width="wrap_content">
+                                <EditText android:layout_width="wrap_content" 
+                                    android:id="@+id/EditText_write_child_10_2_81" 
+                                    android:layout_height="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_81"></EditText>
+                                
+                                <LinearLayout android:id="@+id/linearLayout5" android:layout_width="wrap_content" android:layout_height="wrap_content">
+                                    <EditText android:layout_width="wrap_content" 
+                                        android:id="@+id/EditText_write_child_10_2_82" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_82"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView66" android:text="年" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                    <EditText android:layout_width="wrap_content" 
+                                        android:id="@+id/EditText_write_child_10_2_83" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_83"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView62" android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="月"></TextView>
+                                    <EditText android:layout_width="wrap_content" 
+                                        android:id="@+id/EditText_write_child_10_2_84" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_84"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView70" android:text="日" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                </LinearLayout>
+                                <LinearLayout android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/LinearLayout15">
+                                    <EditText android:layout_width="wrap_content" 
+                                        android:id="@+id/EditText_write_child_10_2_85" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_child_10_2_85"></EditText>
+                                    
+                                    <TextView style="@style/blackOnly"  android:id="@+id/TextView69" android:text="歳" android:layout_height="wrap_content" android:layout_width="wrap_content"></TextView>
+                                </LinearLayout>
+                                <EditText android:id="@+id/EditText_write_child_10_2_86" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_86"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_87" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_87"></EditText>
+                                
+                                <EditText android:id="@+id/EditText_write_child_10_2_88" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:text="@+id/EditText_write_child_10_2_87"></EditText>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>

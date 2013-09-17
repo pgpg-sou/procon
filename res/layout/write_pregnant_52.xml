@@ -1,0 +1,2153 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="fill_parent" 
+  android:layout_width="fill_parent" 
+  android:orientation="vertical" 
+  android:background="@drawable/background_pink">
+  
+    
+  <!-- 読込・保存ボタン -->
+    <TextView 
+        android:layout_height="wrap_content" 
+        style="@style/write_9_title" 
+        android:layout_width="fill_parent" 
+        android:id="@+id/TextView01" 
+        android:text="出産の状況と出産後の母体の経過"></TextView>
+    
+    
+    
+    
+    <LinearLayout
+         android:layout_height="wrap_content" 
+         android:id="@+id/linearLayout8" 
+         android:layout_width="match_parent" 
+         style="@style/write_9_question_box">
+        
+
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_52_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="編集する"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_52_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集終了"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_pregnant_52_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="キャンセル"></Button>
+    </LinearLayout>
+    
+    
+    
+    <ScrollView
+         android:layout_height="wrap_content" 
+         android:id="@+id/scrollView1" 
+         android:layout_width="fill_parent" 
+         android:layout_gravity="top">
+        
+
+        <LinearLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:orientation="vertical" 
+            android:id="@+id/linearLayout4">
+            
+            <TextView android:text="出産の状態" 
+                style="@style/write_9_title" 
+                android:id="@+id/textView_pregnant_52"></TextView>
+            
+            <LinearLayout
+                 android:layout_height="wrap_content" 
+                 android:orientation="vertical" 
+                 android:id="@+id/LinearLayout01" 
+                 android:layout_width="fill_parent" 
+                 style="@style/write_9_question_box">
+                
+                <HorizontalScrollView 
+                    android:id="@+id/horizontalScrollView1" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content">
+                    
+                    
+                    
+                    <LinearLayout 
+                        android:id="@+id/linearLayout5" 
+                        android:layout_width="match_parent" 
+                        android:layout_height="match_parent" 
+                        android:orientation="horizontal">
+                        
+                        
+                        
+                        <TableLayout
+                             android:layout_height="wrap_content"
+                              android:id="@+id/tableLayout1" 
+                              android:layout_width="match_parent">
+                            
+                            <TableRow 
+                                android:id="@+id/tableRow1"
+                                 android:layout_width="wrap_content" 
+                                 android:layout_height="wrap_content">
+                            
+                                
+                             <!-- 妊娠期間 -->
+                            <TextView 
+                                    android:text="妊娠期間" style="@style/blackOnly" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/TextView04"></TextView>
+                            
+                            </TableRow>
+                            
+                            <TableRow 
+                                android:id="@+id/tableRow1"
+                                 android:layout_width="wrap_content" 
+                                 android:layout_height="wrap_content">
+                                
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                        
+                                
+                                <TextView 
+                                    android:text="妊娠" style="@style/blackOnly" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/TextView04"></TextView>
+                                
+                                 <EditText 
+                                        android:text="@+id/EditText_write_pregnant_52_01" 
+                                        android:layout_height="wrap_content"
+                                         android:id="@+id/EditText_write_pregnant_52_01"
+                                          android:layout_width="wrap_content"></EditText>
+                                    
+                                 <TextView 
+                                    android:text="週" style="@style/blackOnly" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/TextView04"></TextView>
+                                    
+                                 
+                                 
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView android:text="氏名" 
+                                        style="@style/blackOnly" 
+                                        android:layout_height="wrap_content"
+                                         android:id="@+id/TextView17" 
+                                         android:layout_width="wrap_content"
+                                          android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                                    
+                            </TableRow>
+                            
+                            <TableRow 
+                                android:id="@+id/tableRow2" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                            
+                                
+                            <!-- 娩出日時 -->
+                            <TextView 
+                                    android:text="娩出日時" 
+                                    style="@style/blackOnly"
+                                     android:layout_width="wrap_content" 
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/TextView01"></TextView>
+                            
+                            </TableRow>
+                            
+                            <TableRow 
+                                android:id="@+id/tableRow2" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                    <LinearLayout 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/linearLayout2" 
+                                        android:layout_height="wrap_content">
+                                        
+                                        <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_pregnant_52_02" 
+                                             android:id="@+id/EditText_write_pregnant_52_02" 
+                                             android:layout_width="100px"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="@string/write_1_year" 
+                                            style="@style/blackOnly" 
+                                            android:layout_height="wrap_content" 
+                                            android:id="@+id/TextView01" 
+                                            android:layout_width="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_03"
+                                             android:layout_height="wrap_content"
+                                              android:layout_width="50px" 
+                                              android:text="@+id/EditText_write_pregnant_52_03"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="@string/write_1_month"
+                                             style="@style/blackOnly" 
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView01" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        
+                                        
+                                        <EditText android:id="@+id/EditText_write_pregnant_52_04"
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="50px" 
+                                             android:text="@+id/EditText_write_pregnant_52_04"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="日生　"
+                                             style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView02" 
+                                              android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                            </TableRow>
+                            
+                            <TableRow
+                                  android:id="@+id/TableRow01"
+                                  android:layout_width="wrap_content"
+                                  android:layout_height="wrap_content">
+                                
+                                
+
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper03">
+                                    
+                                    <LinearLayout
+                                         android:layout_width="wrap_content" 
+                                         android:id="@+id/linearLayout3"
+                                          android:layout_height="wrap_content">
+                                        
+                                       <Spinner 
+                                            android:layout_height="wrap_content" 
+                                            android:id="@+id/spinner27" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                
+                                        
+                                        <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_pregnant_52_05" 
+                                             android:id="@+id/EditText_write_pregnant_52_05" 
+                                             android:layout_width="wrap_content"></EditText>
+                                        
+                                        <TextView android:text="時" 
+                                            style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView03" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_pregnant_52_06" 
+                                             android:id="@+id/EditText_write_pregnant_52_06" 
+                                             android:layout_width="wrap_content"></EditText>
+                                        
+                                        <TextView android:text="分" 
+                                            style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView03" 
+                                              android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView android:text="氏名" 
+                                        style="@style/blackOnly" 
+                                        android:layout_height="wrap_content"
+                                         android:id="@+id/TextView17" 
+                                         android:layout_width="wrap_content"
+                                          android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                           <!-- 娩出の経過 -->
+                            <TextView
+                                     android:text="娩出の経過" 
+                                     style="@style/blackOnly"
+                                      android:layout_width="wrap_content" 
+                                      android:layout_height="wrap_content" 
+                                      android:id="@+id/TextView09"></TextView>
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow03"
+                                 android:layout_width="wrap_content" 
+                                 android:layout_height="wrap_content">
+                                
+                            
+                            </TableRow>
+                            
+                            
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow03"
+                                 android:layout_width="wrap_content" 
+                                 android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout05" 
+                                         android:layout_height="wrap_content">
+                                        
+                                        <Spinner 
+                                            android:layout_height="wrap_content" 
+                                            android:id="@+id/spinner28" 
+                                           android:layout_width="wrap_content"></Spinner>
+                                        
+                                        <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_pregnant_52_07" 
+                                             android:id="@+id/EditText_write_pregnant_52_07" 
+                                             android:layout_width="wrap_content"></EditText>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            <!-- 特記事項 -->
+                            <TableRow 
+                                android:id="@+id/TableRow04" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                            
+                                <TextView 
+                                    android:text="特記事項" 
+                                    style="@style/blackOnly" 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/TextView01"></TextView>
+                                
+                            
+                            </TableRow>
+                            
+                           
+                            <TableRow 
+                                android:id="@+id/TableRow04" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                            
+                                <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_pregnant_52_08" 
+                                             android:id="@+id/EditText_write_pregnant_52_08" 
+                                             android:layout_width="wrap_content"></EditText>
+                                
+                                
+                                </TableRow>
+                            
+                            
+                            <!-- 娩出所要時間 -->
+                            <TableRow 
+                                android:id="@+id/TableRow04" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                            
+                                <TextView 
+                                    android:text="娩出所要時間" 
+                                    style="@style/blackOnly" 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/TextView01"></TextView>
+                                
+                            
+                            </TableRow>
+                            
+                           
+                            <TableRow 
+                                android:id="@+id/TableRow04" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                            
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper03">
+                                    
+                                    <LinearLayout
+                                         android:layout_width="wrap_content" 
+                                         android:id="@+id/linearLayout3"
+                                          android:layout_height="wrap_content">
+                                
+                                
+                                
+                                <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_pregnant_52_09" 
+                                             android:id="@+id/EditText_write_pregnant_52_09" 
+                                             android:layout_width="wrap_content"></EditText>
+                                
+                                <TextView 
+                                    android:text="分" 
+                                    style="@style/blackOnly" 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/TextView01"></TextView>
+                                
+                                </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                                
+                                
+                                </TableRow>
+                            
+                            <!-- 出血量 -->
+                            <TextView
+                                     android:text="出血量" 
+                                     style="@style/blackOnly"
+                                      android:layout_width="wrap_content" 
+                                      android:layout_height="wrap_content" 
+                                      android:id="@+id/TextView09"></TextView>
+                            
+                            <TableRow 
+                                android:id="@+id/TableRow03"
+                                 android:layout_width="wrap_content" 
+                                 android:layout_height="wrap_content">
+                                
+                            
+                            </TableRow>
+                            
+                            
+                            <!-- 出血量 -->
+                            <TableRow 
+                                android:id="@+id/TableRow03"
+                                 android:layout_width="wrap_content" 
+                                 android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout05" 
+                                         android:layout_height="wrap_content">
+                                        
+                                        <Spinner 
+                                            android:layout_height="wrap_content" 
+                                            android:id="@+id/spinner29" 
+                                           android:layout_width="wrap_content"></Spinner>
+                                        
+                                        <EditText 
+                                            android:layout_height="wrap_content"
+                                             android:text="@+id/EditText_write_pregnant_52_10" 
+                                             android:id="@+id/EditText_write_pregnant_52_10" 
+                                             android:layout_width="wrap_content"></EditText>
+                                        
+                                        
+                                        <TextView 
+                                        android:text="ml"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                        
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            
+            
+            
+            <!-- 出産時の児の状態 -->
+            <TextView  
+                style="@style/write_9_title" 
+                android:id="@+id/TextView07" 
+                android:text="出産時の児の状態"></TextView>
+            
+            
+            <LinearLayout
+                 android:id="@+id/linearLayout1" 
+                 android:layout_height="wrap_content" 
+                 android:layout_width="match_parent" 
+                 style="@style/write_9_question_box">
+                
+                <HorizontalScrollView 
+                    android:id="@+id/horizontalScrollView2" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:layout_width="fill_parent" 
+                        android:id="@+id/LinearLayout04" 
+                        android:orientation="vertical" 
+                        android:layout_height="wrap_content">
+                        
+                        <TableLayout 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="match_parent" 
+                            android:id="@+id/tableLayout2">
+                            
+                            
+                            <!-- 性別 -->
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="性別" 
+                                     android:layout_width="wrap_content"></TextView>
+                                
+                                <ViewFlipper 
+                                    android:layout_height="wrap_content" 
+                                    android:id="@+id/ViewFlipper06" 
+                                    android:layout_width="wrap_content">
+                                    
+                                    <Spinner 
+                                            android:id="@+id/spinner30" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView20" 
+                                        android:text="氏名" 
+                                        android:layout_height="wrap_content"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <!-- 数 -->
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="数" 
+                                     android:layout_width="wrap_content"></TextView>
+                                
+                                    <Spinner 
+                                            android:id="@+id/spinner31" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView20" 
+                                        android:text="人" 
+                                        android:layout_height="wrap_content"></TextView>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- 体重 -->
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="体重" 
+                                     android:layout_width="wrap_content"></TextView>
+                                
+                                    <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_11"
+                                             android:text="@+id/EditText_write_pregnant_52_11" 
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="100px"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView20" 
+                                        android:text="g" 
+                                        android:layout_height="wrap_content"></TextView>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- 身長 -->
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="身長" 
+                                     android:layout_width="wrap_content"></TextView>
+                                
+                                    <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_12"
+                                             android:text="@+id/EditText_write_pregnant_52_12" 
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="100px"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView20" 
+                                        android:text="cm" 
+                                        android:layout_height="wrap_content"></TextView>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- 頭囲 -->
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="頭囲" 
+                                     android:layout_width="wrap_content"></TextView>
+                                
+                                    <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_13"
+                                             android:text="@+id/EditText_write_pregnant_52_13" 
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="100px"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView20" 
+                                        android:text="cm" 
+                                        android:layout_height="wrap_content"></TextView>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- 胸囲 -->
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="胸囲" 
+                                     android:layout_width="wrap_content"></TextView>
+                                
+                                    <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_14"
+                                             android:text="@+id/EditText_write_pregnant_52_14" 
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="100px"></EditText>
+                                    
+                                    <TextView 
+                                        style="@style/blackOnly" 
+                                        android:layout_width="wrap_content" 
+                                        android:id="@+id/TextView20" 
+                                        android:text="cm" 
+                                        android:layout_height="wrap_content"></TextView>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- 特別な所見・処置 -->
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="特別な所見・処置" 
+                                     android:layout_width="wrap_content"></TextView>
+                            </TableRow>
+                            
+                            
+                            <!-- 新生児仮死→ -->
+                            <TableRow 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/tableRow3" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    android:layout_height="wrap_content" 
+                                    style="@style/blackOnly" 
+                                    android:id="@+id/TextView12"
+                                     android:text="新生児仮死→" 
+                                     android:layout_width="wrap_content"></TextView>
+                                
+                                    <Spinner 
+                                            android:id="@+id/spinner32" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></Spinner>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            <!-- 証明：出産の場所 -->
+            <TextView 
+                style="@style/write_9_title" 
+                android:layout_height="wrap_content" 
+                android:id="@+id/TextView27" 
+                android:text="証明・出産の場所など" 
+                android:layout_width="fill_parent"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:layout_height="wrap_content" 
+                android:layout_width="match_parent" 
+                android:id="@+id/LinearLayout06">
+                
+                <HorizontalScrollView 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/HorizontalScrollView01" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:orientation="vertical" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout11">
+                        
+                        <TableLayout 
+                            android:id="@+id/TableLayout01" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="match_parent">
+                            
+                            
+                            
+                            
+                            <!-- 証明 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                    
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="証明"></TextView>
+                                    
+                            </TableRow>
+                            
+                            
+                            <!-- 証明スピナー -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                    
+                                    <Spinner 
+                                            android:id="@+id/spinner33" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                    
+                                    
+                            </TableRow>
+                            
+                            
+                            <!-- 出産場所の名称 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                    
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="出産場所の名称"></TextView>
+                                
+                                    <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_15" 
+                                        android:text="@+id/EditText_write_pregnant_52_15" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="100px"></EditText>
+                                    
+                                    </LinearLayout>
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                    </ViewFlipper>
+                            </TableRow>
+                            
+                            <!-- 分娩取扱者 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                    <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="分娩取扱者"></TextView>
+                                
+                                </LinearLayout>
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                    </ViewFlipper>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- 医師 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="医師"></TextView>
+                                
+                                    <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_16" 
+                                        android:text="@+id/EditText_write_pregnant_52_16" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="100px"></EditText>
+                                    
+                                    </LinearLayout>
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                    </ViewFlipper>
+                                    
+                            </TableRow>
+                            
+                            
+                            <!-- 助産師 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                    
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="助産師"></TextView>
+                                
+                                    <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_17" 
+                                        android:text="@+id/EditText_write_pregnant_52_17" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="100px"></EditText>
+                                    
+                                    </LinearLayout>
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                    </ViewFlipper>
+                                    
+                            </TableRow>
+                            
+                            
+                            <!-- その他 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                    
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="その他"></TextView>
+                                
+                                    <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_18" 
+                                        android:text="@+id/EditText_write_pregnant_52_18" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="100px"></EditText>
+                                    
+                                    </LinearLayout>
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                    </ViewFlipper>
+                                    
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            
+            <!-- 出産後の母体の経過 -->
+            <TextView 
+                style="@style/write_9_title" 
+                android:layout_height="wrap_content" 
+                android:id="@+id/TextView27" 
+                android:text="出産後の母体の経過" 
+                android:layout_width="fill_parent"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:layout_height="wrap_content" 
+                android:layout_width="match_parent" 
+                android:id="@+id/LinearLayout06">
+                
+                <HorizontalScrollView 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/HorizontalScrollView01" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:orientation="vertical" 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout11">
+                        
+                        <TableLayout 
+                            android:id="@+id/TableLayout01" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="match_parent">
+                            
+                            
+                            
+                            <!-- 産後日月数 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                        
+                              <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                        
+                                
+                                
+                               <EditText 
+                                        android:layout_height="wrap_content"
+                                        android:text="@+id/EditText_write_pregnant_52_19" 
+                                        android:id="@+id/EditText_write_pregnant_52_19" 
+                                        android:layout_width="wrap_content"></EditText>
+                                        
+                              <TextView android:text="ヶ月" 
+                                        style="@style/blackOnly"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/kagetsu" 
+                                        android:layout_width="wrap_content"></TextView>
+                                
+                                <EditText 
+                                        android:layout_height="wrap_content"
+                                        android:text="@+id/EditText_write_pregnant_52_20" 
+                                        android:id="@+id/EditText_write_pregnant_52_20" 
+                                        android:layout_width="wrap_content"></EditText>
+                                        
+                              <TextView android:text="日" 
+                                        style="@style/blackOnly"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/kagetsu" 
+                                        android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            
+                            <!-- 子宮復古 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="子宮復古"></TextView>
+                            </TableRow>
+                            
+                            
+                            <!-- 子宮復古スピナー -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                              <Spinner 
+                                     android:id="@+id/spinner34" 
+                                     android:layout_height="wrap_content" 
+                                     android:layout_width="wrap_content"></Spinner>
+                              
+                            </TableRow>
+                            
+                            <!-- 悪露 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="悪露"></TextView>
+
+                            </TableRow>
+                            
+                            <!-- 悪露スピナー -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                              <Spinner 
+                                     android:id="@+id/spinner35" 
+                                     android:layout_height="wrap_content" 
+                                     android:layout_width="wrap_content"></Spinner>
+                              
+                            </TableRow>
+
+                            <!-- 乳房の状態 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="乳房の状態"></TextView>
+                                
+                                    <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_21" 
+                                        android:text="@+id/EditText_write_pregnant_52_21" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="100px"></EditText>
+                            </TableRow>
+                            
+                            
+                            <!-- 血圧 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="血圧"></TextView>
+                                
+                            </TableRow>
+                            
+                            <!-- 血圧エディット -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                        
+                              <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                        
+                                
+                                
+                               <EditText 
+                                        android:layout_height="wrap_content"
+                                        android:text="@+id/EditText_write_pregnant_52_22" 
+                                        android:id="@+id/EditText_write_pregnant_52_22" 
+                                        android:layout_width="wrap_content"></EditText>
+                                        
+                              <TextView android:text="mmhg -" 
+                                        style="@style/blackOnly"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/kagetsu" 
+                                        android:layout_width="wrap_content"></TextView>
+                                
+                                <EditText 
+                                        android:layout_height="wrap_content"
+                                        android:text="@+id/EditText_write_pregnant_52_23" 
+                                        android:id="@+id/EditText_write_pregnant_52_23" 
+                                        android:layout_width="wrap_content"></EditText>
+                                        
+                              <TextView android:text="mmhg" 
+                                        style="@style/blackOnly"
+                                        android:layout_height="wrap_content"
+                                        android:id="@+id/kagetsu" 
+                                        android:layout_width="wrap_content"></TextView>
+                                    </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <!-- 尿たんぱく -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="尿たんぱく"></TextView>
+
+                            </TableRow>
+                            
+                            <!-- 尿タンパクスピナー -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                              <Spinner 
+                                     android:id="@+id/spinner36" 
+                                     android:layout_height="wrap_content" 
+                                     android:layout_width="wrap_content"></Spinner>
+                              
+                            </TableRow>
+                            
+                            
+                            
+                            <!-- 尿糖 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="尿糖"></TextView>
+
+                            </TableRow>
+                            
+                            <!-- 尿糖スピナー -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                              <Spinner 
+                                     android:id="@+id/spinner37" 
+                                     android:layout_height="wrap_content" 
+                                     android:layout_width="wrap_content"></Spinner>
+                              
+                            </TableRow>
+                            
+                            <!-- 体重 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="体重"></TextView>
+
+                            </TableRow>
+                            
+                            
+                            <!-- 体重エディット -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+
+                                    <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_24" 
+                                        android:text="@+id/EditText_write_pregnant_52_24" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="100px"></EditText>
+                                    
+                                    <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="kg"></TextView>
+                                
+                                    
+                            </TableRow>
+                            
+                            <!-- 備考 -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+
+                                    <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView34" 
+                                    android:text="備考"></TextView>
+                                
+                                    
+                            </TableRow>
+                            
+                            <!-- 備考エディット -->
+                            <TableRow 
+                                android:id="@+id/TableRow10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+
+                                    <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_25" 
+                                        android:text="@+id/EditText_write_pregnant_52_25" 
+                                        android:layout_height="wrap_content" 
+                                        android:layout_width="fill_parent"></EditText>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+            
+            <!-- 母親自信の記録 -->            
+            <TextView 
+                style="@style/write_9_title" 
+                android:id="@+id/TextView23" 
+                android:layout_height="wrap_content" 
+                android:text="母親自身の記録" 
+                android:layout_width="fill_parent"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box"
+                 android:layout_height="wrap_content" 
+                 android:layout_width="match_parent" 
+                 android:id="@+id/LinearLayout09">
+                
+                <HorizontalScrollView 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/HorizontalScrollView02" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:orientation="vertical"
+                         android:layout_width="fill_parent" 
+                         android:layout_height="wrap_content" 
+                         android:id="@+id/LinearLayout08">
+                        
+                        <TableLayout 
+                            android:id="@+id/TableLayout02" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="match_parent">
+                            
+                            
+                            <!-- 気分が沈んだり，涙もろくなったり，何もやる気になれないといったことがありますか？ -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="気分が沈んだり，涙もろくなったり，何もやる気になれないといったことがありますか？"></TextView>
+                            </TableRow>
+                            
+                            <!-- yes no -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                              
+                                <Spinner 
+                                            android:id="@+id/spinner38" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                 </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                                
+                            </TableRow>
+                            
+                            <!-- 入浴 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="入浴"></TextView>
+                            </TableRow>
+                            
+                            
+                            <!-- 産後 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                               
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="産後"></TextView>
+                                
+                                
+                                <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_26" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_pregnant_52_26" 
+                                        android:layout_width="100px"></EditText>
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="日"></TextView>
+                                
+                                </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- ○月○日 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                               
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                
+                               
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_27"
+                                             android:layout_height="wrap_content"
+                                              android:layout_width="100px" 
+                                              android:text="@+id/EditText_write_pregnant_52_27"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="月"
+                                             style="@style/blackOnly" 
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView01" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        
+                                        
+                                        <EditText android:id="@+id/EditText_write_pregnant_52_28"
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="100px" 
+                                             android:text="@+id/EditText_write_pregnant_52_28"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="日　"
+                                             style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView02" 
+                                              android:layout_width="wrap_content"></TextView>
+                                         </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                                        
+                                        
+                            </TableRow>
+                            
+                            
+                            <!-- 家事開始 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="家事開始"></TextView>
+                            </TableRow>
+                            
+                            
+                            <!-- 産後 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                               
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="産後"></TextView>
+                                
+                                
+                                <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_29" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_pregnant_52_29" 
+                                        android:layout_width="100px"></EditText>
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="日"></TextView>
+                                </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- ○月○日 -->
+                            <TableRow
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                               
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                
+                                <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_30"
+                                             android:layout_height="wrap_content"
+                                              android:layout_width="100px" 
+                                              android:text="@+id/EditText_write_pregnant_52_30"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="月"
+                                             style="@style/blackOnly" 
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView01" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        
+                                        
+                                        <EditText android:id="@+id/EditText_write_pregnant_52_31"
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="100px" 
+                                             android:text="@+id/EditText_write_pregnant_52_31"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="日　"
+                                             style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView02" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <!-- 家事以外の労働開始 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="家事以外の労働開始"></TextView>
+                            </TableRow>
+                            
+                            
+                            <!-- 産後 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                               
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="産後"></TextView>
+                                
+                                
+                                <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_32" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_pregnant_52_32" 
+                                        android:layout_width="100px"></EditText>
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="日"></TextView>
+                                </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                                
+                            </TableRow>
+                            
+                            
+                            <!-- ○月○日 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                               
+                                <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_33"
+                                             android:layout_height="wrap_content"
+                                              android:layout_width="50px" 
+                                              android:text="@+id/EditText_write_pregnant_52_33"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="月"
+                                             style="@style/blackOnly" 
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView01" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        
+                                        
+                                        <EditText android:id="@+id/EditText_write_pregnant_52_34"
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="50px" 
+                                             android:text="@+id/EditText_write_pregnant_52_34"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="日　"
+                                             style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView02" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                                        
+                            </TableRow>
+                            
+                            
+                            <!-- 月経再開 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="月経再開"></TextView>
+                            </TableRow>
+                            
+                            
+                            <!-- ○年○月○日 -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                               
+                                <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_35" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_pregnant_52_35" 
+                                        android:layout_width="100px"></EditText>
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="年"></TextView>
+                                
+                                
+                                <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_36"
+                                             android:layout_height="wrap_content"
+                                              android:layout_width="50px" 
+                                              android:text="@+id/EditText_write_pregnant_52_36"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="月"
+                                             style="@style/blackOnly" 
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView01" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        
+                                        
+                                        <EditText android:id="@+id/EditText_write_pregnant_52_37"
+                                             android:layout_height="wrap_content" 
+                                             android:layout_width="50px" 
+                                             android:text="@+id/EditText_write_pregnant_52_37"></EditText>
+                                        
+                                        <TextView 
+                                            android:text="日　"
+                                             style="@style/blackOnly"
+                                             android:layout_height="wrap_content"
+                                              android:id="@+id/TextView02" 
+                                              android:layout_width="wrap_content"></TextView>
+                                        
+                                        </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <!-- 産後，気がついたこと，変わったことがあれば医師，助産師などに相談しましょう．また，気付いたことなどを記録してください． -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_height="wrap_content" 
+                                    android:layout_width="wrap_content" 
+                                    android:id="@+id/TextView33" 
+                                    android:text="産後，気がついたこと，変わったことがあれば医師，助産師などに相談しましょう．また，気付いたことなどを記録してください．"></TextView>
+                                 </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                            
+                            
+                            <!-- 産後，気がついたこと，変わったことがあれば医師～エディット -->
+                            <TableRow 
+                                android:id="@+id/TableRow08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content">
+                                
+                                <ViewFlipper 
+                                    android:layout_width="wrap_content"
+                                     android:layout_height="wrap_content" 
+                                     android:id="@+id/ViewFlipper04">
+                                    
+                                    <LinearLayout 
+                                        android:layout_width="match_parent"
+                                         android:id="@+id/LinearLayout5_1111" 
+                                         android:layout_height="wrap_content">
+                                
+                                
+                                <EditText 
+                                        android:id="@+id/EditText_write_pregnant_52_38" 
+                                        android:layout_height="wrap_content" 
+                                        android:text="@+id/EditText_write_pregnant_52_38" 
+                                        android:layout_width="wrap_content"></EditText>
+                                 </LinearLayout>
+                                    
+                                    
+                                    <TextView 
+                                        android:text="氏名"
+                                         style="@style/blackOnly" 
+                                         android:layout_height="wrap_content" 
+                                         android:id="@+id/TextView18" 
+                                         android:layout_width="wrap_content" 
+                                         android:gravity="center|center_vertical|center_horizontal"></TextView>
+                                </ViewFlipper>
+                            </TableRow>
+                        </TableLayout>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+            
+
+            
+            
+            <!-- 家族計画指導 -->
+            <TextView 
+                style="@style/write_9_title" 
+                android:id="@+id/TextView47" 
+                android:layout_height="wrap_content" 
+                android:text="家族計画指導" 
+                android:layout_width="fill_parent"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:layout_height="wrap_content" 
+                android:layout_width="match_parent" 
+                android:id="@+id/LinearLayout13">
+                
+                <HorizontalScrollView 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/HorizontalScrollView03" 
+                    android:layout_width="wrap_content">
+                    
+                    <LinearLayout 
+                        android:layout_width="fill_parent" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/LinearLayout12" 
+                        android:orientation="vertical">
+                        
+                        <ViewFlipper 
+                            android:id="@+id/ViewFlipper17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <TableLayout 
+                                android:id="@+id/TableLayout04" 
+                                android:layout_height="wrap_content"
+                                 android:layout_width="match_parent">
+                                
+                                <TableRow 
+                                    android:id="@+id/TableRow19" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content">
+                                
+                                
+                                <Spinner 
+                                            android:id="@+id/spinner39" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                </TableRow>
+                                
+                                
+                                <TableRow 
+                                    android:id="@+id/TableRow19" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content">
+                                
+                                
+                                <Spinner 
+                                            android:id="@+id/spinner40" 
+                                            android:layout_height="wrap_content" 
+                                            android:layout_width="wrap_content"></Spinner>
+                                </TableRow>
+                                
+                                
+                                
+                                <TableRow 
+                                    android:id="@+id/TableRow19" 
+                                    android:layout_width="wrap_content" 
+                                    android:layout_height="wrap_content">
+
+                                        <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_39" 
+                                            android:layout_width="100px" 
+                                            android:text="@+id/EditText_write_pregnant_52_39" 
+                                            android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:layout_width="wrap_content" 
+                                            android:text="@string/write_1_year" 
+                                            android:id="@+id/TextView46" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_40" 
+                                            android:layout_width="50px" 
+                                            android:text="@+id/EditText_write_pregnant_52_40" 
+                                            android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:layout_width="wrap_content" 
+                                            android:text="@string/write_1_month" 
+                                            android:id="@+id/TextView46" 
+                                            android:layout_height="wrap_content"></TextView>
+                                        
+                                        <EditText 
+                                            android:id="@+id/EditText_write_pregnant_52_41" 
+                                            android:layout_width="50px" 
+                                            android:text="@+id/EditText_write_pregnant_52_41" 
+                                            android:layout_height="wrap_content"></EditText>
+                                        
+                                        <TextView 
+                                            style="@style/blackOnly" 
+                                            android:layout_width="wrap_content" 
+                                            android:id="@+id/TextView45" 
+                                            android:layout_height="wrap_content" 
+                                            android:text="日"></TextView>
+                                </TableRow>
+                                
+
+                            </TableLayout>
+                            
+                            
+                            
+                            
+                            <LinearLayout 
+                                android:orientation="vertical" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/linearLayout6" 
+                                android:layout_width="wrap_content">
+                                
+                                <TextView 
+                                    style="@style/blackOnly" 
+                                    android:layout_width="wrap_content" 
+                                    android:text="生年月日" 
+                                    android:id="@+id/TextView49" 
+                                    android:layout_height="wrap_content"></TextView>
+                                
+                            </LinearLayout>
+                        </ViewFlipper>
+                    </LinearLayout>
+                </HorizontalScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>

@@ -1,0 +1,1340 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="fill_parent" 
+  android:layout_width="fill_parent" 
+  android:orientation="vertical" 
+  android:background="@drawable/background_pink">
+  
+    
+  <!-- 読込・保存ボタン -->
+    <TextView  
+        style="@style/write_9_title" 
+        android:id="@+id/TextView01" 
+        android:text="妊娠中の経過"></TextView>
+    
+    <LinearLayout 
+        android:id="@+id/linearLayout1" 
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        style="@style/write_9_question_box">
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_0_41_back" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="前の項目"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_0_41_home" 
+            android:layout_width="wrap_content"
+             android:layout_weight="1"
+              android:text="編集"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/Button_Write_0_41_next" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1"
+             android:text="次の項目"></Button>
+    </LinearLayout>
+    
+    
+    <ScrollView 
+        android:layout_height="wrap_content" 
+        android:id="@+id/scrollView1" 
+        android:layout_width="fill_parent" 
+        android:layout_gravity="top">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:id="@+id/linearLayout4" 
+            android:orientation="vertical">
+            
+            <TextView 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:id="@+id/TextView71" 
+                android:text="診察記録"></TextView>
+           
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical" 
+                android:id="@+id/LinearLayout01" 
+                android:layout_height="wrap_content">
+                
+                <TextView 
+                    android:id="@+id/TextView43" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;診察月日&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:id="@+id/LinearLayout13" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content">
+                    
+                    <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_01" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView64" 
+                        android:layout_width="wrap_content" 
+                        android:text="年"></TextView>
+                    
+                    <!-- 月 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_02" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView25" 
+                        android:layout_width="wrap_content" 
+                        android:text="月"></TextView>
+                    
+                    <!-- 日 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_03" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView41" 
+                        android:layout_width="wrap_content" 
+                        android:text="日"></TextView>
+                </LinearLayout>
+                
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout05" 
+                    android:layout_height="wrap_content">
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView02" 
+                        android:layout_height="wrap_content" 
+                        android:text="妊娠"></TextView>
+                    
+                    <!-- 妊娠〇〇週目 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_04" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:id="@+id/TextView14" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="週目"></TextView>
+                </LinearLayout>
+                
+                
+                
+                <TextView 
+                    android:id="@+id/TextView04" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;子宮底長&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout18" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 子宮底長 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_05" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        android:text="cm" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView47" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                
+                <TextView 
+                    android:id="@+id/TextView50" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;腹囲&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout02" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 腹囲 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_06" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        android:text="cm" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView03" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView18" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;血圧&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout19" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 血圧min -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_07" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        android:text="mmhg-" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView48" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                    
+                    <!-- 血圧max -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_08" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        android:text="mmhg" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView16" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView07" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;体重&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout06" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 体重 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_09" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    
+                    <TextView 
+                        android:text="kg" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView08" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView15" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;浮腫&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout08" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 浮腫 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_10" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView05" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;尿たんぱく&gt;"></TextView>
+                
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout03" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 尿たんぱく -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_11" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView06" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;尿糖&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:id="@+id/LinearLayout04" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 尿糖 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_12" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/TextView22" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;その他特に行った検査&gt;"></TextView>
+                
+                
+                <LinearLayout 
+                    android:orientation="vertical" 
+                    android:id="@+id/LinearLayout11" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content">
+                    
+                    <TextView 
+                        android:layout_height="wrap_content" 
+                        android:text="ヘモグロビンも含まれます。" 
+                        android:id="@+id/TextView11" 
+                        android:layout_width="wrap_content" 
+                        style="@style/blackOnly"></TextView>
+                    
+                    <!-- ヘモグロビンも含まれます。 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_13" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/TextView09" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;特記指示事項&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:orientation="vertical" 
+                    android:id="@+id/LinearLayout09" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 特記指示事項& -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_14" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/TextView10" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;施設名または担当者名&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:orientation="vertical" 
+                    android:id="@+id/LinearLayout12" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content">
+                    
+                    <!-- 施設名または担当者名 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_15" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                </LinearLayout>
+                
+
+            </LinearLayout>
+            
+            
+            <TextView  
+                android:id="@+id/TextView13" 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:text="梅毒血清反応"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:id="@+id/LinearLayout07" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical">
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper01">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout14" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_16" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView19"></TextView>
+                        
+                        <!-- 月 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_17" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView20"></TextView>
+                        
+                        <!-- 日実施 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_18" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="日実施" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView21"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="日実施" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView33"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+            
+            
+            <TextView 
+                android:id="@+id/TextView23" 
+                android:layout_height="wrap_content" 
+                android:text="B型肝炎抗原検査" 
+                style="@style/write_9_title"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:id="@+id/LinearLayout16" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical">
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper02">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout15" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_19" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView27"></TextView>
+                        
+                       <!-- 月 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_20" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView24"></TextView>
+                       
+                        <!-- 日実施 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_21" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="日実施" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView26"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView80"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+            
+            
+            <TextView  
+                android:id="@+id/TextView28" 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:text="血液型検査"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:id="@+id/LinearLayout20" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical">
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper03">
+                    
+                    <LinearLayout 
+                        android:id="@+id/linearLayout3" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:orientation="vertical">
+                        
+                        <LinearLayout 
+                            android:id="@+id/LinearLayout17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_22" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                            
+                            <TextView 
+                                android:text="年" style="@style/blackOnly" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TextView31"></TextView>
+                            
+                            <!-- 月 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_23" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                            
+                            <TextView 
+                                android:text="月" style="@style/blackOnly" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TextView29"></TextView>
+                            
+                            <!-- 日実施 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_24" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                            
+                            <TextView 
+                                android:text="日実施" 
+                                style="@style/blackOnly" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TextView30"></TextView>
+                        </LinearLayout>
+                        
+                        
+                        <LinearLayout 
+                            android:id="@+id/LinearLayout21" 
+                            android:layout_height="wrap_content"
+                             android:layout_width="wrap_content" 
+                             android:orientation="horizontal">
+                            
+                            <!-- 血液型 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_25" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                            
+                           
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_kata" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="型"></TextView>
+                            
+                            <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_26" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        </LinearLayout>
+                        
+                        
+                        <LinearLayout 
+                            android:id="@+id/LinearLayout22" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <TextView 
+                                android:text="その他" 
+                                style="@style/blackOnly" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TextView32"></TextView>
+                            
+                            <!-- その他 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_27" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        style="@style/blackOnly" 
+                        android:text="年" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView93" 
+                        android:layout_width="match_parent"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+            
+            
+            <TextView  
+                android:id="@+id/TextView35" 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:text="妊婦自身の記録"></TextView>
+            
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:id="@+id/LinearLayout24" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical">
+                
+                <TextView 
+                    android:id="@+id/TextView36" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;最終月経開始日&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent"
+                     android:layout_width="wrap_content" 
+                     android:id="@+id/ViewFlipper04">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout26" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_28" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView39"></TextView>
+                        
+                        <!-- 月 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_29" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView34"></TextView>
+                        
+                        <!-- 日 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_30" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="日" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView38"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="日" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content"
+                         android:layout_width="wrap_content" 
+                         android:id="@+id/TextView81"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView37" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;この妊娠の初診日&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper05">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout23" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_31" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView42"></TextView>
+                        
+                        <!-- 月 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_32" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly"
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:id="@+id/TextView40"></TextView>
+                        
+                        <!-- 日 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_33" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="日" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView44"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="日" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView82"></TextView>
+                </ViewFlipper>
+                
+                <TextView 
+                    android:id="@+id/TextView49" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;胎動を感じた日&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper06">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout25" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_34" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView45"></TextView>
+                        
+                        <!-- 月 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_35" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView51"></TextView>
+                        
+                        <!-- 日 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_36" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="日" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content"
+                             android:layout_width="wrap_content" 
+                             android:id="@+id/TextView46"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView83"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView54" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;分娩予定日&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper07">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout27" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <!-- 年 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_37" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="年" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView53"></TextView>
+                        
+                        <!-- 月 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_38" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView52"></TextView>
+                        
+                        <!-- 日 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_39" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="日" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView55"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView84"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView59" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;赤ちゃん誕生を迎える両親の気持ちなどを記入しましょう。&gt;"></TextView>
+                
+                <TextView 
+                    android:id="@+id/TextView17" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="心配なこと，相談したいことなども記入しておきましょう。" 
+                    style="@style/blackOnly"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper08">
+                    
+                    <!-- 赤ちゃん誕生を迎える両親の気持ちなどを記入しましょう。 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_40" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="---------------"></TextView>
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView85"></TextView>
+                </ViewFlipper>
+                
+                <TextView 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content"
+                     android:id="@+id/TextView61" 
+                     style="@style/Ques_title" 
+                     android:text="&lt;出産前後の居住地&gt;"></TextView>
+                
+                <TableLayout 
+                    android:layout_width="fill_parent" 
+                    android:id="@+id/tableLayout2" 
+                    android:layout_height="fill_parent">
+                    
+                    <TableRow 
+                        android:layout_width="match_parent" 
+                        android:layout_height="match_parent" 
+                        android:id="@+id/tableRow2">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:text="住所" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView56"></TextView>
+                        
+                        <ViewFlipper 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/ViewFlipper09">
+                            
+                            <!-- 住所 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_41" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                            
+                            <TextView 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:text="年" style="@style/blackOnly" 
+                                android:id="@+id/TextView86"></TextView>
+                        </ViewFlipper>
+                    </TableRow>
+                    
+                    <TableRow 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/tableRow3">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:text="電話" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView57"></TextView>
+                        
+                        <ViewFlipper 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/ViewFlipper10">
+                            
+                             <!-- 住所 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_42" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                            
+                            <TextView 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:text="年" style="@style/blackOnly" 
+                                android:id="@+id/TextView87"></TextView>
+                        </ViewFlipper>
+                    </TableRow>
+                </TableLayout>
+                
+                
+                <TextView
+                     android:layout_width="wrap_content" 
+                     android:layout_height="wrap_content" 
+                     android:id="@+id/TextView58" 
+                     style="@style/Ques_title" 
+                     android:text="&lt;出産前後の連絡先&gt;"></TextView>
+                
+                <TextView 
+                    style="@style/blackOnly"  
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView62" 
+                    android:text="(知らせてほしい人)"></TextView>
+                
+                <TableLayout 
+                    android:layout_height="fill_parent" 
+                    android:layout_width="fill_parent"
+                     android:id="@+id/TableLayout01">
+                    
+                    <TableRow 
+                        android:layout_width="match_parent" 
+                        android:layout_height="match_parent" 
+                        android:id="@+id/TableRow01">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:text="名前" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView92"></TextView>
+                        
+                        <ViewFlipper 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/ViewFlipper11" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1">
+                            
+                             <!-- 名前 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_43" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                            
+                            <TextView 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:text="年" style="@style/blackOnly" 
+                                android:id="@+id/TextView88"></TextView>
+                        </ViewFlipper>
+                    </TableRow>
+                    
+                    <TableRow 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TableRow02">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:text="電話" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView60"></TextView>
+                        
+                        <ViewFlipper 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/ViewFlipper12" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1">
+                            
+                            <!-- 電話 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_44" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                            
+                            <TextView
+                                 android:layout_height="wrap_content" 
+                                 android:layout_width="wrap_content" 
+                                 android:text="年" style="@style/blackOnly" 
+                                 android:id="@+id/TextView89"></TextView>
+                        </ViewFlipper>
+                    </TableRow>
+                </TableLayout>
+                
+                
+                <TextView 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView63" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;入院の方法&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper13">
+                    
+                    <LinearLayout 
+                        android:id="@+id/linearLayout5" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content">
+                        
+                        <!-- 入院方法 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_45" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView90"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView65" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;所要時間&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper14">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout35" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <!-- 時間 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_46" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="時間" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView66"></TextView>
+                        
+                        <!-- 分 -->
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/write_pregnant_41_47" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="------"></TextView>
+                        
+                        <TextView 
+                            android:text="分" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView67"></TextView>
+                        
+                    </LinearLayout>
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView91"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>
+

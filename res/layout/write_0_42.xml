@@ -1,0 +1,1386 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="fill_parent" 
+  android:layout_width="fill_parent" 
+  android:orientation="vertical" 
+  android:background="@drawable/background_pink">
+  
+    
+  <!-- 読込・保存ボタン -->
+    <TextView  
+        style="@style/write_9_title" 
+        android:id="@+id/TextView01" 
+        android:text="妊娠中の経過"></TextView>
+    
+    <LinearLayout 
+        android:id="@+id/linearLayout1" 
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent" 
+        style="@style/write_9_question_box">
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonLock" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="編集する"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonUnlock" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="編集終了"></Button>
+        
+        <Button 
+            android:layout_height="wrap_content" 
+            android:id="@+id/ButtonCancel" 
+            android:layout_width="wrap_content" 
+            android:layout_weight="1" 
+            android:text="キャンセル"></Button>
+    </LinearLayout>
+    
+    
+    <ScrollView 
+        android:layout_height="wrap_content" 
+        android:id="@+id/scrollView1" 
+        android:layout_width="fill_parent" 
+        android:layout_gravity="top">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:id="@+id/linearLayout4" 
+            android:orientation="vertical">
+            
+            <TextView 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:id="@+id/TextView71" 
+                android:text="診察記録"></TextView>
+            
+            <HorizontalScrollView 
+                android:id="@+id/horizontalScrollView1" 
+                android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_question_box">
+                
+                <LinearLayout 
+                    android:id="@+id/linearLayout2" 
+                    android:layout_width="match_parent" 
+                    android:layout_height="match_parent" 
+                    android:orientation="horizontal">
+                    
+                    <TableLayout 
+                        android:layout_height="match_parent" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/tableLayout1">
+                        
+                        <TableRow 
+                            android:id="@+id/tableRow1" 
+                            android:layout_width="wrap_content" 
+                            android:layout_height="wrap_content">
+                            
+                            <TextView 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/TextHead01" 
+                                android:text="　　　"></TextView>
+                            
+                            <TextView 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:id="@+id/TextHead02" 
+                                android:text="　　　　"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/textView1" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="診察年月日"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView68" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="妊娠週数"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView70" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:text="子宮底長"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView69" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:text="腹囲"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView73" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="血圧"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView78" 
+                                android:text="体重" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView75" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="浮腫"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView72" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="尿たんぱく"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView74" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content"
+                                android:text="尿糖"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView76" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="その他特に行った検査"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView77" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="特記指示事項"></TextView>
+                            
+                            <TextView 
+                                style="@style/blackOnly"  
+                                android:id="@+id/TextView79" 
+                                android:layout_width="wrap_content" 
+                                android:layout_height="wrap_content" 
+                                android:text="施設名又は担当者"></TextView>
+                        </TableRow>
+                    </TableLayout>
+                </LinearLayout>
+            </HorizontalScrollView>
+            
+            
+            <TextView 
+                android:layout_width="wrap_content" 
+                android:id="@+id/TextView39" 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:text="いままでの妊娠-追加フォーム-"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical" 
+                android:id="@+id/LinearLayout01" 
+                android:layout_height="wrap_content">
+                
+                <TextView 
+                    android:id="@+id/TextView43" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;診察月日&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:id="@+id/LinearLayout13" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content">
+                    
+                    <EditText 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText01" 
+                        android:text="@+id/EditText01"></EditText>
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView64" 
+                        android:layout_width="wrap_content" 
+                        android:text="年"></TextView>
+                    
+                    <EditText 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText02" 
+                        android:text="@+id/EditText02"></EditText>
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView25" 
+                        android:layout_width="wrap_content" 
+                        android:text="月"></TextView>
+                    
+                    <EditText 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText17" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText03"></EditText>
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView41" 
+                        android:layout_width="wrap_content" 
+                        android:text="日"></TextView>
+                </LinearLayout>
+                
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout05" 
+                    android:layout_height="wrap_content">
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView02" 
+                        android:layout_height="wrap_content" 
+                        android:text="妊娠"></TextView>
+                    
+                    <EditText 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText17" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText43"></EditText>
+                    
+                    <TextView 
+                        style="@style/blackOnly"  
+                        android:id="@+id/TextView14" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:text="週目"></TextView>
+                </LinearLayout>
+                
+                
+                
+                <TextView 
+                    android:id="@+id/TextView04" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;子宮底長&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout18" 
+                    android:layout_height="wrap_content">
+                    
+                    <EditText 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText04" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText17"></EditText>
+                    
+                    <TextView 
+                        android:text="cm" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView47" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                
+                <TextView 
+                    android:id="@+id/TextView50" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;腹囲&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout02" 
+                    android:layout_height="wrap_content">
+                    
+                    <EditText 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText05" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText18"></EditText>
+                    
+                    <TextView 
+                        android:text="cm" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView03" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView18" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;血圧&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout19" 
+                    android:layout_height="wrap_content">
+                    
+                    <EditText
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText06" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText18"></EditText>
+                    
+                    <TextView 
+                        android:text="mmhg-" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView48" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                    
+                    <EditText 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText07" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText17"></EditText>
+                    
+                    <TextView 
+                        android:text="mmhg" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView16" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView07" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;体重&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout06" 
+                    android:layout_height="wrap_content">
+                    
+                    <EditText 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText08" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText07"></EditText>
+                    
+                    <TextView 
+                        android:text="kg" 
+                        style="@style/blackOnly" 
+                        android:id="@+id/TextView08" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></TextView>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView15" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;浮腫&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout08" 
+                    android:layout_height="wrap_content">
+                    
+                    <Spinner
+                        android:id="@+id/Spinner01" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></Spinner>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView05" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;尿たんぱく&gt;"></TextView>
+                
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout03" 
+                    android:layout_height="wrap_content">
+                    
+                    <Spinner 
+                        android:id="@+id/Spinner02" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></Spinner>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView06" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;尿糖&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:layout_width="wrap_content"
+                    android:id="@+id/LinearLayout04" 
+                    android:layout_height="wrap_content">
+                    
+                    <Spinner 
+                        android:id="@+id/Spinner03"
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content"></Spinner>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/TextView22" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;その他特に行った検査&gt;"></TextView>
+                
+                
+                <LinearLayout 
+                    android:orientation="vertical" 
+                    android:id="@+id/LinearLayout11" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content">
+                    
+                    <TextView 
+                        android:layout_height="wrap_content" 
+                        android:text="ヘモグロビンも含まれます。" 
+                        android:id="@+id/TextView11" 
+                        android:layout_width="wrap_content" 
+                        style="@style/blackOnly"></TextView>
+                    
+                    <EditText 
+                        android:id="@+id/EditText09" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText07" 
+                        android:layout_width="wrap_content"></EditText>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/TextView09" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;特記指示事項&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:orientation="vertical" 
+                    android:id="@+id/LinearLayout09" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content">
+                    
+                    <TextView 
+                        android:layout_height="wrap_content" 
+                        android:text="安静・休業、母性健康管理指導事項連絡カードに記載された措置など" 
+                        android:id="@+id/TextView12" 
+                        android:layout_width="wrap_content" 
+                        style="@style/blackOnly"></TextView>
+                    
+                    
+                    <EditText 
+                        android:id="@+id/EditText10" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText07" 
+                        android:layout_width="wrap_content"></EditText>
+                </LinearLayout>
+                
+                
+                <TextView 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/TextView10" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;施設名または担当者名&gt;"></TextView>
+                
+                <LinearLayout 
+                    android:orientation="vertical" 
+                    android:id="@+id/LinearLayout12" 
+                    android:layout_width="fill_parent" 
+                    android:layout_height="wrap_content">
+                    
+                    <EditText 
+                        android:id="@+id/EditText11" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText17" 
+                        android:layout_width="wrap_content"></EditText>
+                </LinearLayout>
+                
+                
+                <Button 
+                    android:layout_height="wrap_content" 
+                    android:text="上記の内容を追加する" 
+                    android:layout_width="fill_parent" 
+                    android:id="@+id/ButtonRec"></Button>
+                
+                <Button 
+                    android:id="@+id/Button01" 
+                    android:layout_height="wrap_content" 
+                    android:text="入力情報を消去する" 
+                    android:layout_width="fill_parent"></Button>
+            </LinearLayout>
+            
+            
+            <TextView  
+                android:id="@+id/TextView13" 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:text="梅毒血清反応"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:id="@+id/LinearLayout07" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical">
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper01">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout14" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText12"></EditText>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView19"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText13"></EditText>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView20"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText14"></EditText>
+                        
+                        <TextView 
+                            android:text="日実施" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView21"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="日実施" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView33"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+            
+            
+            <TextView 
+                android:id="@+id/TextView23" 
+                android:layout_height="wrap_content" 
+                android:text="B型肝炎抗原検査" 
+                style="@style/write_9_title"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:id="@+id/LinearLayout16" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical">
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper02">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout15" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText15"></EditText>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView27"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText16"></EditText>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView24"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText17"></EditText>
+                        
+                        <TextView 
+                            android:text="日実施" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView26"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView80"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+            
+            
+            <TextView  
+                android:id="@+id/TextView28" 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:text="血液型検査"></TextView>
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:id="@+id/LinearLayout20" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical">
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper03">
+                    
+                    <LinearLayout 
+                        android:id="@+id/linearLayout3" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:orientation="vertical">
+                        
+                        <LinearLayout 
+                            android:id="@+id/LinearLayout17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <EditText 
+                                android:text="@+id/EditText17" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText18"></EditText>
+                            
+                            <TextView 
+                                android:text="年" style="@style/blackOnly" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TextView31"></TextView>
+                            
+                            <EditText 
+                                android:text="@+id/EditText17" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText19"></EditText>
+                            
+                            <TextView 
+                                android:text="月" style="@style/blackOnly" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TextView29"></TextView>
+                            
+                            <EditText 
+                                android:text="@+id/EditText17" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText20"></EditText>
+                            
+                            <TextView 
+                                android:text="日実施" 
+                                style="@style/blackOnly" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TextView30"></TextView>
+                        </LinearLayout>
+                        
+                        
+                        <LinearLayout 
+                            android:id="@+id/LinearLayout21" 
+                            android:layout_height="wrap_content"
+                             android:layout_width="wrap_content" 
+                             android:orientation="horizontal">
+                            
+                            <Spinner 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/Spinner05"></Spinner>
+                            
+                            <Spinner 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/Spinner06"></Spinner>
+                        </LinearLayout>
+                        
+                        
+                        <LinearLayout 
+                            android:id="@+id/LinearLayout22" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content">
+                            
+                            <TextView 
+                                android:text="その他" 
+                                style="@style/blackOnly" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/TextView32"></TextView>
+                            
+                            <EditText 
+                                android:text="@+id/EditText17" 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText22"></EditText>
+                        </LinearLayout>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        style="@style/blackOnly" 
+                        android:text="年" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView93" 
+                        android:layout_width="match_parent"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+            
+            
+            <TextView  
+                android:id="@+id/TextView35" 
+                android:layout_height="wrap_content" 
+                style="@style/write_9_title" 
+                android:text="妊婦自身の記録"></TextView>
+            
+            
+            <LinearLayout 
+                style="@style/write_9_question_box" 
+                android:id="@+id/LinearLayout24" 
+                android:layout_height="wrap_content" 
+                android:layout_width="fill_parent" 
+                android:orientation="vertical">
+                
+                <TextView 
+                    android:id="@+id/TextView36" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;最終月経開始日&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent"
+                     android:layout_width="wrap_content" 
+                     android:id="@+id/ViewFlipper04">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout26" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <EditText 
+                            android:text="@+id/EditText23" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText23"></EditText>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView39"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText24"></EditText>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView34"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText25"></EditText>
+                        
+                        <TextView 
+                            android:text="日" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView38"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="日" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content"
+                         android:layout_width="wrap_content" 
+                         android:id="@+id/TextView81"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView37" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;この妊娠の初診日&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper05">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout23" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <EditText 
+                            android:text="@+id/EditText26" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText26"></EditText>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView42"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText27"></EditText>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly"
+                             android:layout_height="wrap_content" 
+                             android:layout_width="wrap_content" 
+                             android:id="@+id/TextView40"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText28" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText28"></EditText>
+                        
+                        <TextView 
+                            android:text="日" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView44"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="日" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView82"></TextView>
+                </ViewFlipper>
+                
+                <TextView 
+                    android:id="@+id/TextView49" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;胎動を感じた日&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper06">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout25" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText29"></EditText>
+                        
+                        <TextView 
+                            android:text="年" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView45"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText30"></EditText>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView51"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText31"></EditText>
+                        
+                        <TextView 
+                            android:text="日" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content"
+                             android:layout_width="wrap_content" 
+                             android:id="@+id/TextView46"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView83"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView54" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;分娩予定日&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper07">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout27" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <EditText 
+                            android:text="@+id/EditText32" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText32"></EditText>
+                        
+                        <TextView 
+                            android:text="年" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView53"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText17" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText33"></EditText>
+                        
+                        <TextView 
+                            android:text="月" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView52"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText34" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText34"></EditText>
+                        
+                        <TextView 
+                            android:text="日" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView55"></TextView>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView84"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView59" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;赤ちゃん誕生を迎える両親の気持ちなどを記入しましょう。&gt;"></TextView>
+                
+                <TextView 
+                    android:id="@+id/TextView17" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:text="心配なこと，相談したいことなども記入しておきましょう。" 
+                    style="@style/blackOnly"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper08">
+                    
+                    <EditText 
+                        android:text="@+id/EditText35" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText35"></EditText>
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView85"></TextView>
+                </ViewFlipper>
+                
+                <TextView 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content"
+                     android:id="@+id/TextView61" 
+                     style="@style/Ques_title" 
+                     android:text="&lt;出産前後の居住地&gt;"></TextView>
+                
+                <TableLayout 
+                    android:layout_width="fill_parent" 
+                    android:id="@+id/tableLayout2" 
+                    android:layout_height="fill_parent">
+                    
+                    <TableRow 
+                        android:layout_width="match_parent" 
+                        android:layout_height="match_parent" 
+                        android:id="@+id/tableRow2">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:text="住所" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView56"></TextView>
+                        
+                        <ViewFlipper 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/ViewFlipper09">
+                            
+                            <EditText 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText36" 
+                                android:text="@+id/EditText36"></EditText>
+                            
+                            <TextView 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:text="年" style="@style/blackOnly" 
+                                android:id="@+id/TextView86"></TextView>
+                        </ViewFlipper>
+                    </TableRow>
+                    
+                    <TableRow 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/tableRow3">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:text="電話" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView57"></TextView>
+                        
+                        <ViewFlipper 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/ViewFlipper10">
+                            
+                            <EditText 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText37" 
+                                android:text="@+id/EditText37"></EditText>
+                            
+                            <TextView 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:text="年" style="@style/blackOnly" 
+                                android:id="@+id/TextView87"></TextView>
+                        </ViewFlipper>
+                    </TableRow>
+                </TableLayout>
+                
+                
+                <TextView
+                     android:layout_width="wrap_content" 
+                     android:layout_height="wrap_content" 
+                     android:id="@+id/TextView58" 
+                     style="@style/Ques_title" 
+                     android:text="&lt;出産前後の連絡先&gt;"></TextView>
+                
+                <TextView 
+                    style="@style/blackOnly"  
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView62" 
+                    android:text="(知らせてほしい人)"></TextView>
+                
+                <TableLayout 
+                    android:layout_height="fill_parent" 
+                    android:layout_width="fill_parent"
+                     android:id="@+id/TableLayout01">
+                    
+                    <TableRow 
+                        android:layout_width="match_parent" 
+                        android:layout_height="match_parent" 
+                        android:id="@+id/TableRow01">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:text="名前" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView92"></TextView>
+                        
+                        <ViewFlipper 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/ViewFlipper11" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1">
+                            
+                            <EditText 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText38" 
+                                android:text="@+id/EditText38"></EditText>
+                            
+                            <TextView 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:text="年" style="@style/blackOnly" 
+                                android:id="@+id/TextView88"></TextView>
+                        </ViewFlipper>
+                    </TableRow>
+                    
+                    <TableRow 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TableRow02">
+                        
+                        <TextView 
+                            android:layout_width="wrap_content" 
+                            android:text="電話" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:id="@+id/TextView60"></TextView>
+                        
+                        <ViewFlipper 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/ViewFlipper12" 
+                            android:layout_height="wrap_content" 
+                            android:layout_weight="1">
+                            
+                            <EditText 
+                                android:layout_height="wrap_content" 
+                                android:layout_width="wrap_content" 
+                                android:id="@+id/EditText39" 
+                                android:text="@+id/EditText39"></EditText>
+                            
+                            <TextView
+                                 android:layout_height="wrap_content" 
+                                 android:layout_width="wrap_content" 
+                                 android:text="年" style="@style/blackOnly" 
+                                 android:id="@+id/TextView89"></TextView>
+                        </ViewFlipper>
+                    </TableRow>
+                </TableLayout>
+                
+                
+                <TextView 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView63" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;入院の方法&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper13">
+                    
+                    <LinearLayout 
+                        android:id="@+id/linearLayout5" 
+                        android:layout_width="wrap_content" 
+                        android:layout_height="wrap_content">
+                        
+                        <Spinner 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/Spinner04"></Spinner>
+                        
+                        <EditText 
+                            android:layout_height="wrap_content" 
+                            android:text="@+id/EditText40" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText40"></EditText>
+                    </LinearLayout>
+                    
+                    
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView90"></TextView>
+                </ViewFlipper>
+                
+                
+                <TextView 
+                    android:id="@+id/TextView65" 
+                    android:layout_width="wrap_content" 
+                    android:layout_height="wrap_content" 
+                    style="@style/Ques_title" 
+                    android:text="&lt;所要時間&gt;"></TextView>
+                
+                <ViewFlipper 
+                    android:layout_height="match_parent" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/ViewFlipper14">
+                    
+                    <LinearLayout 
+                        android:id="@+id/LinearLayout35" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content">
+                        
+                        <EditText 
+                            android:text="@+id/EditText41" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText41"></EditText>
+                        
+                        <TextView 
+                            android:text="時間" style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView66"></TextView>
+                        
+                        <EditText 
+                            android:text="@+id/EditText42" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/EditText42"></EditText>
+                        
+                        <TextView 
+                            android:text="分" 
+                            style="@style/blackOnly" 
+                            android:layout_height="wrap_content" 
+                            android:layout_width="wrap_content" 
+                            android:id="@+id/TextView67"></TextView>
+                        
+                    </LinearLayout>
+                    <TextView 
+                        android:text="年" 
+                        style="@style/blackOnly" 
+                        android:layout_height="wrap_content" 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView91"></TextView>
+                </ViewFlipper>
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>
+

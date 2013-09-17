@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="fill_parent" 
+  android:layout_width="fill_parent" 
+  android:orientation="vertical" 
+  android:background="@drawable/background_pink">
+  <!-- 読込・保存ボタン -->
+  
+  
+  
+  
+    <TextView style="@style/write_9_title" 
+        android:id="@+id/TextView01" 
+        android:text="妊娠中と産後の体重変化の記録"></TextView>
+    
+    
+    <LinearLayout android:id="@+id/linearLayout1" 
+        android:layout_height="wrap_content" 
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent">
+        
+        
+        <Button android:layout_height="wrap_content" 
+            android:text="@string/write_9_save" 
+            android:id="@+id/write_9_save" 
+            android:layout_width="wrap_content"></Button>
+        
+        
+        <Button android:layout_height="wrap_content" 
+            android:text="@string/write_9_load" 
+            android:id="@+id/write_9_load" 
+            android:layout_width="wrap_content"></Button>
+    </LinearLayout>
+    
+    
+    
+    <ScrollView android:layout_height="wrap_content" 
+        android:id="@+id/scrollView1" 
+        android:layout_width="fill_parent" 
+        android:layout_gravity="top">
+        
+        <LinearLayout 
+            android:layout_width="fill_parent" 
+            android:layout_height="wrap_content" 
+            android:id="@+id/linearLayout4" 
+            android:orientation="vertical">
+            
+            
+            <TextView   
+                style="@style/write_9_title" 
+                android:id="@+id/TextView43" 
+                android:text="現在の体重"></TextView>
+            
+            <LinearLayout style="@style/write_9_question_box"
+                 android:layout_width="fill_parent" 
+                 android:orientation="vertical" 
+                 android:id="@+id/LinearLayout01" 
+                 android:layout_height="wrap_content">
+                 
+                
+                
+                <LinearLayout 
+                    android:id="@+id/LinearLayout13" 
+                    android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content">
+                    
+                    <EditText 
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/EditText01" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText01"></EditText>
+                    
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView25" 
+                        android:layout_height="wrap_content" 
+                        android:text="年"></TextView>
+                    
+                    
+                    <EditText android:layout_width="wrap_content" 
+                        android:id="@+id/EditText02" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText02"></EditText>
+                    
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView41" 
+                        android:layout_height="wrap_content" 
+                        android:text="月"></TextView>
+                    
+                    
+                    <EditText android:layout_width="wrap_content" 
+                        android:id="@+id/EditText03" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText03"></EditText>
+                    
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:layout_width="wrap_content" 
+                        android:id="@+id/TextView05" 
+                        android:layout_height="wrap_content" 
+                        android:text="日"></TextView>
+                </LinearLayout>
+                
+                
+                
+                <LinearLayout android:layout_height="wrap_content" 
+                    android:layout_width="wrap_content" 
+                    android:id="@+id/LinearLayout03">
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView03" 
+                        android:layout_width="wrap_content" 
+                        android:text="体重"></TextView>
+                    
+                    <EditText android:layout_width="wrap_content" 
+                        android:id="@+id/EditText04" 
+                        android:layout_height="wrap_content" 
+                        android:text="@+id/EditText04"></EditText>
+                    
+                    <TextView style="@style/blackOnly"  
+                        android:layout_height="wrap_content" 
+                        android:id="@+id/TextView02" 
+                        android:layout_width="wrap_content" 
+                        android:text="kg"></TextView>
+                </LinearLayout>
+            </LinearLayout>
+            
+            
+            
+            <LinearLayout android:orientation="vertical" 
+                android:layout_width="fill_parent" 
+                android:layout_height="wrap_content" 
+                android:id="@+id/LinearLayout16" 
+                style="@style/write_9_question_box">
+                
+                
+                <TextView style="@style/blackOnly"  
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView99" 
+                    android:layout_width="wrap_content" 
+                    android:text="体重は健康のよい指標です。特に妊娠中と産後は体重の増減が異常発見の手がかりにもなりますから，自分で記入して参考にしましょう。"></TextView>
+                
+                
+                
+                <TextView style="@style/blackOnly"  
+                    android:layout_height="wrap_content" 
+                    android:id="@+id/TextView04" 
+                    android:layout_width="wrap_content" 
+                    android:text="妊娠前またはごく初期の体重を0にして，その後の体重の増減をメモリに従って，点で記入してつなぎましょう。産後6か月くらいで妊娠前の体重に戻したいものです。"></TextView>
+            </LinearLayout>
+            
+            <Button android:layout_width="wrap_content" 
+                android:layout_height="wrap_content" 
+                android:text="上書きしてグラフ表示" 
+                android:id="@+id/Button01"></Button>
+        </LinearLayout>
+    </ScrollView>
+<!-- 読込・保存ボタン -->
+
+</LinearLayout>
