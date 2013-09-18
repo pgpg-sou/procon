@@ -49,10 +49,8 @@ public class immunization_b extends Activity {
         setContentView(R.layout.immunization_b);
     }
 
-    public void onStart(){
-    	super.onStart();
+    public void onStart(TextView[] tvParam){
     	 //xmlファイル読み込み
-        TextView[] tvParam = new TextView[item_immunization_mumps_tag.length];
         File dir1 = new File(Environment.getExternalStorageDirectory().getPath());
         if(dir1.exists()){
 
@@ -101,10 +99,7 @@ public class immunization_b extends Activity {
 	    		i1++;
 	    	}
 
-	    	// TextViewインスタンスの取得
-    		for (int i11 = 0; i11 < item_immunization_mumps_tag.length; i11++) {
-          	tvParam[i11] = (TextView)findViewById(item_immunization_mumps_tag[i11]);
-    		}
+
     		//初期値入力
     		int n = 0;
 	    	for(int i11 = 0; i11 < item_immunization_mumps_tag.length/4; i11++){
@@ -126,34 +121,6 @@ public class immunization_b extends Activity {
 
         }
 
-        //それぞれのボタンにクリック時の処理を表示
-        Button button_Write_child_9_12_1_back = (Button) findViewById(R.id.Button_checkup_back);
-        button_Write_child_9_12_1_back.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            	//mode="aaaa";
-            	Intent intent_read_1 = new Intent(getApplicationContext(),immunization_mumps.class);
-                startActivity(intent_read_1);
-                finish();
-            }
-        });
-
-        Button button_Write_child_9_12_1_home = (Button) findViewById(R.id.Button_checkup_edit);
-        button_Write_child_9_12_1_home.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            	immunization_main.immunization_flag="immunization_b";
-            	Intent intent_read_1 = new Intent(getApplicationContext(),immunization_save.class);
-                startActivity(intent_read_1);
-            }
-        });
-
-        Button button_Write_child_9_12_1_next = (Button) findViewById(R.id.Button_checkup_next);
-        button_Write_child_9_12_1_next.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            	Intent intent_read_1 = new Intent(getApplicationContext(),immunization_dpt.class);
-                startActivity(intent_read_1);
-                finish();
-            }
-        });
 
     }
 

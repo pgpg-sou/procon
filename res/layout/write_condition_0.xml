@@ -40,7 +40,7 @@
                 <!-- ソース側で自動記入します -->
 
                 <TextView
-                    android:id="@+id/TextView_write_0p_condition_day_record"
+                    android:id="@+id/EditText_write_condition_day_record"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content" >
                 </TextView>
@@ -55,7 +55,7 @@
             </LinearLayout>
 
             <ImageView
-                android:id="@+id/imageview_write_0p_condition_day_record"
+                android:id="@+id/imageview_write_condition_day_record"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
@@ -72,7 +72,7 @@
                     android:background="#000000" >
 
                     <TextView
-                        android:id="@+id/TextView_write_0p_condition_day_old"
+                        android:id="@+id/TextView_write_condition_day_old"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
@@ -116,7 +116,7 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/TextView_pregnancy_write_0_1"
+                        android:id="@+id/radio_write_condition1"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
@@ -146,7 +146,7 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/TextView_pregnancy_write_0_2"
+                        android:id="@+id/radio_write_condition2"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
@@ -176,7 +176,7 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/TextView_pregnancy_write_0_3"
+                        android:id="@+id/radio_write_condition3"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
@@ -206,7 +206,7 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/TextView_pregnancy_write_0_4"
+                        android:id="@+id/radio_write_condition4"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
@@ -236,7 +236,7 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/TextView_pregnancy_write_0_5"
+                        android:id="@+id/radio_write_condition5"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
@@ -266,37 +266,7 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/TextView_pregnancy_write_0_6"
-                        android:layout_width="0dp"
-                        android:layout_height="fill_parent"
-                        android:layout_marginBottom="1dip"
-                        android:layout_marginRight="1dip"
-                        android:layout_weight="2"
-                        android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:text="----"
-                        android:textColor="#000000" >
-                    </TextView>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:background="#000000" >
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="fill_parent"
-                        android:layout_marginBottom="1dip"
-                        android:layout_marginLeft="1dip"
-                        android:layout_marginRight="1dip"
-                        android:layout_weight="7"
-                        android:background="#FFDFA5"
-                        android:text="子育てについて不安や困難を感じることがありますか。" >
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/TextView_pregnancy_write_0_7"
+                        android:id="@+id/radio_write_condition6"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
@@ -322,7 +292,7 @@
                         android:layout_marginRight="1dip"
                         android:layout_weight="4"
                         android:background="#FFDFA5"
-                        android:text="成長の様子、育児の心配、、かかった病気、、感想などを自由に記入しましょう。" >
+                        android:text="成長の様子、育児の心配、かかった病気、感想などを自由に記入しましょう。" >
                     </TextView>
                 </TableRow>
 
@@ -342,7 +312,7 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/TextView_pregnancy_write_0_8"
+                        android:id="@+id/EditText_write_condition_other"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"

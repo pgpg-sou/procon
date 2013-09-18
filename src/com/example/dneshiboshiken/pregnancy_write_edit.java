@@ -36,6 +36,7 @@ import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
 import android.content.Context;
@@ -46,6 +47,7 @@ import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceManager;
@@ -96,6 +98,12 @@ public class pregnancy_write_edit extends Activity{
 
 	private static int REQUEST_CAMERA = 1;
 	private static Uri mImageUri; // インスタンス変数
+    private static String xmlFileName="Pregnancyfile1.xml";
+    private static String imageFileName;
+
+
+    private SharedPreferences pref;// Drive関係
+    private Activity activity;// Drive関係
 
 	private String[] item_pregnancy_writetag = {"pregnancy_write_edit_examination",
 			"pregnancy_write_edit_uterus",
@@ -136,6 +144,7 @@ public class pregnancy_write_edit extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.pregnancy_write_edit);	//画面レイアウトを指定(res/layout/index_read.xml)
+        activity=this;
 
         EditText[] tvParam_EditText = new EditText[item_checkup_EditText_9.length];
 
@@ -362,6 +371,7 @@ public class pregnancy_write_edit extends Activity{
 	    		}
 
 	        	String filename = "imageView_Pregnancy" + photopath +".png";
+                imageFileName="imageView_Pregnancy" + photopath +".png";
 	    		String path = Environment.getExternalStorageDirectory().getPath() + "/Yukari/Photo/" + filename;
 	    		File file = new File(path);
 
@@ -438,26 +448,90 @@ public class pregnancy_write_edit extends Activity{
     	    		 		"Yukari/Write/Pregnancy/Course/Pregnancyfile"+i1+".xml");
     	    		 if (file.exists()) {
     	    			 datapath="/Yukari/Write/Pregnancy/Course/Pregnancyfile"+(i1+1)+".xml";
-    	    			 
+                         xmlFileName="Pregnancyfile"+(i1+1)+".xml";
     	    		 }
     	    	 }
     	     }
-    	String filePath = Environment.getExternalStorageDirectory() + datapath;
+            String filePath = Environment.getExternalStorageDirectory() + datapath;
         File file = new File(filePath);
         file.getParentFile().mkdir();
         transformer.transform(new DOMSource(document), new StreamResult(file));
 
 
-    	} catch (ParserConfigurationException e) {
-    	     // TODO Auto-generated catch block
-    	     e.printStackTrace();
-    	 }catch (TransformerConfigurationException e) {
-    	     // TODO Auto-generated catch block
-    	     e.printStackTrace();
-    	 } catch (TransformerException e) {
-    	     // TODO Auto-generated catch block
-    	     e.printStackTrace();
-    	 }
+
+
+        /**
+         * ここからGoogleDriveへのアップロード 個々によって変更するところ
+         * */
+        try {
+            DriveModule.OAuth(GoogleDriveBuild.credential, activity);
+            pref = getSharedPreferences("prefs", Activity.MODE_PRIVATE);
+            final String str = pref.getString("RootFolder",
+                    "PERF NOT FOUND!!");
+            Log.i("PREF", str);
+
+            AsyncTask<Void, ProgressDialog, Void> task = new AsyncTask<Void, ProgressDialog, Void>() {
+                protected void onPostExecute() {
+                    // UIスレッド
+                    //Toast.makeText(WriteCheckup_12p.this, "UPLOAD OK",
+                    //	Toast.LENGTH_LONG);
+                }
+
+                protected Void doInBackground(Void... params) {
+                    // TODO 自動生成されたメソッド・スタブ
+                    boolean a = false;
+                    try {
+                        com.google.api.services.drive.model.File file1 = GoogleDriveBuild.service
+                                .files()
+                                .get(pref.getString("RootFolder", null))
+                                .execute();
+                        if (file1 != null) {
+                            String filePath =  Environment.getExternalStorageDirectory() + datapath;
+                            String imagefilePath= Environment.getExternalStorageDirectory().getPath() + "/Yukari/Photo/" + imageFileName;
+                            if (DriveModule.checkFile(file1, "Checkup",xmlFileName,GoogleDriveBuild.service,GoogleDriveBuild.credential, filePath,"application/xml", activity) == true) {
+                            } else {
+                            }
+
+                            if (DriveModule.checkFile(file1, "Checkup",imageFileName,GoogleDriveBuild.service,GoogleDriveBuild.credential, imagefilePath,"application/xml", activity) == true) {
+                            } else {
+                            }
+
+                            a = true;
+                        }
+                    } catch (IOException e) {
+                        // TODO 自動生成された catch ブロック
+                        Log.e("ERROR a", e.toString());
+                    }
+                    return null;
+
+                }
+
+            };
+            task.execute(); // 実行
+
+        } catch (Exception e) {
+            Log.e("DRIVE ERROR", e.toString());
+        }
+
+        if(GoogleDriveBuild.netWorkCheck(this)==false){
+            Toast.makeText(this, "インターネットに接続されていません", Toast.LENGTH_LONG).show();
+            Log.i("NETWORK","false")	;
+        }
+
+
+        /**
+         * ここまでがアップロード
+         * */
+        } catch (ParserConfigurationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }catch (TransformerConfigurationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (TransformerException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
 
     	Toast.makeText(this, "保存が完了しました", Toast.LENGTH_LONG).show();
     	Intent intent_cancel = new Intent(getApplicationContext(),pregnancy_write.class);

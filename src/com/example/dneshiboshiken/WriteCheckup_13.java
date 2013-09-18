@@ -396,7 +396,7 @@ public class WriteCheckup_13 extends Activity {
     	 switch (item.getItemId()){
     	 case 0:
     		 Intent intent1 = new Intent();
-    		 intent1.setClass(WriteCheckup_13.this, Write_child_9_2_2.class);
+    		 intent1.setClass(WriteCheckup_13.this, MainActivity.class);
     		 startActivity(intent1);
     		 return true;
     	 case 1:

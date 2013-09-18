@@ -18,5 +18,8 @@
         <item>Grapefruit</item>
         <item>Pineapple</item>
     </string-array>
+<!-- カレンダー用リソース -->
+    <string name="previous">←</string>
+    <string name = "next">→</string>
 
 </resources>

@@ -57,13 +57,11 @@ public class immunization_dpt extends Activity {
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.immunization_dpt);
+        setContentView(R.layout.immunization_main);
     }
 
-    public void onStart(){
-    	super.onStart();
-    	 //xmlファイル読み込み
-        TextView[] tvParam = new TextView[item_immunization_mumps_tag.length];
+    public void onStart(TextView[] tvParam){
+
         File dir1 = new File(Environment.getExternalStorageDirectory().getPath());
         if(dir1.exists()){
 
@@ -107,16 +105,13 @@ public class immunization_dpt extends Activity {
 
                     }
                 } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), "エラー発生", Toast.LENGTH_SHORT);
                 }
             }else break;
 	    		i1++;
 	    	}
 
 	    	// TextViewインスタンスの取得
-    		for (int i11 = 0; i11 < item_immunization_mumps_tag.length; i11++) {
-          	tvParam[i11] = (TextView)findViewById(item_immunization_mumps_tag[i11]);
-    		}
+
     		//初期値入力
     		int n = 0;
     		for(int i11 = 0; i11 < item_immunization_mumps_tag.length/5; i11++){
@@ -142,34 +137,6 @@ public class immunization_dpt extends Activity {
 
         }
 
-        //それぞれのボタンにクリック時の処理を表示
-        Button button_Write_child_9_12_1_back = (Button) findViewById(R.id.Button_checkup_back);
-        button_Write_child_9_12_1_back.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            	//mode="aaaa";
-            	Intent intent_read_1 = new Intent(getApplicationContext(),immunization_b.class);
-                startActivity(intent_read_1);
-                finish();
-            }
-        });
-
-        Button button_Write_child_9_12_1_home = (Button) findViewById(R.id.Button_checkup_edit);
-        button_Write_child_9_12_1_home.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            	immunization_main.immunization_flag="immunization_dpt";
-            	Intent intent_read_1 = new Intent(getApplicationContext(),immunization_save2.class);
-                startActivity(intent_read_1);
-            }
-        });
-
-        Button button_Write_child_9_12_1_next = (Button) findViewById(R.id.Button_checkup_next);
-        button_Write_child_9_12_1_next.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            	Intent intent_read_1 = new Intent(getApplicationContext(),immunization_bcg.class);
-                startActivity(intent_read_1);
-                finish();
-            }
-        });
 
     }
 }

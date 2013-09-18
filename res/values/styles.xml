@@ -104,4 +104,20 @@
 	<item name="android:gravity">center</item>
 	<item name="android:button">@null</item> <!-- ラジオボタンの先頭の画像を表示しないときにこれを指定するらしい。。。ひたすらググった結果判明 -->
 	</style>
+<style name="center_yes_orange_radiobutton" parent="@android:Widget.CompoundButton.RadioButton">
+	<item name="android:background">@drawable/center_yes_orange_custom_radiobutton</item> <!-- ラジオボタンのテキストの背景部分をボタンぽいやつに指定。標準だと背景なし -->
+	<item name="android:textColor">#ffffff</item>
+	<item name="android:layout_height">fill_parent</item>
+	<item name="android:text">"いいえ"</item>
+	<item name="android:gravity">center</item>
+	<item name="android:button">@null</item> <!-- ラジオボタンの先頭の画像を表示しないときにこれを指定するらしい。。。ひたすらググった結果判明 -->
+</style>
+
+<style name="Animation.Activity" parent="android:Animation.Activity">
+	<item name="android:activityOpenEnterAnimation">@anim/act_open_enter_anim</item>
+	<item name="android:activityOpenExitAnimation">@anim/act_open_exit_anim</item>
+	<item name="android:activityCloseExitAnimation">@anim/act_close_exit_anim</item>
+	<item name="android:activityCloseEnterAnimation">@anim/act_close_enter_anim</item>
+	</style>
+
 </resources>

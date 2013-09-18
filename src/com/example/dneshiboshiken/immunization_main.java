@@ -59,49 +59,25 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 import android.os.Environment;
 
 
-
 public class immunization_main extends Activity implements View.OnClickListener{
 
 	static String immunization_flag;
+	static int immunization_number;
 
-	//目次の項目だけボタンを定義
-	private EditText editText_day1;
-	private DatePickerDialog.OnDateSetListener varDateSetListener_day1;
-	private EditText editText_day2;
-	private DatePickerDialog.OnDateSetListener varDateSetListener_day2;
-	private EditText editText_day3;
-	private DatePickerDialog.OnDateSetListener varDateSetListener_day3;
-
-	private Button button_Write_cancel;
-	private Button button_Write_save;
-	private Button button_Write_gallery;
-	private Button button_Write_camera;
-
-	private Button button_dpt;
-	private Button button_bcg;
-	private Button button_mr;
-	private Button button_japan;
-	private Button button_dt;
-	private Button button_hib;
-	private Button button_seven;
-	private Button button_hpv;
-	private Button button_varicella;
-	private Button button_mumps;
-	private Button button_b;
+	
+	private Button button_dpt1;
   //ここはクラス内で実行
 	static int REQUEST_ACTION_PICK = 1;
 	static final int REQUEST_CAPTURE_IMAGE = 100;
@@ -109,199 +85,340 @@ public class immunization_main extends Activity implements View.OnClickListener{
 	private static final String PATH = Environment.getExternalStorageDirectory().getPath() + "/Yukari/Photo/" + APPLICATION_NAME;
 
 	final boolean[] checkedItems = new boolean[50];
-	final CheckBox[] checkbox = new CheckBox[50];
 
-	private String[] item_immunization_CheckBox_tag = {
-			"checkBox_immunization_dpt1",
-			"checkBox_immunization_dpt2",
-			"checkBox_immunization_dpt3",
-			"checkBox_immunization_dpt4",
-			"checkBox_immunization_bcg1",
-			"checkBox_immunization_mr1",
-			"checkBox_immunization_mr2",
-			"checkBox_immunization_japan1",
-			"checkBox_immunization_japan2",
-			"checkBox_immunization_japan3",
-			"checkBox_immunization_dt1",
-			"checkBox_immunization_hib1",
-			"checkBox_immunization_hib2",
-			"checkBox_immunization_hib3",
-			"checkBox_immunization_hib4",
-			"checkBox_immunization_seven1",
-			"checkBox_immunization_seven2",
-			"checkBox_immunization_seven3",
-			"checkBox_immunization_seven4",
-			"checkBox_immunization_hpv1",
-			"checkBox_immunization_hpv2",
-			"checkBox_immunization_hpv3",
-			"checkBox_immunization_varicella1",
-			"checkBox_immunization_varicella2",
-			"checkBox_immunization_mumps1",
-			"checkBox_immunization_mumps2",
-			"checkBox_immunization_b1",
-			"checkBox_immunization_b2",
-			"checkBox_immunization_b3"
-			};
+	public static int[] burtton_immunization_dpt = {R.id.button_immunization_dpt1,
+		R.id.button_immunization_dpt2,
+		R.id.button_immunization_dpt3,
+		R.id.button_immunization_dpt4,
+		R.id.button_immunization_bcg1,
+		R.id.button_immunization_mr1,
+		R.id.button_immunization_mr2,
+		R.id.button_immunization_japa1,
+		R.id.button_immunization_japa2,
+		R.id.button_immunization_japa3,
+		R.id.button_immunization_japa4,
+		R.id.button_immunization_dt1,
+		R.id.button_immunization_hib1,
+		R.id.button_immunization_hib2,
+		R.id.button_immunization_hib3,
+		R.id.button_immunization_hib4,
+		R.id.button_immunization_seven1,
+		R.id.button_immunization_seven2,
+		R.id.button_immunization_seven3,
+		R.id.button_immunization_seven4,
+		R.id.button_immunization_hpv1,
+		R.id.button_immunization_hpv2,
+		R.id.button_immunization_hpv3,
+		R.id.button_immunization_varicella1,
+		R.id.button_immunization_varicella2,
+		R.id.button_immunization_mumps1,
+		R.id.button_immunization_mumps2,
+		R.id.button_immunization_b1,
+		R.id.button_immunization_b2,
+		R.id.button_immunization_b3,};
 
-	public static int[] item_immunization_CheckBox = {
-		R.id.checkBox_immunization_dpt1,
-		R.id.checkBox_immunization_dpt2,
-		R.id.checkBox_immunization_dpt3,
-		R.id.checkBox_immunization_dpt4,
-		R.id.checkBox_immunization_bcg1,
-		R.id.checkBox_immunization_mr1,
-		R.id.checkBox_immunization_mr2,
-		R.id.checkBox_immunization_japan1,
-		R.id.checkBox_immunization_japan2,
-		R.id.checkBox_immunization_japan3,
-		R.id.checkBox_immunization_dt1,
-		R.id.checkBox_immunization_hib1,
-		R.id.checkBox_immunization_hib2,
-		R.id.checkBox_immunization_hib3,
-		R.id.checkBox_immunization_hib4,
-		R.id.checkBox_immunization_seven1,
-		R.id.checkBox_immunization_seven2,
-		R.id.checkBox_immunization_seven3,
-		R.id.checkBox_immunization_seven4,
-		R.id.checkBox_immunization_hpv1,
-		R.id.checkBox_immunization_hpv2,
-		R.id.checkBox_immunization_hpv3,
-		R.id.checkBox_immunization_varicella1,
-		R.id.checkBox_immunization_varicella2,
-		R.id.checkBox_immunization_mumps1,
-		R.id.checkBox_immunization_mumps2,
-		R.id.checkBox_immunization_b1,
-		R.id.checkBox_immunization_b2,
-		R.id.checkBox_immunization_b3,};
+	 public void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.immunization_main);
+	    }
+
+	 //アコーディオン読み込み
+	 Boolean _first = true;
+	 private AccordionSet _as1;
+	 private AccordionSet _as2;
+	 private AccordionSet _as3;
+	 private AccordionSet _as4;
+	 private AccordionSet _as5;
+	 private AccordionSet _as6;
+	 private AccordionSet _as7;
+	 private AccordionSet _as8;
+	 private AccordionSet _as9;
+	 private AccordionSet _as10;
+	 private AccordionSet _as11;
+
+
+	 @Override
+		public void onWindowFocusChanged(boolean hasFocus) {
+			if (_first) {
+				_first = false;
+				_as1 = new AccordionSet((LinearLayout)findViewById(R.id.btn1), (LinearLayout)findViewById(R.id.content1));
+				_as2 = new AccordionSet((LinearLayout)findViewById(R.id.btn2), (LinearLayout)findViewById(R.id.content2));
+				_as3 = new AccordionSet((LinearLayout)findViewById(R.id.btn3), (LinearLayout)findViewById(R.id.content3));
+				_as4 = new AccordionSet((LinearLayout)findViewById(R.id.btn4), (LinearLayout)findViewById(R.id.content4));
+				_as5 = new AccordionSet((LinearLayout)findViewById(R.id.btn5), (LinearLayout)findViewById(R.id.content5));
+				_as6 = new AccordionSet((LinearLayout)findViewById(R.id.btn6), (LinearLayout)findViewById(R.id.content6));
+				_as7 = new AccordionSet((LinearLayout)findViewById(R.id.btn7), (LinearLayout)findViewById(R.id.content7));
+				_as8 = new AccordionSet((LinearLayout)findViewById(R.id.btn8), (LinearLayout)findViewById(R.id.content8));
+				_as9 = new AccordionSet((LinearLayout)findViewById(R.id.btn9), (LinearLayout)findViewById(R.id.content9));
+				_as10 = new AccordionSet((LinearLayout)findViewById(R.id.btn10), (LinearLayout)findViewById(R.id.content10));
+				_as11 = new AccordionSet((LinearLayout)findViewById(R.id.btn11), (LinearLayout)findViewById(R.id.content11));
+			}
+			super.onWindowFocusChanged(hasFocus);
+		}
+
+		@Override
+		protected void onDestroy() {
+			if (!_first) {
+				_as1.deleteAccordion();
+				_as2.deleteAccordion();
+				_as3.deleteAccordion();
+				_as4.deleteAccordion();
+				_as5.deleteAccordion();
+				_as6.deleteAccordion();
+				_as7.deleteAccordion();
+				_as8.deleteAccordion();
+				_as9.deleteAccordion();
+				_as10.deleteAccordion();
+				_as11.deleteAccordion();
+			}
+			super.onDestroy();
+
+		}
+
 
 
 	/** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.immunization_main);	//画面レイアウトを指定(res/layout/index_read.xml)
+	 public void onStart(){
+	    	super.onStart();	//画面レイアウトを指定(res/layout/index_read.xml)
+	    	Log.d("a", "が動かない");
+	    	int i;
+	    	for(i=0;i<burtton_immunization_dpt.length;i++){
+	    		button_dpt1=(Button)findViewById(burtton_immunization_dpt[i]);
+	    		button_dpt1.setOnClickListener(this);
+	    	}
 
-    	button_dpt=(Button)findViewById(R.id.button_immunization_dpt);
-    	button_bcg=(Button)findViewById(R.id.button_immunization_bcg);
-    	button_mr=(Button)findViewById(R.id.button_immunization_mr);
-    	button_japan=(Button)findViewById(R.id.button_immunization_japan);
-    	button_dt=(Button)findViewById(R.id.button_immunization_dt);
-    	button_hib=(Button)findViewById(R.id.button_immunization_hib);
-		button_seven=(Button)findViewById(R.id.button_immunization_seven);
-		button_hpv=(Button)findViewById(R.id.button_immunization_hpv);
-		button_varicella=(Button)findViewById(R.id.button_immunization_varicella);
-		button_mumps=(Button)findViewById(R.id.button_immunization_mumps);
-		button_b=(Button)findViewById(R.id.button_immunization_b);
+	 TextView[] tvParam = new TextView[immunization_dpt.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_dpt.item_immunization_mumps_tag.length; i11++) {
+       	tvParam[i11] = (TextView)findViewById(immunization_dpt.item_immunization_mumps_tag[i11]);
+ 		}
+     a.onStart(tvParam);
 
-		button_dpt.setOnClickListener(this);
-		button_bcg.setOnClickListener(this);
-		button_mr.setOnClickListener(this);
-		button_japan.setOnClickListener(this);
-		button_dt.setOnClickListener(this);
-		button_hib.setOnClickListener(this);
-		button_seven.setOnClickListener(this);
-		button_hpv.setOnClickListener(this);
-		button_varicella.setOnClickListener(this);
-		button_mumps.setOnClickListener(this);
-		button_b.setOnClickListener(this);
+	 TextView[] tvParam1 = new TextView[immunization_bcg.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_bcg.item_immunization_mumps_tag.length; i11++) {
+       	tvParam1[i11] = (TextView)findViewById(immunization_bcg.item_immunization_mumps_tag[i11]);
+ 		}
+     b.onStart(tvParam1);
 
-        //初期値読み込み
-        File dir = new File(Environment.getExternalStorageDirectory().getPath());
-        if(dir.exists()){
+	 TextView[] tvParam11 = new TextView[immunization_mr.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_mr.item_immunization_mumps_tag.length; i11++) {
+       	tvParam11[i11] = (TextView)findViewById(immunization_mr.item_immunization_mumps_tag[i11]);
+ 		}
+     c.onStart(tvParam11);
 
-            File file = new File(dir.getAbsolutePath()+"/Yukari/Write/immunization/immunizationfile.xml");
-            if (file.exists()) {
-            	try {
-            		XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-            		factory.setNamespaceAware(true);
-            		XmlPullParser parser = factory.newPullParser();
-            		FileInputStream fis = new FileInputStream(file);
-            		parser.setInput(new InputStreamReader(fis));
+	 TextView[] tvParam111 = new TextView[immunization_japan.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_japan.item_immunization_mumps_tag.length; i11++) {
+       	tvParam111[i11] = (TextView)findViewById(immunization_japan.item_immunization_mumps_tag[i11]);
+ 		}
+     d.onStart(tvParam111);
+     TextView[] tvParam1111 = new TextView[immunization_dt.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_dt.item_immunization_mumps_tag.length; i11++) {
+       	tvParam1111[i11] = (TextView)findViewById(immunization_dt.item_immunization_mumps_tag[i11]);
+ 		}
+     e.onStart(tvParam1111);
+     TextView[] tvParam11111 = new TextView[immunization_hib.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_hib.item_immunization_mumps_tag.length; i11++) {
+       	tvParam11111[i11] = (TextView)findViewById(immunization_hib.item_immunization_mumps_tag[i11]);
+ 		}
+     f.onStart(tvParam11111);
+     TextView[] tvParam111111 = new TextView[immunization_seven.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_seven.item_immunization_mumps_tag.length; i11++) {
+       	tvParam111111[i11] = (TextView)findViewById(immunization_seven.item_immunization_mumps_tag[i11]);
+ 		}
+     g.onStart(tvParam111111);
+     TextView[] tvParam1111111 = new TextView[immunization_hpv.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_hpv.item_immunization_mumps_tag.length; i11++) {
+       	tvParam1111111[i11] = (TextView)findViewById(immunization_hpv.item_immunization_mumps_tag[i11]);
+ 		}
+     h.onStart(tvParam1111111);
+     TextView[] tvParam11111111 = new TextView[immunization_varicella.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_varicella.item_immunization_mumps_tag.length; i11++) {
+       	tvParam11111111[i11] = (TextView)findViewById(immunization_varicella.item_immunization_mumps_tag[i11]);
+ 		}
+     ii.onStart(tvParam11111111);
+     TextView[] tvParam111111111 = new TextView[immunization_mumps.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_mumps.item_immunization_mumps_tag.length; i11++) {
+       	tvParam111111111[i11] = (TextView)findViewById(immunization_mumps.item_immunization_mumps_tag[i11]);
+ 		}
+     j.onStart(tvParam111111111);
+     TextView[] tvParam11111111111 = new TextView[immunization_b.item_immunization_mumps_tag.length];
+     for (int i11 = 0; i11 < immunization_b.item_immunization_mumps_tag.length; i11++) {
+       	tvParam11111111111[i11] = (TextView)findViewById(immunization_b.item_immunization_mumps_tag[i11]);
+ 		}
+     l.onStart(tvParam11111111111);
 
-                    // タグ名
-                    String tag = "";
-                    // 値
-                    String value = "";
-                    // XMLの解析
-                    for (int type = parser.getEventType(); type != XmlPullParser.END_DOCUMENT;
-                            type = parser.next()) {
-                        switch(type) {
-                        case XmlPullParser.START_TAG: // 開始タグ
-                            tag = parser.getName();
-                            break;
-                        case XmlPullParser.TEXT: // タグの内容
-                            value = parser.getText();
-                            if(value.trim().length() != 0) {
-                            // 空白で取得したものは全て処理対象外とする
-                            if(tag.equals(item_immunization_CheckBox_tag[0])) {checkedItems[0] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[1])) {checkedItems[1] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[2])) {checkedItems[2] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[3])) {checkedItems[3] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[4])) {checkedItems[4] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[5])) {checkedItems[5] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[6])) {checkedItems[6] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[7])) {checkedItems[7] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[8])) {checkedItems[8] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[9])) {checkedItems[9] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[10])) {checkedItems[10] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[11])) {checkedItems[11] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[12])) {checkedItems[12] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[13])) {checkedItems[13] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[14])) {checkedItems[14] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[15])) {checkedItems[15] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[16])) {checkedItems[16] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[17])) {checkedItems[17] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[18])) {checkedItems[18] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[19])) {checkedItems[19] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[20])) {checkedItems[20] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[21])) {checkedItems[21] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[22])) {checkedItems[22] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[23])) {checkedItems[23] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[24])) {checkedItems[24] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[25])) {checkedItems[25] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[26])) {checkedItems[26] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[27])) {checkedItems[27] = Boolean.valueOf( value );}
-                            else if(tag.equals(item_immunization_CheckBox_tag[28])) {checkedItems[28] = Boolean.valueOf( value );}
-                            }
-                            break;
-                        case XmlPullParser.END_TAG: // 終了タグ
-                            break;
-                        }
 
-                    }
-                } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), "エラー発生", Toast.LENGTH_SHORT);
-                }
-            }
 
-            for (int i1 = 0; i1 < item_immunization_CheckBox.length; i1++) {
-            	CheckBox chkbox = (CheckBox)findViewById(item_immunization_CheckBox[i1]);
-            	chkbox.setChecked(checkedItems[i1]);
-            }
 
-        }
-        //画像読み込み
-            /*if(dir.exists()){
-                File view = new File(dir.getAbsolutePath()+"/Yukari/Photo/imageView_write_checkup_1p.png");
-                if (view.exists()) {
-                        Bitmap _bm = BitmapFactory.decodeFile(view.getPath());
-                        ((ImageView)findViewById(R.id.imageview_write_checkup_1)).setImageBitmap(_bm);
-                }else{
-                    //存在しない
-                }
-            }
-        }*/
+	 }
+	 immunization_dpt a = new immunization_dpt();
+	 immunization_bcg b = new immunization_bcg();
+	 immunization_mr c = new immunization_mr();
+	 immunization_japan d = new immunization_japan();
+	 immunization_dt e = new immunization_dt();
+	 immunization_hib f = new immunization_hib();
+	 immunization_seven g = new immunization_seven();
+	 immunization_hpv h = new immunization_hpv();
+	 immunization_varicella ii= new immunization_varicella();
+	 immunization_mumps j = new immunization_mumps();
+	 immunization_japan k = new immunization_japan();
+	 immunization_b l = new immunization_b();
 
-    }
 
     //詳細ボタン
     public void onClick(View v){
     	Intent intent=new Intent();
-    	switch(v.getId()){
-    	case R.id.button_immunization_dpt:
-	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_dpt");
-	        break;
+    	
+    	if(R.id.button_immunization_dpt1==v.getId()){
+    		immunization_main.immunization_flag="immunization_dpt";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save2");
+	         
+    	}else if( R.id.button_immunization_dpt2==v.getId()){
+    		immunization_main.immunization_flag="immunization_dpt";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save2");
+	         
+    	}else if( R.id.button_immunization_dpt3==v.getId()){
+    		immunization_main.immunization_flag="immunization_dpt";
+    		immunization_number=3;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save2");
+	         
+    	}else if( R.id.button_immunization_dpt4==v.getId()){
+    		immunization_main.immunization_flag="immunization_dpt";
+    		immunization_number=4;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save2");
+	         
+    	}else if( R.id.button_immunization_bcg1==v.getId()){
+    		immunization_main.immunization_flag="immunization_bcg";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_mr1==v.getId()){
+    		immunization_main.immunization_flag="immunization_mr";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_mr2==v.getId()){
+    		immunization_main.immunization_flag="immunization_mr";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_japa1==v.getId()){
+    		immunization_main.immunization_flag="immunization_japan";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_japa2==v.getId()){
+    		immunization_main.immunization_flag="immunization_japan";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_japa3==v.getId()){
+    		immunization_main.immunization_flag="immunization_japan";
+    		immunization_number=3;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_japa4==v.getId()){
+    		immunization_main.immunization_flag="immunization_japan";
+    		immunization_number=4;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_dt1==v.getId()){
+    		immunization_main.immunization_flag="immunization_dt";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_hib1==v.getId()){
+    		immunization_main.immunization_flag="immunization_hib";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_hib2==v.getId()){
+    		immunization_main.immunization_flag="immunization_hib";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_hib3==v.getId()){
+    		immunization_main.immunization_flag="immunization_hib";
+    		immunization_number=3;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_hib4==v.getId()){
+    		immunization_main.immunization_flag="immunization_hib";
+    		immunization_number=4;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_seven1==v.getId()){
+    		immunization_main.immunization_flag="immunization_seven";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_seven2==v.getId()){
+    		immunization_main.immunization_flag="immunization_seven";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_seven3==v.getId()){
+    		immunization_main.immunization_flag="immunization_seven";
+    		immunization_number=3;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_seven4==v.getId()){
+    		immunization_main.immunization_flag="immunization_seven";
+    		immunization_number=4;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_hpv1==v.getId()){
+    		immunization_main.immunization_flag="immunization_hpv";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_hpv2==v.getId()){
+    		immunization_main.immunization_flag="immunization_hpv";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_hpv3==v.getId()){
+    		immunization_main.immunization_flag="immunization_hpv";
+    		immunization_number=3;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+    	}else if( R.id.button_immunization_varicella1==v.getId()){
+    		immunization_main.immunization_flag="immunization_varicella";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_varicella2==v.getId()){
+    		immunization_main.immunization_flag="immunization_varicella";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+	     }else if( R.id.button_immunization_mumps1==v.getId()){
+    		immunization_main.immunization_flag="immunization_mumps";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_mumps2==v.getId()){
+    		immunization_main.immunization_flag="immunization_mumps";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_b1==v.getId()){
+    		immunization_main.immunization_flag="immunization_b";
+    		immunization_number=1;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_b2==v.getId()){
+    		immunization_main.immunization_flag="immunization_b";
+    		immunization_number=2;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+	         
+    	}else if( R.id.button_immunization_b3==v.getId()){
+    		immunization_main.immunization_flag="immunization_b";
+    		immunization_number=3;
+	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
 
+
+	        /*
     	case R.id.button_immunization_bcg:
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_bcg");
 	        break;
@@ -336,11 +453,12 @@ public class immunization_main extends Activity implements View.OnClickListener{
 
     	case R.id.button_immunization_mumps:
     		intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_mumps");
-	        break;
+	        break;*/
 
-    	case R.id.button_immunization_b:
-	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_b");
-	        break;
+    	//case R.id.button_immunization_b:
+	     //   intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_b");
+	       // break;
+
     	}
     	startActivity(intent);
 
@@ -348,56 +466,7 @@ public class immunization_main extends Activity implements View.OnClickListener{
     }
 
 	//チェックボックスダイアログ
-	public void onclick_checkbox_immunization(View v) {
-		Text text;
-		//チェックボックスの中身を手に入れる
-		for (int i1 = 0; i1 < item_immunization_CheckBox.length; i1++) {
-			CheckBox checkbox1 = (CheckBox) findViewById(item_immunization_CheckBox[i1]);
-			checkedItems[i1] = checkbox1.isChecked();
-			}
-    	//ディレクトリの作成
-    	String target_path = Environment.getExternalStorageDirectory().getAbsolutePath() + "/Yukari/Write/immunization";
-    	File dir = new File(target_path);
-    	if(!dir.exists()){
-    	    dir.mkdirs();
-    	}
-    	DocumentBuilderFactory dbfactory = DocumentBuilderFactory.newInstance();
-    	try {
-    		 DocumentBuilder dbuilder = dbfactory.newDocumentBuilder();
-    	     Document document = dbuilder.newDocument();
-    	     Element root = document.createElement("members");
 
-    	   //CheckBoxの中身を保存
-    	     for (int i1 = 0; i1 < item_immunization_CheckBox_tag.length; i1++) {
-    	    	 Element element1 = document.createElement(item_immunization_CheckBox_tag[i1]);
-    	    	 String string1 =  String.valueOf( checkedItems[i1] );//booleanとstring変換
-    	    	 text = document.createTextNode(string1);
-    	    	 element1.appendChild(text);
-    	    	 root.appendChild(element1);
-    	     }
-
-    	     document.appendChild(root);
-
-    	     TransformerFactory tffactory = TransformerFactory.newInstance();
-    	     Transformer transformer = tffactory.newTransformer();
-
-    	//保存ファイルの作成
-    	String filePath = Environment.getExternalStorageDirectory() + "/Yukari/Write/immunization/immunizationfile.xml";
-        File file = new File(filePath);
-        file.getParentFile().mkdir();
-        transformer.transform(new DOMSource(document), new StreamResult(file));
-
-
-    	} catch (ParserConfigurationException e) {
-    	     // TODO Auto-generated catch block
-    	     e.printStackTrace();
-    	 }catch (TransformerConfigurationException e) {
-    	     // TODO Auto-generated catch block
-    	     e.printStackTrace();
-    	 } catch (TransformerException e) {
-    	     // TODO Auto-generated catch block
-    	     e.printStackTrace();
-    	 }
 
     	//Toast.makeText(this, "保存が完了しました", Toast.LENGTH_LONG).show();
 	}
@@ -406,4 +475,4 @@ public class immunization_main extends Activity implements View.OnClickListener{
 
   //バックキー
 
-}
+

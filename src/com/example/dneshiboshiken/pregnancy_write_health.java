@@ -196,41 +196,6 @@ public class pregnancy_write_health extends Activity {
 
 
 
-  //onCreateOptionsMenuメソッド(オプションメニュー生成)
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu){
-    	super.onCreateOptionsMenu(menu);
-
-    //メニューアイテムの追加
-    	MenuItem item1=menu.add(0,0,0,"編集");
-    	item1.setIcon(android.R.drawable.ic_menu_edit);
-
-    	MenuItem item2=menu.add(0,1,0,"タイトル");
-    	item2.setIcon(R.drawable.ic_menu_home);
-
-    	return true;
-    }
-
-  //onOPtionsItemSelectedメソッド(メニューアイテム選択処理)
-    @Override
-     public boolean onOptionsItemSelected(MenuItem item){
-    	 switch (item.getItemId()){
-    	 case 0:
-    		 Intent intent1 = new Intent();
-    		 intent1.setClass(pregnancy_write_health.this, Write_child_9_2_2.class);
-    		 startActivity(intent1);
-    		 return true;
-    	 case 1:
-    		 Intent intent2 = new Intent();
-    		 intent2.setClass(pregnancy_write_health.this, MainActivity.class);
-    		 startActivity(intent2);
-    		 return true;
-    	 }
-    	 return true;
-    }
-
-
-
   //バックキーのアクション
 
 

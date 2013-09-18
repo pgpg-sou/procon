@@ -1,7 +1,6 @@
 //教育機能の目次
 package com.example.dneshiboshiken;
 
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -10,10 +9,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
-import java.io.OutputStreamWriter;
-import java.io.PrintWriter;
-import java.io.StringReader;
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.Date;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -29,49 +27,42 @@ import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 import org.xmlpull.v1.XmlPullParser;
-import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
-import android.content.Context;
-import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
-import android.preference.PreferenceActivity;
-import android.preference.PreferenceManager;
+import android.os.Environment;
 import android.provider.MediaStore;
-import android.provider.MediaStore.Images;
 import android.util.Log;
-import android.util.Xml;
 import android.view.KeyEvent;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.MenuItem;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.MediaController;
 import android.widget.Spinner;
-import android.widget.TextView;
 import android.widget.Toast;
-import android.os.Environment;
+import android.widget.VideoView;
 
 
 
 public class diary_mainp extends Activity{
+
+	//movie関係
+	public static final int MEDIA_TYPE_VIDEO = 2;
+	private static final int CAPTURE_VIDEO_ACTIVITY_REQUEST_CODE = 200;
+	private Uri fileUri;
+	private static String mp4Path;
+	private VideoView videoView;
 
 	//目次の項目だけボタンを定義
 	private String datapath = "/Yukari/Diary/file1.xml";
@@ -116,6 +107,23 @@ public class diary_mainp extends Activity{
 		};
 	public static int[] item_checkup_Spinner_10 = {};
 	public static int[] item_checkup_label_10 = {};
+
+
+	public void onStart(){
+		super.onStart();
+		//moview
+        videoView = (VideoView)findViewById(R.id.videoview_diaryp);
+	    videoView.setMediaController(new MediaController(this));
+	    videoView.setVisibility(View.GONE);
+	    //videoが存在しているか
+	    File videoFile = new File("/mnt/sdcard/2013-09-17 014020.mp4");
+	    if(videoFile.exists()){
+	    	Log.d("video", "exists");
+	    	videoView.setVisibility(View.VISIBLE);
+	    	//存在している場合再生準備 SDカード上のファイルを再生
+	    	videoView.setVideoPath("/mnt/sdcard/2013-09-17 014020.mp4");
+	    }
+	}
 
 	/** Called when the activity is first created. */
     @Override
@@ -214,7 +222,15 @@ public class diary_mainp extends Activity{
        button_Write_gallery = (Button) findViewById(R.id.Button_diary_movie);
        button_Write_gallery.setOnClickListener(new View.OnClickListener(){
                 public void onClick(View v) {
+                	//movie初期設定
 
+                	//create new Intent
+            	    Intent intent = new Intent(MediaStore.ACTION_VIDEO_CAPTURE);
+            	    fileUri = getOutputMediaFileUri(MEDIA_TYPE_VIDEO);  // create a file to save the video
+            	    intent.putExtra(MediaStore.EXTRA_OUTPUT, fileUri);  // set the image file name
+            	    intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1); // set the video image quality to high
+            	    //start the Video Capture Intent
+            	    startActivityForResult(intent, CAPTURE_VIDEO_ACTIVITY_REQUEST_CODE);
                 }
             });
 
@@ -443,6 +459,43 @@ public class diary_mainp extends Activity{
         iv.setImageDrawable(null);
         finish();
     }
+
+    //movie関係
+    private static Uri getOutputMediaFileUri(int type){
+	      return Uri.fromFile(getOutputMediaFile(type));
+	}
+
+	/** Create a File for saving an image or video */
+	private static File getOutputMediaFile(int type){
+	    // To be safe, you should check that the SDCard is mounted
+	    // using Environment.getExternalStorageState() before doing this.
+
+	    File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
+	              Environment.DIRECTORY_PICTURES), "MyCameraApp");
+	    // This location works best if you want the created images to be shared
+	    // between applications and persist after your app has been uninstalled.
+
+	    // Create the storage directory if it does not exist
+	    if (! mediaStorageDir.exists()){
+	        if (! mediaStorageDir.mkdirs()){
+	            Log.d("MyCameraApp", "failed to create directory");
+	            return null;
+	        }
+	    }
+
+	    // Create a media file name
+	    String timeStamp = "diary";
+	    File mediaFile;
+	    if(type == MEDIA_TYPE_VIDEO) {
+	        mediaFile = new File(Environment.getExternalStorageDirectory().getPath()+"/Yukari/Video/dialy.mp4");
+	        mp4Path = mediaFile.getPath();
+	        Log.d("path", mediaFile.getPath());
+	    } else {
+	        return null;
+	    }
+
+	    return mediaFile;
+	}
 
   //バックキー
     @Override

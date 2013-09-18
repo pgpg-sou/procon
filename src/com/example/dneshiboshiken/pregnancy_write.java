@@ -29,17 +29,18 @@ import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class pregnancy_write extends ListActivity {
 	ArrayAdapter<String> adapter;
-
+	static int pregnancy_write_flag;
 	private String datapath = "/Yukari/Write/Pregnancy/Course/Pregnancyfile1.xml";
-	private int photopath;
+	private int photopath=0;
 
 	private Button button_Write_edit;
 
-	private String[] mTitles = new String[12];
+	private String[] mTitles = new String[50];
 
 	private String[] item_pregnancy_writetag = {"pregnancy_write_edit_examination",
 			"pregnancy_write_edit_uterus",
@@ -82,7 +83,7 @@ public class pregnancy_write extends ListActivity {
 		//初期値読み込み
         File dir = new File(Environment.getExternalStorageDirectory().getPath());
         if(dir.exists()){
-	    	 for(int i1 = 1; i1 < 20; i1++) {
+	    	 for(int i1 = 1; i1 < 50; i1++) {
 	    		 File file = new File(dir.getAbsolutePath()+"/Yukari/Write/Pregnancy/Course/Pregnancyfile"+i1+".xml");
 	    		 if (file.exists()) {
 	    			 datapath="/Yukari/Write/Pregnancy/Course/Pregnancyfile"+(i1)+".xml";
@@ -135,7 +136,6 @@ public class pregnancy_write extends ListActivity {
 	                 } catch (Exception e) {
 	                     Toast.makeText(getApplicationContext(), "エラー発生", Toast.LENGTH_SHORT);
 	                 }
-
 	    			 mTitles[i1] = "";
 	    			 for(int i = 0; i < tvParam_EditText.length; i++) {
 	    					if(tvParam_EditText[i]==null) tvParam_EditText[i]="未記入";
@@ -149,18 +149,29 @@ public class pregnancy_write extends ListActivity {
 	    					else {
 	    						bitmap[i1] = BitmapFactory.decodeResource(getResources(), R.drawable.noimage);
 	    					}
-
-	    			 Log.d("tag",mTitles[i1] );
-
 	    		 }
 	    	 }
-	    	 Log.d("tag", datapath);
 	     }
+
+        if(photopath==0){
+        	TextView textView = (TextView) findViewById(R.id.text_pregnansy_check);
+        	textView.setText("記録されているデータがありません。\n"+"検査日　　　：\n"+
+        			"子宮底長　　：\n"+
+        			"腹囲　　　　：\n"+
+        			"体重　　　　：\n"+
+        			"血圧（上）　：\n"+
+        			"血圧（下）　：\n"+
+        			"浮腫　　　　：\n"+
+        			"尿蛋白　　　：\n"+
+        			"尿糖　　　　：\n"+
+        			"その他の検査：\n"+
+        			"特記事項　　：\n"+
+        			"施設名又は担当者：");
+        }
 
 
 		List<BindData2> objects = new ArrayList<BindData2>();
-		Log.d("tag", "行った");
-		for(int i = 1; i < mTitles.length; i++) {
+		for(int i = 1; i < photopath+1; i++) {
 			BindData2 data = new BindData2(mTitles[i], bitmap[i]);
 			objects.add(data);
 		}
@@ -171,12 +182,15 @@ public class pregnancy_write extends ListActivity {
             public void onItemClick(AdapterView<?> parent, View view,
                     int position, long id) {
             	//リスト内で、どこかタッチされたら（position=タッチされた位置 0~）
-
-            	if (position==0){
-            		Intent intent_write0 = new Intent(getApplicationContext(),pregnancy_write_edit.class);
+            	for(int i = 0; i < photopath; i++) {
+            	if (position==i){
+            		Intent intent_write0 = new Intent(getApplicationContext(),pregnancy_write_editedit.class);
             		startActivity(intent_write0);
+            		pregnancy_write_flag = i;
+            		finish();
             	}
             	}
+            }
 
         });
 

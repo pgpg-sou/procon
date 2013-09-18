@@ -21,9 +21,6 @@ import android.widget.Toast;
 public class write_condition extends ListActivity {
 
 	private String[] mTitles = {
-			"生まれた時",
-			"生後１週間",
-			"生後４週間",
 			"１ヶ月頃",
 			"３〜４ヶ月頃",
 			"６〜７ヶ月頃",
@@ -37,9 +34,6 @@ public class write_condition extends ListActivity {
 			"６歳の頃"};
 
 	private String[] filepath = {
-			"/Yukari/Photo/imageView_write_checkup_0p.png",
-			"/Yukari/Photo/imageView_write_checkup_1p.png",
-			"/Yukari/Photo/imageView_write_checkup_2p.png",
 			"/Yukari/Photo/imageView_write_checkup_3p.png",
 			"/Yukari/Photo/imageView_write_checkup_4p.png",
 			"/Yukari/Photo/imageView_write_checkup_5p.png",
@@ -98,11 +92,11 @@ public class write_condition extends ListActivity {
             		startActivity(intent_write0);
             	}
             	if (position==1){
-            		Intent intent_write1 = new Intent(getApplicationContext(),WriteCheckup_1.class);
+            		Intent intent_write1 = new Intent(getApplicationContext(),write_condition_1.class);
             		startActivity(intent_write1);
             	}
             	if (position==2){
-            		Intent intent_write2 = new Intent(getApplicationContext(),WriteCheckup_2.class);
+            		Intent intent_write2 = new Intent(getApplicationContext(),write_condition_2.class);
             		startActivity(intent_write2);
             	}
             	if (position==3){
@@ -136,18 +130,6 @@ public class write_condition extends ListActivity {
             	if (position==10){
             		Intent intent_write10 = new Intent(getApplicationContext(),WriteCheckup_10.class);
             		startActivity(intent_write10);
-            	}
-            	if (position==11){
-            		Intent intent_write11 = new Intent(getApplicationContext(),WriteCheckup_11.class);
-            		startActivity(intent_write11);
-            	}
-            	if (position==12){
-            		Intent intent_write12 = new Intent(getApplicationContext(),WriteCheckup_12.class);
-            		startActivity(intent_write12);
-            	}
-            	if (position==13){
-            		Intent intent_write13 = new Intent(getApplicationContext(),WriteCheckup_13.class);
-            		startActivity(intent_write13);
             	}
 
             }

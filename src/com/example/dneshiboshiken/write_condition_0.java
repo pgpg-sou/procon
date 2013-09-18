@@ -56,156 +56,139 @@ import android.widget.EditText;
 import android.content.Context;
 
 public class write_condition_0 extends Activity {
-
 	//目次の項目だけボタンを定義
-	private Button button_Write_child_9_1_1_back;
-	private Button button_Write_child_9_1_1_home;
-	private Button button_Write_child_9_1_1_next;
-    private static final String PREFERRENCES_FILE_NAME = "PrefrencesFile";
+	private String filename = "imageView_write_condition0.png";
+		private Button button_Write_child_9_12_1_back;
+		private Button button_Write_child_9_12_1_home;
+		private Button button_Write_child_9_12_1_next;
+		private int imagepath = R.id.imageview_write_condition_day_record;
+		final boolean[] checkedItems = new boolean[10];
+
+		private String filepath = "/Yukari/Write/condition/write_condition0.xml";
+
+		private String[] item_pregnancy_writetag = {"EditText_write_condition_day_record",
+				"EditText_write_condition_other",
+				"radio_write_condition1",
+				"radio_write_condition2",
+				"radio_write_condition3",
+				"radio_write_condition4",
+				"radio_write_condition5",
+				"radio_write_condition6",
+				};
+		public static int[] item_checkup_8 = {R.id.EditText_write_condition_day_record,
+			R.id.EditText_write_condition_other,
+			R.id.radio_write_condition1,
+			R.id.radio_write_condition2,
+			R.id.radio_write_condition3,
+			R.id.radio_write_condition4,
+			R.id.radio_write_condition5,
+			R.id.radio_write_condition6,};
+		public static int[] item_checkup_check_textview_8 = {};
+		/** Called when the activity is first created. */
+	    @Override
+	    public void onCreate(Bundle savedInstanceState) {
+	        super.onCreate(savedInstanceState);
+	        setContentView(R.layout.write_condition_0);	//画面レイアウトを指定(res/layout/index_read.xml)
+	        TextView[] tvParam = new TextView[item_checkup_8.length];
+
+	        // 読み込み
+	        //xmlファイル読み込み
+	          File dir = new File(Environment.getExternalStorageDirectory().getPath());
+	          if(dir.exists()){
+
+	              File file = new File(dir.getAbsolutePath()+filepath);
+	              if (file.exists()) {
+	              	try {
+	              		XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+	              		factory.setNamespaceAware(true);
+	              		XmlPullParser parser = factory.newPullParser();
+	              		FileInputStream fis = new FileInputStream(file);
+	              		parser.setInput(new InputStreamReader(fis));
+
+	                      // TextViewインスタンスの取得
+	              		for (int i1 = 0; i1 < item_checkup_8.length; i1++) {
+	                    	tvParam[i1] = (TextView)findViewById(item_checkup_8[i1]);
+	                    }
 
 
-	@Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.write_condition_0);	//画面レイアウトを指定(res/layout/index_read.xml)
+	                      // タグ名
+	                      String tag = "";
+	                      // 値
+	                      String value = "";
+	                      // XMLの解析
+	                      for (int type = parser.getEventType(); type != XmlPullParser.END_DOCUMENT;
+	                              type = parser.next()) {
+	                          switch(type) {
+	                          case XmlPullParser.START_TAG: // 開始タグ
+	                              tag = parser.getName();
+	                              break;
+	                          case XmlPullParser.TEXT: // タグの内容
+	                              value = parser.getText();
+	                              if(value.trim().length() != 0) {
+	                              // 空白で取得したものは全て処理対象外とする
+	                            	  if(tag.equals(item_pregnancy_writetag[0])) {tvParam[0].setText(value);}
+	                            	  else if(tag.equals(item_pregnancy_writetag[1])) {tvParam[1].setText(value);}
+	                            	  else if(tag.equals(item_pregnancy_writetag[2])) {tvParam[2].setText(value);}
+	                            	  else if(tag.equals(item_pregnancy_writetag[3])) {tvParam[3].setText(value);}
+	                            	  else if(tag.equals(item_pregnancy_writetag[4])) {tvParam[4].setText(value);}
+	                            	  else if(tag.equals(item_pregnancy_writetag[5])) {tvParam[5].setText(value);}
+	                            	  else if(tag.equals(item_pregnancy_writetag[6])) {tvParam[6].setText(value);}
+	                            	  else if(tag.equals(item_pregnancy_writetag[7])) {tvParam[7].setText(value);}
+	                              }
 
-     // 読み込み
-      //xmlファイル読み込み
-        File dir = new File(Environment.getExternalStorageDirectory().getPath());
-        if(dir.exists()){
-            File file = new File(dir.getAbsolutePath()+"/Yukari/Write/Checkup/WriteCheckup_0file.xml");
-            if (file.exists()) {
-            	try {
-            		XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
-            		factory.setNamespaceAware(true);
-            		XmlPullParser parser = factory.newPullParser();
-            		FileInputStream fis = new FileInputStream(file);
-            		parser.setInput(new InputStreamReader(fis));
+	                              break;
+	                          case XmlPullParser.END_TAG: // 終了タグ
+	                              break;
+	                          }
 
-                    // TextViewインスタンスの取得
-            		TextView tvParam1 = (TextView)findViewById(R.id.TextView_write_checkup_0_weight);
-            		TextView tvParam2 = (TextView)findViewById(R.id.TextView_write_checkup_0_height);
-            		TextView tvParam3 = (TextView)findViewById(R.id.TextView_write_checkup_0_chest);
-            		TextView tvParam4 = (TextView)findViewById(R.id.TextView_write_checkup_0_head);
+	                      }
+	                  } catch (Exception e) {
+	                      Toast.makeText(getApplicationContext(), "エラー発生", Toast.LENGTH_SHORT);
+	                  }
+	              }
+	          //画像読み込み
+	              File view = new File(dir.getAbsolutePath()+"/Yukari/Photo/"+filename);
+	              if (view.exists()) {
+	              	BitmapFactory.Options options = new BitmapFactory.Options();
+	              	options.inJustDecodeBounds = true;
+	              	Bitmap bmp1 = BitmapFactory.decodeFile(view.getPath(), options );
 
-                    // タグ名
-                    String tag = "";
-                    // 値
-                    String value = "";
-                    // XMLの解析
-                    for (int type = parser.getEventType(); type != XmlPullParser.END_DOCUMENT;
-                            type = parser.next()) {
-                        switch(type) {
-                        case XmlPullParser.START_TAG: // 開始タグ
-                            tag = parser.getName();
-                            break;
-                        case XmlPullParser.TEXT: // タグの内容
-                            value = parser.getText();
-                            // 空白で取得したものは全て処理対象外とする
-                            if(value.trim().length() != 0) {
-                                // 取得した結果をTextViewに設定
-                                if(tag.equals("write_checkup_0_weight")) {
-                                    tvParam1.setText(value);
-                                } else if(tag.equals("write_checkup_0_height")) {
-                                    tvParam2.setText(value);
-                                }else if(tag.equals("write_checkup_0_chest")) {
-                                    tvParam3.setText(value);
-                                }else if(tag.equals("write_checkup_0_head")) {
-                                    tvParam4.setText(value);
-                                }
-                            }
-                            break;
-                        case XmlPullParser.END_TAG: // 終了タグ
-                            break;
-                        }
-                    }
-                } catch (Exception e) {
-                    Toast.makeText(getApplicationContext(), "エラー発生", Toast.LENGTH_SHORT);
-                }
-            }
-        //画像読み込み
-            if(dir.exists()){
-                File view = new File(dir.getAbsolutePath()+"/Yukari/Photo/imageView_write_checkup_0p.png");
-                if (view.exists()) {
-                	BitmapFactory.Options options = new BitmapFactory.Options();
-                	options.inJustDecodeBounds = true;
-                	Bitmap bmp1 = BitmapFactory.decodeFile(view.getPath(), options );
+	              	int reqWidth = 0;
+	              	int reqHeight = 0;
+	              	options.inSampleSize = WriteCheckup_13.calculateInSampleSize(options, reqWidth, reqHeight);
+	              	int scale = Math.max(1, 1);
+	              	options.inJustDecodeBounds = false;
+	              	options.inSampleSize = scale;
+	              	Bitmap image = BitmapFactory.decodeFile(view.getPath(), options);
 
-                	int reqWidth = 0;
-                	int reqHeight = 0;
-                	options.inSampleSize = calculateInSampleSize(options, reqWidth, reqHeight);
-                	int scale = Math.max(1, 1);
-                	options.inJustDecodeBounds = false;
-                	options.inSampleSize = scale;
-                	Bitmap image = BitmapFactory.decodeFile(view.getPath(), options);
+	              	((ImageView)findViewById(imagepath)).setImageBitmap(image);
+	              }else{
+	                  //存在しない
+	              }
+	              //日付読み込む
+	          }
 
-                	((ImageView)findViewById(R.id.imageview_write_0p_condition_day_record)).setImageBitmap(image);
-                }else{
-                    //存在しない
-                }
-            }
+	        //日付読みーっ！(」*ﾟﾛﾟ)」*ﾟﾛﾟ)」
+
+	        //それぞれのボタンにクリック時の処理を表示
+
+	        button_Write_child_9_12_1_home = (Button) findViewById(R.id.Button_checkup_edit);
+	        button_Write_child_9_12_1_home.setOnClickListener(new View.OnClickListener(){
+	            public void onClick(View v) {
+	            	button_Write_child_9_12_1_home_onClick();
+	            }
+	        });
 
 
-
-        //それぞれのボタンにクリック時の処理を表示
-        button_Write_child_9_1_1_back = (Button) findViewById(R.id.Button_checkup_back);
-        button_Write_child_9_1_1_back.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            button_Write_child_9_1_1_back_onClick();
-            }
-        });
-
-        button_Write_child_9_1_1_home = (Button) findViewById(R.id.Button_checkup_edit);
-        button_Write_child_9_1_1_home.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            	button_Write_child_9_1_1_home_onClick();
-            }
-        });
-
-        button_Write_child_9_1_1_next = (Button) findViewById(R.id.Button_checkup_next);
-        button_Write_child_9_1_1_next.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-            	button_Write_child_9_1_1_next_onClick();
-            }
-        });
-        }
-    }
-	public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
-
-	    // 画像の元サイズ
-	    final int height = options.outHeight;
-	    final int width = options.outWidth;
-	    int inSampleSize = 1;
-
-	    if (height > reqHeight || width > reqWidth) {
-	        if (width > height) {
-	            inSampleSize = Math.round((float)height / (float)reqHeight);
-	        } else {
-	            inSampleSize = Math.round((float)width / (float)reqWidth);
-	        }
 	    }
-	    return inSampleSize;
-	}
-    //ボタンクリックによって呼び出される処理
-    //classの呼び出し(EMCHH.java)で行った内容と同様
-    private void button_Write_child_9_1_1_back_onClick() {
-    	Toast.makeText(this, "検診がありません。", Toast.LENGTH_LONG).show();
-    }
+	  //ボタンクリックによって呼び出される処理
+	    //classの呼び出し(EMCHH.java)で行った内容と同様
 
-    private void button_Write_child_9_1_1_home_onClick() {
-        Intent intent_read_2 = new Intent(getApplicationContext(),write_condition_0p.class);
-        startActivity(intent_read_2);
-        ImageView iv = (ImageView)findViewById(R.id.imageview_write_0p_condition_day_record);
-        iv.setImageDrawable(null);
-        finish();
-    }
-
-    private void button_Write_child_9_1_1_next_onClick() {
-        Intent intent_read_3 = new Intent(getApplicationContext(),WriteCheckup_1.class);
-        ImageView iv = (ImageView)findViewById(R.id.imageview_write_0p_condition_day_record);
-        iv.setImageDrawable(null);
-        startActivity(intent_read_3);
-    }
+	    private void button_Write_child_9_12_1_home_onClick() {
+	        Intent intent_read_2 = new Intent(getApplicationContext(),write_condition_0p.class);
+	        startActivity(intent_read_2);
+	        finish();
+	    }
 
 
     //バックキーのアクション

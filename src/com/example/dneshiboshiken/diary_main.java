@@ -15,10 +15,12 @@ import android.graphics.BitmapFactory;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Environment;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.MenuItem;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -340,7 +342,7 @@ public class diary_main extends Activity {
     	 switch (item.getItemId()){
     	 case 0:
     		 Intent intent1 = new Intent();
-    		 intent1.setClass(diary_main.this, Write_child_9_2_2.class);
+    		 intent1.setClass(diary_main.this, MainActivity.class);
     		 startActivity(intent1);
     		 return true;
     	 case 1:
@@ -368,7 +370,33 @@ public class diary_main extends Activity {
 	    return inSampleSize;
 	}
 
+    private float actDownX;
+	private float actDownY;
+	private float actUpX;
+	private float actUpY;
 
+    @Override
+	public boolean onTouchEvent(MotionEvent event){
+    	Log.d("TouchEvent", "X:" + event.getX() + ",Y:" + event.getY());
+		switch(event.getAction()){
+		case MotionEvent.ACTION_DOWN:
+			actDownX = event.getX();
+			break;
+		case MotionEvent.ACTION_MOVE:
+			break;
+		case MotionEvent.ACTION_UP:
+			actUpX = event.getX();
+			//左から右
+			if(actUpX-actDownX > 100){
+				button_Write_child_9_12_1_back_onClick();
+			}else if(actDownX-actUpX > 100){//右から左
+				button_Write_child_9_12_1_next_onClick();
+			}
+			break;
+		}
+		return false;
+
+	}
 
 
   //バックキーのアクション

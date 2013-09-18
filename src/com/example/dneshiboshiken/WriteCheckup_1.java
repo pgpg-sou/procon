@@ -226,22 +226,7 @@ public class WriteCheckup_1 extends Activity {
     }
 
   //onOPtionsItemSelectedメソッド(メニューアイテム選択処理)
-    @Override
-     public boolean onOptionsItemSelected(MenuItem item){
-    	 switch (item.getItemId()){
-    	 case 0:
-    		 Intent intent1 = new Intent();
-    		 intent1.setClass(WriteCheckup_1.this, Write_child_9_2_2.class);
-    		 startActivity(intent1);
-    		 return true;
-    	 case 1:
-    		 Intent intent2 = new Intent();
-    		 intent2.setClass(WriteCheckup_1.this, MainActivity.class);
-    		 startActivity(intent2);
-    		 return true;
-    	 }
-    	 return true;
-    }
+   
     public static int calculateInSampleSize(BitmapFactory.Options options, int reqWidth, int reqHeight) {
 
 	    // 画像の元サイズ
