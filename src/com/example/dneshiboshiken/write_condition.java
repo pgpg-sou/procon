@@ -34,17 +34,17 @@ public class write_condition extends ListActivity {
 			"６歳の頃"};
 
 	private String[] filepath = {
-			"/Yukari/Photo/imageView_write_checkup_3p.png",
-			"/Yukari/Photo/imageView_write_checkup_4p.png",
-			"/Yukari/Photo/imageView_write_checkup_5p.png",
-			"/Yukari/Photo/imageView_write_checkup_6p.png",
-			"/Yukari/Photo/imageView_write_checkup_7p.png",
-			"/Yukari/Photo/imageView_write_checkup_8p.png",
-			"/Yukari/Photo/imageView_write_checkup_9p.png",
-			"/Yukari/Photo/imageView_write_checkup_10p.png",
-			"/Yukari/Photo/imageView_write_checkup_11p.png",
-			"/Yukari/Photo/imageView_write_checkup_12p.png",
-			"/Yukari/Photo/imageView_write_checkup_13p.png",};
+			"/Yukari/Photo/imageView_write_condition0.png",
+			"/Yukari/Photo/imageView_write_condition1.png",
+			"/Yukari/Photo/imageView_write_condition2.png",
+			"/Yukari/Photo/imageView_write_condition3.png",
+			"/Yukari/Photo/imageView_write_condition4.png",
+			"/Yukari/Photo/imageView_write_condition5.png",
+			"/Yukari/Photo/imageView_write_condition6.png",
+			"/Yukari/Photo/imageView_write_condition7.png",
+			"/Yukari/Photo/imageView_write_condition8.png",
+			"/Yukari/Photo/imageView_write_condition9.png",
+			"/Yukari/Photo/imageView_write_condition10.png"};
 
 	private Bitmap[] bitmap = new Bitmap[filepath.length];
 
@@ -100,35 +100,35 @@ public class write_condition extends ListActivity {
             		startActivity(intent_write2);
             	}
             	if (position==3){
-            		Intent intent_write3 = new Intent(getApplicationContext(),WriteCheckup_3.class);
+            		Intent intent_write3 = new Intent(getApplicationContext(),write_condition_3.class);
             		startActivity(intent_write3);
             	}
             	if (position==4){
-            		Intent intent_write4 = new Intent(getApplicationContext(),WriteCheckup_4.class);
+            		Intent intent_write4 = new Intent(getApplicationContext(),write_condition_4.class);
             		startActivity(intent_write4);
             	}
             	if (position==5){
-            		Intent intent_write5 = new Intent(getApplicationContext(),WriteCheckup_5.class);
+            		Intent intent_write5 = new Intent(getApplicationContext(),write_condition_5.class);
             		startActivity(intent_write5);
             	}
             	if (position==6){
-            		Intent intent_write6 = new Intent(getApplicationContext(),WriteCheckup_6.class);
+            		Intent intent_write6 = new Intent(getApplicationContext(),write_condition_6.class);
             		startActivity(intent_write6);
             	}
             	if (position==7){
-            		Intent intent_write7 = new Intent(getApplicationContext(),WriteCheckup_7.class);
+            		Intent intent_write7 = new Intent(getApplicationContext(),write_condition_7.class);
             		startActivity(intent_write7);
             	}
             	if (position==8){
-            		Intent intent_write8 = new Intent(getApplicationContext(),WriteCheckup_8.class);
+            		Intent intent_write8 = new Intent(getApplicationContext(),write_condition_8.class);
             		startActivity(intent_write8);
             	}
             	if (position==9){
-            		Intent intent_write9 = new Intent(getApplicationContext(),WriteCheckup_9.class);
+            		Intent intent_write9 = new Intent(getApplicationContext(),write_condition_9.class);
             		startActivity(intent_write9);
             	}
             	if (position==10){
-            		Intent intent_write10 = new Intent(getApplicationContext(),WriteCheckup_10.class);
+            		Intent intent_write10 = new Intent(getApplicationContext(),write_condition_10.class);
             		startActivity(intent_write10);
             	}
 

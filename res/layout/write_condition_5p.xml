@@ -64,6 +64,25 @@
                 android:gravity="center"
                 android:src="@drawable/noimage" />
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/Button_write_checkup_9p_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="写真を撮る" />
+
+                <Button
+                    android:id="@+id/Button_write_checkup_9p_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="ギャラリーから選択" />
+            </LinearLayout>
             <TextView
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
@@ -154,7 +173,7 @@
                             android:layout_weight="1" />
                     </RadioGroup>
                 </TableRow>
-                
+
 
                 <TableRow
                     android:layout_width="fill_parent"
@@ -172,7 +191,7 @@
                         android:text="自分でコップを持って水を飲めますか｡" >
                     </TextView>
 
-                    
+
 
                     <RadioGroup
                         android:id="@+id/radio_write_condition3"
@@ -212,7 +231,7 @@
                         android:text="哺乳ビンを使っていますか。（いつまでも哺乳ビンを使って飲むのは、むし歯につながるおそれがあるので、やめるようにしましょう｡） " >
                     </TextView>
 
-                    
+
 
                     <RadioGroup
                         android:id="@+id/radio_write_condition4"
@@ -252,7 +271,7 @@
                         android:text="食事や間食（おやつ）の時間はだいたい決まっていますか。 " >
                     </TextView>
 
-                    
+
 
                     <RadioGroup
                         android:id="@+id/radio_write_condition5"
@@ -292,7 +311,7 @@
                         android:text="歯の仕上げみがきをしてあげていますか。" >
                     </TextView>
 
-                    
+
 
                     <RadioGroup
                         android:id="@+id/radio_write_condition6"
@@ -332,7 +351,7 @@
                         android:text="極端にまぶしがったり、目の動きがおかしいのではないかと気になったりしますか｡" >
                     </TextView>
 
-                    
+
 
                     <RadioGroup
                         android:id="@+id/radio_write_condition7"
@@ -372,7 +391,7 @@
                         android:text="うしろから名前を呼んだとき、振り向きますか｡" >
                     </TextView>
 
-                    
+
 
                     <RadioGroup
                         android:id="@+id/radio_write_condition8"
@@ -485,7 +504,7 @@
                         android:text="子育てについて気軽に相談できる人はいますか。" >
                     </TextView>
 
-                    
+
 
                     <RadioGroup
                         android:id="@+id/radio_write_condition11"

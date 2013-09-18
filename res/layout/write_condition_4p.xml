@@ -32,7 +32,6 @@
                 android:text="　" >
             </TextView>
 
-
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="fill_parent"
@@ -64,6 +63,26 @@
                 android:layout_weight="1"
                 android:gravity="center"
                 android:src="@drawable/noimage" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal" >
+
+                <Button
+                    android:id="@+id/Button_write_checkup_9p_camera"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="写真を撮る" />
+
+                <Button
+                    android:id="@+id/Button_write_checkup_9p_gallery"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="ギャラリーから選択" />
+            </LinearLayout>
 
             <TableLayout
                 android:layout_width="fill_parent"
@@ -115,13 +134,12 @@
                     </TextView>
                 </TableRow>
 
-               <TableRow
+                <TableRow
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
                     android:background="#ffffff" >
 
                     <!-- デフォルトであえて高さをとるためのダミービュー -->
-
 
                     <TextView
                         android:layout_width="0dp"

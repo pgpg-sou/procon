@@ -1,6 +1,7 @@
 //教育機能の目次
 package com.example.dneshiboshiken;
 
+import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -9,6 +10,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.io.PrintWriter;
+import java.io.StringReader;
 import java.util.Calendar;
 
 import javax.xml.parsers.DocumentBuilder;
@@ -21,45 +25,52 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 
+
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
 import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
 import org.xmlpull.v1.XmlPullParserFactory;
 
+import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.app.ProgressDialog;
 import android.content.ContentResolver;
 import android.content.ContentValues;
+import android.content.Context;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Bitmap;
 import android.graphics.Bitmap.CompressFormat;
 import android.graphics.BitmapFactory;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.Environment;
+import android.preference.PreferenceActivity;
+import android.preference.PreferenceManager;
 import android.provider.MediaStore;
 import android.provider.MediaStore.Images;
 import android.util.Log;
+import android.util.Xml;
 import android.view.KeyEvent;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
+import android.os.Environment;
 
 
 
 public class WriteCheckup_5p extends Activity{
-
-	private SharedPreferences pref;// Drive関係
-	private Activity activity;// Drive関係
 
 	//目次の項目だけボタンを定義
 	private EditText editText_day1;
@@ -135,8 +146,6 @@ public class WriteCheckup_5p extends Activity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.write_checkup_5p);	//画面レイアウトを指定(res/layout/index_read.xml)
-        activity=this;
-
 
 
         EditText[] tvParam_EditText = new EditText[item_checkup_EditText_5.length];
@@ -378,10 +387,10 @@ public class WriteCheckup_5p extends Activity{
     private void button_Write_camera() {
     	Intent intent = new Intent();
     	ContentValues values = new ContentValues();
-        values.put(Images.Media.TITLE,"aaaaa");//任意のタイトル（拡張子は付けない）
-        values.put(Images.Media.MIME_TYPE, "image/jpeg");
+        values.put(MediaStore.Images.Media.TITLE,"aaaaa");//任意のタイトル（拡張子は付けない）
+        values.put(MediaStore.Images.Media.MIME_TYPE, "image/jpeg");
         //URIの取得
-        mImageUri = getContentResolver().insert(Images.Media.EXTERNAL_CONTENT_URI, values);
+        mImageUri = getContentResolver().insert(MediaStore.Images.Media.EXTERNAL_CONTENT_URI, values);
        // mImageUri = Uri.fromFile(new File(Environment.getExternalStorageDirectory().getPath()  + System.currentTimeMillis() +"."));
         intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, mImageUri);
@@ -520,66 +529,6 @@ public class WriteCheckup_5p extends Activity{
     	     // TODO Auto-generated catch block
     	     e.printStackTrace();
     	 }
-
-    	/**
-		 * ここからGoogleDriveへのアップロード 個々によって変更するところ
-		 * */
-		try {
-			DriveModule.OAuth(GoogleDriveBuild.credential, activity);
-			pref = getSharedPreferences("prefs", Activity.MODE_PRIVATE);
-			final String str = pref.getString("RootFolder",
-					"PERF NOT FOUND!!");
-			Log.i("PREF", str);
-
-			AsyncTask<Void, ProgressDialog, Void> task = new AsyncTask<Void, ProgressDialog, Void>() {
-				protected void onPostExecute() {
-					// UIスレッド
-					//Toast.makeText(WriteCheckup_12p.this, "UPLOAD OK",
-						//	Toast.LENGTH_LONG);
-				}
-
-				protected Void doInBackground(Void... params) {
-					// TODO 自動生成されたメソッド・スタブ
-					boolean a = false;
-					try {
-						com.google.api.services.drive.model.File file1 = GoogleDriveBuild.service
-								.files()
-								.get(pref.getString("RootFolder", null))
-								.execute();
-						if (file1 != null) {
-							String filePath = Environment.getExternalStorageDirectory()+ "/Yukari/Write/Checkup/WriteCheckup_5file.xml";
-							String path = Environment.getExternalStorageDirectory().getPath() + "/Yukari/Photo/imageView_write_checkup_5p.png" ;
-							File view = new File(path);
-							if (DriveModule.checkFile(file1, "Checkup","WriteCheckup_5file.xml",GoogleDriveBuild.service,GoogleDriveBuild.credential, filePath,"application/xml", activity) == true) {
-							} else {
-							}
-							if(view.exists()&&DriveModule.checkFile(file1, "Photo","imageView_write_checkup_5p.png",GoogleDriveBuild.service,GoogleDriveBuild.credential, path,"image/*", activity) == true)
-							a = true;
-						}
-					} catch (IOException e) {
-						// TODO 自動生成された catch ブロック
-						Log.e("ERROR a", e.toString());
-					}
-					return null;
-
-				}
-
-			};
-			task.execute(); // 実行
-
-		} catch (Exception e) {
-			Log.e("DRIVE ERROR", e.toString());
-		}
-
-		if(GoogleDriveBuild.netWorkCheck(this)==false){
-			Toast.makeText(this, "インターネットに接続されていません", Toast.LENGTH_LONG).show();
-			Log.i("NETWORK","false")	;
-		}
-
-
-		/**
-		 * ここまでがアップロード
-		 * */
 
     	Toast.makeText(this, "保存が完了しました", Toast.LENGTH_LONG).show();
     	Intent intent_cancel = new Intent(getApplicationContext(),WriteCheckup_5.class);

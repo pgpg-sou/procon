@@ -85,7 +85,6 @@ public class write_condition_1p extends Activity{
 	private Button button_Write_save;
 	private Button button_Write_gallery;
 	private Button button_Write_camera;
-
 	private String filepath = "/Yukari/Write/condition/write_condition1.xml";
 	private String datapath = "/Yukari/Write/condition";
 	//ここはクラス内で実行

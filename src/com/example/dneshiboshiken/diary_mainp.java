@@ -66,7 +66,7 @@ public class diary_mainp extends Activity{
 
 	//目次の項目だけボタンを定義
 	private String datapath = "/Yukari/Diary/file1.xml";
-	private int photopath;
+	private static int photopath;
 
 	private EditText editText_day1;
 	private DatePickerDialog.OnDateSetListener varDateSetListener_day1;
@@ -111,25 +111,6 @@ public class diary_mainp extends Activity{
 
 	public void onStart(){
 		super.onStart();
-		//moview
-        videoView = (VideoView)findViewById(R.id.videoview_diaryp);
-	    videoView.setMediaController(new MediaController(this));
-	    videoView.setVisibility(View.GONE);
-	    //videoが存在しているか
-	    File videoFile = new File("/mnt/sdcard/2013-09-17 014020.mp4");
-	    if(videoFile.exists()){
-	    	Log.d("video", "exists");
-	    	videoView.setVisibility(View.VISIBLE);
-	    	//存在している場合再生準備 SDカード上のファイルを再生
-	    	videoView.setVideoPath("/mnt/sdcard/2013-09-17 014020.mp4");
-	    }
-	}
-
-	/** Called when the activity is first created. */
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.diary_mainp);	//画面レイアウトを指定(res/layout/index_read.xml)
 
         EditText[] tvParam_EditText = new EditText[item_checkup_EditText_10.length];
 
@@ -164,7 +145,6 @@ public class diary_mainp extends Activity{
             		for (int i1 = 0; i1 < item_checkup_EditText_10.length; i1++) {
             			tvParam_EditText[i1] = (EditText)findViewById(item_checkup_EditText_10[i1]);
                     }
-
                     // タグ名
                     String tag = "";
                     // 値
@@ -195,6 +175,26 @@ public class diary_mainp extends Activity{
                 }
             }
         }
+      //moview
+		videoView = (VideoView)findViewById(R.id.videoview_diaryp);
+		videoView.setMediaController(new MediaController(this));
+		videoView.setVisibility(View.GONE);
+		//videoが存在しているか
+		File videoFile = new File(Environment.getExternalStorageDirectory().getPath()+"/Yukari/Video/dialy"+(photopath+1)+".mp4");
+		if(videoFile.exists()){
+			Log.d("video", "exists");
+			videoView.setVisibility(View.VISIBLE);
+			//存在している場合再生準備 SDカード上のファイルを再生
+			videoView.setVideoPath(Environment.getExternalStorageDirectory().getPath()+"/Yukari/Video/dialy"+(photopath+1)+".mp4");
+			}
+
+		}
+
+	/** Called when the activity is first created. */
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.diary_mainp);	//画面レイアウトを指定(res/layout/index_read.xml)
 
 
 
@@ -231,6 +231,7 @@ public class diary_mainp extends Activity{
             	    intent.putExtra(MediaStore.EXTRA_VIDEO_QUALITY, 1); // set the video image quality to high
             	    //start the Video Capture Intent
             	    startActivityForResult(intent, CAPTURE_VIDEO_ACTIVITY_REQUEST_CODE);
+
                 }
             });
 
@@ -316,6 +317,7 @@ public class diary_mainp extends Activity{
         intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, mImageUri);
     	startActivityForResult(intent, REQUEST_CAMERA);
+
     }
 
     @Override
@@ -382,8 +384,53 @@ public class diary_mainp extends Activity{
    	    		}
 
                      }
+
       	 }
        }
+
+    //movie関係
+    private static Uri getOutputMediaFileUri(int type){
+	      return Uri.fromFile(getOutputMediaFile(type));
+	}
+
+	/** Create a File for saving an image or video */
+	private static File getOutputMediaFile(int type){
+	    // To be safe, you should check that the SDCard is mounted
+	    // using Environment.getExternalStorageState() before doing this.
+
+	    File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
+	              Environment.DIRECTORY_PICTURES), "MyCameraApp");
+	    // This location works best if you want the created images to be shared
+	    // between applications and persist after your app has been uninstalled.
+
+	    // Create the storage directory if it does not exist
+	    if (! mediaStorageDir.exists()){
+	        if (! mediaStorageDir.mkdirs()){
+	            Log.d("MyCameraApp", "failed to create directory");
+	            return null;
+	        }
+	    }
+
+	    // Create a media file name
+	    String timeStamp = "diary";
+	    File mediaFile;
+	    if(type == MEDIA_TYPE_VIDEO) {
+	        mediaFile = new File(Environment.getExternalStorageDirectory().getPath()+"/Yukari/Video/dialy"+(photopath+1)+".mp4");
+	        mp4Path = mediaFile.getPath();
+	        Log.d("path", mediaFile.getPath());
+	        if(!mediaFile.getParentFile().exists()){
+	        	mediaFile.getParentFile().mkdir();
+	    		}
+
+
+
+	    } else {
+	        return null;
+	    }
+
+	    return mediaFile;
+	}
+
     private void button_Write_cancel() {
     	Intent intent_cancel = new Intent(getApplicationContext(),diary_main.class);
         startActivity(intent_cancel);
@@ -460,42 +507,7 @@ public class diary_mainp extends Activity{
         finish();
     }
 
-    //movie関係
-    private static Uri getOutputMediaFileUri(int type){
-	      return Uri.fromFile(getOutputMediaFile(type));
-	}
 
-	/** Create a File for saving an image or video */
-	private static File getOutputMediaFile(int type){
-	    // To be safe, you should check that the SDCard is mounted
-	    // using Environment.getExternalStorageState() before doing this.
-
-	    File mediaStorageDir = new File(Environment.getExternalStoragePublicDirectory(
-	              Environment.DIRECTORY_PICTURES), "MyCameraApp");
-	    // This location works best if you want the created images to be shared
-	    // between applications and persist after your app has been uninstalled.
-
-	    // Create the storage directory if it does not exist
-	    if (! mediaStorageDir.exists()){
-	        if (! mediaStorageDir.mkdirs()){
-	            Log.d("MyCameraApp", "failed to create directory");
-	            return null;
-	        }
-	    }
-
-	    // Create a media file name
-	    String timeStamp = "diary";
-	    File mediaFile;
-	    if(type == MEDIA_TYPE_VIDEO) {
-	        mediaFile = new File(Environment.getExternalStorageDirectory().getPath()+"/Yukari/Video/dialy.mp4");
-	        mp4Path = mediaFile.getPath();
-	        Log.d("path", mediaFile.getPath());
-	    } else {
-	        return null;
-	    }
-
-	    return mediaFile;
-	}
 
   //バックキー
     @Override

@@ -153,8 +153,8 @@ public class IndexActivity extends Activity implements OnClickListener {
 
 		if (first) {
 			check = false;
-			webView.loadUrl("http://enyukari.sakura.ne.jp/wordpress/");
-			url_history[0] = "http://enyukari.sakura.ne.jp/wordpress/";
+			webView.loadUrl("http://enyukari.sakura.ne.jp/wordpress/?code=app");
+			url_history[0] = "http://enyukari.sakura.ne.jp/wordpress/?code=app";
 		}
 	}
 
@@ -165,7 +165,7 @@ public class IndexActivity extends Activity implements OnClickListener {
 		} else if (v == button_forward) {
 			canGoBackForward(1);
 		} else if (v == button_home) {
-			webView.loadUrl("http://enyukari.sakura.ne.jp/wordpress/");
+			webView.loadUrl("http://enyukari.sakura.ne.jp/wordpress/?code=app");
 		}
 	}
 
@@ -185,9 +185,9 @@ public class IndexActivity extends Activity implements OnClickListener {
 		if (keyCode == KeyEvent.KEYCODE_BACK) {
 			if (url_count == 0
 					|| load_url
-							.equals("http://enyukari.sakura.ne.jp/wordpress/")
+							.equals("http://enyukari.sakura.ne.jp/wordpress/?code=app")
 					|| webView.getUrl().equals(
-							"http://enyukari.sakura.ne.jp/wordpress/")) {
+							"http://enyukari.sakura.ne.jp/wordpress/?code=app")) {
 				//ダイアログ表示の処理
 				/*
 				 * AlertDialog.Builder alert = new AlertDialog.Builder(this);

@@ -2,26 +2,12 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.dneshiboshiken"
     android:versionCode="1"
-    android:versionName="1.0" 
-    android:installLocation="preferExternal">
-    <!-- ↑ SDカードにインストールするようにする -->
+    android:versionName="1.0" >
 
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="16" />
-    
-    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
-    <uses-permission android:name="android.permission.CAMERA" />
-	<uses-permission android:name="android.permission.USE_CREDENTIALS" />
-    <uses-permission android:name="android.permission.INTERNET" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_INTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.READ_INTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-	<uses-permission android:name="android.permission.CAMERA" />
-	<uses-permission android:name="android.permission.RECORD_AUDIO" />
-	
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/tile_bg"
@@ -34,11 +20,12 @@
             android:theme="@style/slideAnim"  >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
         <!-- SplashActivityをアプリケーション起動時の画面とする -->
-       <activity android:name=".SplashActivity">
+        <activity android:name=".SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -148,7 +135,7 @@
         </activity>
         <activity android:name=".pregnancy_write" >
         </activity>
-        <activity android:name=".pregnancy_write_edit" >
+        <activity android:name=".pregnancy_writep" >
         </activity>
         <activity android:name=".pregnancy_write_editedit" >
         </activity>
@@ -180,9 +167,12 @@
         </activity>
         <activity android:name=".pregnancy_birth_registrationp" >
         </activity>
+        <activity android:name=".pregnancy_home_situation" >
+        </activity>
+        <activity android:name=".pregnancy_home_situationp" >
+        </activity>
         <activity android:name=".immunization_b" >
         </activity>
-pregnancy_teeth_reportp
         <activity android:name=".immunization_bcg" >
         </activity>
         <activity android:name=".immunization_dpt" >
@@ -229,6 +219,30 @@ pregnancy_teeth_reportp
         </activity>
         <activity android:name=".write_condition_4p" >
         </activity>
+         <activity android:name=".write_condition_5" >
+        </activity>
+        <activity android:name=".write_condition_5p" >
+        </activity>
+         <activity android:name=".write_condition_6" >
+        </activity>
+        <activity android:name=".write_condition_6p" >
+        </activity>
+         <activity android:name=".write_condition_7" >
+        </activity>
+        <activity android:name=".write_condition_7p" >
+        </activity>
+         <activity android:name=".write_condition_8" >
+        </activity>
+        <activity android:name=".write_condition_8p" >
+        </activity>
+         <activity android:name=".write_condition_9" >
+        </activity>
+        <activity android:name=".write_condition_9p" >
+        </activity>
+         <activity android:name=".write_condition_10" >
+        </activity>
+        <activity android:name=".write_condition_10p" >
+        </activity>
         <activity android:name=".Album_Main" >
         </activity>
         <activity android:name=".Album_ShowDetails" >
@@ -239,10 +253,12 @@ pregnancy_teeth_reportp
         </activity>
         <activity android:name=".diary_mainp" >
         </activity>
-        <activity android:name="DisplayCalender"></activity>
-        <activity android:name="DetailData"></activity>
     </application>
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
     <uses-feature
         android:name="android.hardware.camera"

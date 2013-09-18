@@ -197,7 +197,7 @@ public class pregnancy_write extends ListActivity {
 		button_Write_edit = (Button) findViewById(R.id.Button_checkup_edit);
 		button_Write_edit.setOnClickListener(new View.OnClickListener(){
 	        public void onClick(View v) {
-	        	Intent intent_cancel = new Intent(getApplicationContext(),pregnancy_write_edit.class);
+	        	Intent intent_cancel = new Intent(getApplicationContext(),pregnancy_writep.class);
 	            startActivity(intent_cancel);
 	            finish();
 	        }

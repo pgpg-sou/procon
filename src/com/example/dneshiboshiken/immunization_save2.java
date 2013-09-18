@@ -3,7 +3,6 @@ package com.example.dneshiboshiken;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Calendar;
 
@@ -25,9 +24,7 @@ import org.xmlpull.v1.XmlPullParserFactory;
 
 import android.app.Activity;
 import android.app.DatePickerDialog;
-import android.app.ProgressDialog;
-import android.content.SharedPreferences;
-import android.os.AsyncTask;
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -35,6 +32,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.Toast;
 
@@ -53,10 +51,6 @@ public class immunization_save2 extends Activity {
 	private String filename = "/Yukari/Write/immunization/"+immunization_place+immunization_main.immunization_number+"file.xml";
 	private String datapath = "/Yukari/Write/immunization/"+immunization_place+"1file.xml";
 
-    private SharedPreferences pref;// Drive関係
-    private Activity activity;// Drive関係
-
-
 	private String[] item_immunization_write_tag = {"EditText_immunization_write_vaccine",
 			"EditText_immunization_write_ymd",
 			"EditText_immunization_write_lot",
@@ -72,7 +66,6 @@ public class immunization_save2 extends Activity {
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.immunization_save2);
-        activity=this;
 
 		EditText[] tvParam_EditText = new EditText[item_immunization_write.length];
 
@@ -211,67 +204,7 @@ public class immunization_save2 extends Activity {
 			e.printStackTrace();
 		}
 
-        /**
-         * ここからGoogleDriveへのアップロード 個々によって変更するところ
-         * */
-        try {
-            DriveModule.OAuth(GoogleDriveBuild.credential, activity);
-            pref = getSharedPreferences("prefs", Activity.MODE_PRIVATE);
-            final String str = pref.getString("RootFolder",
-                    "PERF NOT FOUND!!");
-            Log.i("PREF", str);
-
-            AsyncTask<Void, ProgressDialog, Void> task = new AsyncTask<Void, ProgressDialog, Void>() {
-                protected void onPostExecute() {
-                    // UIスレッド
-                    //Toast.makeText(WriteCheckup_12p.this, "UPLOAD OK",
-                    //	Toast.LENGTH_LONG);
-                }
-
-                protected Void doInBackground(Void... params) {
-                    // TODO 自動生成されたメソッド・スタブ
-                    boolean a = false;
-                    try {
-                        com.google.api.services.drive.model.File file1 = GoogleDriveBuild.service
-                                .files()
-                                .get(pref.getString("RootFolder", null))
-                                .execute();
-                        if (file1 != null) {
-                            String filePath = Environment.getExternalStorageDirectory().getAbsolutePath()+ filepath +"/" + immunization_place+(immunization_main.immunization_number)+"file.xml";
-                            if (DriveModule.checkFile(file1, "immunization",immunization_place+(immunization_main.immunization_number)+"file.xml",GoogleDriveBuild.service,GoogleDriveBuild.credential, filePath,"application/xml", activity) == true) {
-                            } else {
-                            }
-
-                            a = true;
-                        }
-                    } catch (IOException e) {
-                        // TODO 自動生成された catch ブロック
-                        Log.e("ERROR a", e.toString());
-                    }
-                    return null;
-
-                }
-
-            };
-            task.execute(); // 実行
-
-        } catch (Exception e) {
-            Log.e("DRIVE ERROR", e.toString());
-        }
-
-        if(GoogleDriveBuild.netWorkCheck(this)==false){
-            Toast.makeText(this, "インターネットに接続されていません", Toast.LENGTH_LONG).show();
-            Log.i("NETWORK","false")	;
-        }
-
-
-        /**
-         * ここまでがアップロード
-         * */
-
-
-
-        Toast.makeText(this, "保存が完了しました", Toast.LENGTH_LONG).show();
+		Toast.makeText(this, "保存が完了しました", Toast.LENGTH_LONG).show();
 
 		finish();
 	}

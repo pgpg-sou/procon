@@ -112,7 +112,7 @@ public class WriteActivity extends Activity {
 			}});
 		write_button_0_1[4].setOnClickListener(new View.OnClickListener(){
 			public void onClick(View v) {
-				Intent intent_cancel = new Intent(getApplicationContext(),MainActivity.class);
+				Intent intent_cancel = new Intent(getApplicationContext(),pregnancy_home_situation.class);
 				startActivity(intent_cancel);
 			}});
 		write_button_0_1[5].setOnClickListener(new View.OnClickListener(){

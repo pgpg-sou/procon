@@ -19,7 +19,7 @@ public class AccordionSet {
 	private DecelerateInterpolator mInterpolator = new DecelerateInterpolator();
 	private int easeTime = 400;
 
-	public AccordionSet(LinearLayout btn, LinearLayout content) {
+	public AccordionSet(LinearLayout btn, LinearLayout content)  {
 		_btn = btn;
 		_content = content;
 		_handler = new Handler();

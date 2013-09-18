@@ -488,45 +488,14 @@
                     </TextView>
 
                     <TextView
-                        android:id="@+id/EditText_write_condition_other"
+                        android:id="@+id/EditText_write_condition11"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
-                        android:layout_marginRight="1dip"
                         android:layout_weight="2"
                         android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:text="----"
-                        android:textColor="#000000" >
-                    </TextView>
-                </TableRow>
-
-                <TableRow
-                    android:layout_width="fill_parent"
-                    android:layout_height="fill_parent"
-                    android:background="#000000" >
-
-                    <TextView
-                        android:layout_width="0dp"
-                        android:layout_height="fill_parent"
-                        android:layout_marginBottom="1dip"
-                        android:layout_marginLeft="1dip"
-                        android:layout_marginRight="1dip"
-                        android:layout_weight="7"
-                        android:background="#FFDFA5"
-                        android:text="子育てについて不安や困難を感じることがありますか。" >
-                    </TextView>
-
-                    <TextView
-                        android:id="@+id/radio_write_condition7"
-                        android:layout_width="0dp"
-                        android:layout_height="fill_parent"
-                        android:layout_marginBottom="1dip"
-                        android:layout_marginRight="1dip"
-                        android:layout_weight="2"
-                        android:background="#FFFFFF"
-                        android:gravity="center"
-                        android:text="----"
+                        android:gravity="left"
+                        android:text=""
                         android:textColor="#000000" >
                     </TextView>
                 </TableRow>
@@ -563,17 +532,19 @@
                         android:background="#ffffff" >
                     </TextView>
 
-                    <TextView
-                        android:id="@+id/EditText_write_condition8"
+                     <TextView
+                        android:id="@+id/EditText_write_condition_other"
                         android:layout_width="0dp"
                         android:layout_height="fill_parent"
                         android:layout_marginBottom="1dip"
+                        android:layout_marginRight="1dip"
                         android:layout_weight="2"
                         android:background="#FFFFFF"
-                        android:gravity="left"
-                        android:text=""
+                        android:gravity="center"
+                        android:text="----"
                         android:textColor="#000000" >
                     </TextView>
+
 
                     <TextView
                         android:layout_width="0dp"

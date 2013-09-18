@@ -71,12 +71,12 @@ import android.widget.Toast;
 import android.os.Environment;
 
 
+
 public class immunization_main extends Activity implements View.OnClickListener{
 
 	static String immunization_flag;
 	static int immunization_number;
 
-	
 	private Button button_dpt1;
   //ここはクラス内で実行
 	static int REQUEST_ACTION_PICK = 1;
@@ -267,155 +267,156 @@ public class immunization_main extends Activity implements View.OnClickListener{
     //詳細ボタン
     public void onClick(View v){
     	Intent intent=new Intent();
-    	
-    	if(R.id.button_immunization_dpt1==v.getId()){
+    	switch(v.getId()){
+    	case R.id.button_immunization_dpt1:
     		immunization_main.immunization_flag="immunization_dpt";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save2");
-	         
-    	}else if( R.id.button_immunization_dpt2==v.getId()){
+	        break;
+    	case R.id.button_immunization_dpt2:
     		immunization_main.immunization_flag="immunization_dpt";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save2");
-	         
-    	}else if( R.id.button_immunization_dpt3==v.getId()){
+	        break;
+    	case R.id.button_immunization_dpt3:
     		immunization_main.immunization_flag="immunization_dpt";
     		immunization_number=3;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save2");
-	         
-    	}else if( R.id.button_immunization_dpt4==v.getId()){
+	        break;
+    	case R.id.button_immunization_dpt4:
     		immunization_main.immunization_flag="immunization_dpt";
     		immunization_number=4;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save2");
-	         
-    	}else if( R.id.button_immunization_bcg1==v.getId()){
+	        break;
+    	case R.id.button_immunization_bcg1:
     		immunization_main.immunization_flag="immunization_bcg";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_mr1==v.getId()){
+	        break;
+    	case R.id.button_immunization_mr1:
     		immunization_main.immunization_flag="immunization_mr";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_mr2==v.getId()){
+	        break;
+    	case R.id.button_immunization_mr2:
     		immunization_main.immunization_flag="immunization_mr";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_japa1==v.getId()){
+	        break;
+    	case R.id.button_immunization_japa1:
     		immunization_main.immunization_flag="immunization_japan";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_japa2==v.getId()){
+	        break;
+    	case R.id.button_immunization_japa2:
     		immunization_main.immunization_flag="immunization_japan";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_japa3==v.getId()){
+	        break;
+    	case R.id.button_immunization_japa3:
     		immunization_main.immunization_flag="immunization_japan";
     		immunization_number=3;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_japa4==v.getId()){
+	        break;
+    	case R.id.button_immunization_japa4:
     		immunization_main.immunization_flag="immunization_japan";
     		immunization_number=4;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_dt1==v.getId()){
+	        break;
+    	case R.id.button_immunization_dt1:
     		immunization_main.immunization_flag="immunization_dt";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_hib1==v.getId()){
+	        break;
+    	case R.id.button_immunization_hib1:
     		immunization_main.immunization_flag="immunization_hib";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_hib2==v.getId()){
+	        break;
+    	case R.id.button_immunization_hib2:
     		immunization_main.immunization_flag="immunization_hib";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_hib3==v.getId()){
+	        break;
+    	case R.id.button_immunization_hib3:
     		immunization_main.immunization_flag="immunization_hib";
     		immunization_number=3;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_hib4==v.getId()){
+	        break;
+    	case R.id.button_immunization_hib4:
     		immunization_main.immunization_flag="immunization_hib";
     		immunization_number=4;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_seven1==v.getId()){
+	        break;
+    	case R.id.button_immunization_seven1:
     		immunization_main.immunization_flag="immunization_seven";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_seven2==v.getId()){
+	        break;
+    	case R.id.button_immunization_seven2:
     		immunization_main.immunization_flag="immunization_seven";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_seven3==v.getId()){
+	        break;
+    	case R.id.button_immunization_seven3:
     		immunization_main.immunization_flag="immunization_seven";
     		immunization_number=3;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_seven4==v.getId()){
+	        break;
+    	case R.id.button_immunization_seven4:
     		immunization_main.immunization_flag="immunization_seven";
     		immunization_number=4;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_hpv1==v.getId()){
+	        break;
+    	case R.id.button_immunization_hpv1:
     		immunization_main.immunization_flag="immunization_hpv";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_hpv2==v.getId()){
+	        break;
+    	case R.id.button_immunization_hpv2:
     		immunization_main.immunization_flag="immunization_hpv";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_hpv3==v.getId()){
+	        break;
+    	case R.id.button_immunization_hpv3:
     		immunization_main.immunization_flag="immunization_hpv";
     		immunization_number=3;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-    	}else if( R.id.button_immunization_varicella1==v.getId()){
+    	case R.id.button_immunization_varicella1:
     		immunization_main.immunization_flag="immunization_varicella";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_varicella2==v.getId()){
+	        break;
+    	case R.id.button_immunization_varicella2:
     		immunization_main.immunization_flag="immunization_varicella";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-	     }else if( R.id.button_immunization_mumps1==v.getId()){
+	        break;
+	        case R.id.button_immunization_mumps1:
     		immunization_main.immunization_flag="immunization_mumps";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_mumps2==v.getId()){
+	        break;
+    	case R.id.button_immunization_mumps2:
     		immunization_main.immunization_flag="immunization_mumps";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_b1==v.getId()){
+	        break;
+    	case R.id.button_immunization_b1:
     		immunization_main.immunization_flag="immunization_b";
     		immunization_number=1;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_b2==v.getId()){
+	        break;
+    	case R.id.button_immunization_b2:
     		immunization_main.immunization_flag="immunization_b";
     		immunization_number=2;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
-	         
-    	}else if( R.id.button_immunization_b3==v.getId()){
+	        break;
+    	case R.id.button_immunization_b3:
     		immunization_main.immunization_flag="immunization_b";
     		immunization_number=3;
 	        intent.setClassName("com.example.dneshiboshiken", "com.example.dneshiboshiken.immunization_save");
+    	
 
 
 	        /*
